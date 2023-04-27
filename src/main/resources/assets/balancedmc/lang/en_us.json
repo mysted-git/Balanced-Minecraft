@@ -1,0 +1,9 @@
+{
+  "item.balancedmc.music_disc_intro": "Music Disc",
+  "item.balancedmc.music_disc_intro.desc": "C418 - Intro",
+  "block.balancedmc.conduit_shell": "Conduit Shell",
+  "enchantment.balancedmc.undead_protection": "Undead Protection",
+  "enchantment.balancedmc.arthropod_protection": "Arthropod Protection",
+  "enchantment.balancedmc.aquatic_protection": "Aquatic Protection",
+  "enchantment.balancedmc.illager_protection": "Illager Protection"
+}

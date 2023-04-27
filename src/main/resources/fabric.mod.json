@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "balancedmc",
+  "version": "${version}",
+
+  "name": "Balanced Minecraft",
+  "description": "description!",
+  "authors": [
+    {
+      "name": "Myst3d"
+    },{
+      "name": "HB0P"
+    }
+  ],
+
+  "license": "CC0-1.0",
+  "icon": "assets/balancedmc/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.balancedmc.Main"
+    ]
+  },
+  "mixins": [
+    "balancedmc.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.17",
+    "fabric-api": "*",
+    "minecraft": "~1.19.4",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

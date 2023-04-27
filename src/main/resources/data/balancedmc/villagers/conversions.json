@@ -1,0 +1,14 @@
+[
+  {
+    "profession": "butcher",
+    "buy": {
+      "item": "minecraft:mutton",
+      "count": 1
+    },
+    "price": 1,
+    "sell": {
+      "item": "minecraft:cooked_mutton",
+      "count": 1
+    }
+  }
+]

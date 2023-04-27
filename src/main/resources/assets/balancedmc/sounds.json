@@ -1,0 +1,42 @@
+{
+  "records.intro": {
+    "sounds": [
+      {
+        "name": "balancedmc:records/intro",
+        "stream": true
+      }
+    ]
+  },
+  "records.droopy_likes_ricochet": {
+    "sounds": [
+      {
+        "name": "balancedmc:records/droopy_likes_ricochet",
+        "stream": true
+      }
+    ]
+  },
+  "records.droopy_likes_your_face": {
+    "sounds": [
+      {
+        "name": "balancedmc:records/droopy_likes_your_face",
+        "stream": true
+      }
+    ]
+  },
+  "records.dog": {
+    "sounds": [
+      {
+        "name": "balancedmc:records/dog",
+        "stream": true
+      }
+    ]
+  },
+  "records.death": {
+    "sounds": [
+      {
+        "name": "balancedmc:records/death",
+        "stream": true
+      }
+    ]
+  }
+}

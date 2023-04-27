@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "balancedmc:block/conduit_shell" }
+  }
+}

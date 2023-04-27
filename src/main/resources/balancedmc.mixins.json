@@ -1,0 +1,38 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.balancedmc.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+
+  ],
+  "client": [
+    "client.transport.M_FireworkRocketItem",
+    "client.transport.M_AbstractMinecartEntity",
+    "client.transport.M_BoatEntity",
+    "client.M_ConduitBlockEntity",
+    "client.trident.M_TridentEntity",
+    "client.M_VillagerEntity",
+    "client.enchanting.M_DamageEnchantment",
+    "client.enchanting.M_Enchantments",
+    "client.enchanting.anvil.M_AnvilScreenHandler",
+    "client.enchanting.anvil.M_AnvilScreen",
+    "client.potions.M_BrewingRecipeRegistry",
+    "client.M_IronGolemEntity",
+    "client.potions.M_LivingEntity",
+    "client.M_WitherSkullBlock",
+    "client.trident.M_ImpalingEnchantment",
+    "client.transport.horse.M_EnchantmentHelper",
+    "client.transport.horse.M_FrostWalkerEnchantment",
+    "client.transport.horse.M_ProtectionEnchantment",
+    "client.transport.horse.M_SoulSpeedEnchantment",
+    "client.enchanting.grindstone.M_GrindstoneScreenHandler",
+    "client.enchanting.grindstone.M_GrindstoneScreen"
+  ],
+  "server": [
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
