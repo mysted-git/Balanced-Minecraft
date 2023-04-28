@@ -64,7 +64,7 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
             case 0 -> {
                 return this.addSlot(new Slot(this.input, 0, 49, 19) {
                     public boolean canInsert(ItemStack stack) {
-                        return stack.hasEnchantments() || stack.isOf(Items.ENCHANTED_BOOK);
+                        return stack.hasEnchantments();
                     }
                 });
             }

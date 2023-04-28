@@ -27,7 +27,8 @@
     "client.transport.horse.M_ProtectionEnchantment",
     "client.transport.horse.M_SoulSpeedEnchantment",
     "client.enchanting.grindstone.M_GrindstoneScreenHandler",
-    "client.enchanting.grindstone.M_GrindstoneScreen"
+    "client.enchanting.grindstone.M_GrindstoneScreen",
+    "client.enchanting.M_ProtectionEnchantment"
   ],
   "server": [
 
