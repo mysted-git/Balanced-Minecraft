@@ -7,31 +7,31 @@
 
   ],
   "client": [
-    "client.transport.M_FireworkRocketItem",
+    "client.M_ConduitBlockEntity",
+    "client.M_IronGolemEntity",
+    "client.M_VillagerEntity",
+    "client.M_WitherSkullBlock",
+    "client.enchantment.M_DamageEnchantment",
+    "client.enchantment.M_Enchantments",
+    "client.enchantment.M_ProtectionEnchantment",
+    "client.enchantment.anvil.M_AnvilScreen",
+    "client.enchantment.anvil.M_AnvilScreenHandler",
+    "client.enchantment.grindstone.M_GrindstoneScreen",
+    "client.enchantment.grindstone.M_GrindstoneScreenHandler",
+    "client.potions.M_BrewingRecipeRegistry",
+    "client.potions.M_LivingEntity",
     "client.transport.M_AbstractMinecartEntity",
     "client.transport.M_BoatEntity",
-    "client.M_ConduitBlockEntity",
-    "client.trident.M_TridentEntity",
-    "client.M_VillagerEntity",
-    "client.enchanting.M_DamageEnchantment",
-    "client.enchanting.M_Enchantments",
-    "client.enchanting.anvil.M_AnvilScreenHandler",
-    "client.enchanting.anvil.M_AnvilScreen",
-    "client.potions.M_BrewingRecipeRegistry",
-    "client.M_IronGolemEntity",
-    "client.potions.M_LivingEntity",
-    "client.M_WitherSkullBlock",
-    "client.trident.M_ImpalingEnchantment",
+    "client.transport.M_FireworkRocketItem",
     "client.transport.horse.M_EnchantmentHelper",
     "client.transport.horse.M_FrostWalkerEnchantment",
     "client.transport.horse.M_ProtectionEnchantment",
     "client.transport.horse.M_SoulSpeedEnchantment",
-    "client.enchanting.grindstone.M_GrindstoneScreenHandler",
-    "client.enchanting.grindstone.M_GrindstoneScreen",
-    "client.enchanting.M_ProtectionEnchantment"
+    "client.trident.M_ImpalingEnchantment",
+    "client.trident.M_TridentEntity",
+    "client.enchantment.M_LivingEntity"
   ],
   "server": [
-
   ],
   "injectors": {
     "defaultRequire": 1
