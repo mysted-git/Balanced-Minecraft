@@ -2,6 +2,7 @@ package com.balancedmc;
 
 import com.balancedmc.blocks.ModBlocks;
 import com.balancedmc.enchantments.ModEnchantments;
+import com.balancedmc.loot_tables.ModLootTables;
 import com.balancedmc.potions.ModPotionRecipes;
 import com.balancedmc.sounds.ModSoundEvents;
 import com.balancedmc.villagers.VillagerHelper;
@@ -21,6 +22,7 @@ public class Main implements ModInitializer {
 		ModBlocks.registerBlocks();
 		ModEnchantments.registerEnchantments();
 		ModPotionRecipes.registerPotionRecipes();
+		ModLootTables.registerLootTables();
 
 		VillagerHelper.registerReloadListener();
 	}
