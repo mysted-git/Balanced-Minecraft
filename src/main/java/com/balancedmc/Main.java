@@ -2,10 +2,13 @@ package com.balancedmc;
 
 import com.balancedmc.blocks.ModBlocks;
 import com.balancedmc.enchantments.ModEnchantments;
+import com.balancedmc.items.ModItems;
 import com.balancedmc.potions.ModPotionRecipes;
 import com.balancedmc.sounds.ModSoundEvents;
 import com.balancedmc.villagers.VillagerHelper;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

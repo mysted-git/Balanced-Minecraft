@@ -21,6 +21,7 @@ public class ConduitShellBlock extends Block {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+
         if (hand != Hand.MAIN_HAND) return ActionResult.PASS;
         ItemStack item = player.getMainHandStack();
 
@@ -32,4 +33,5 @@ public class ConduitShellBlock extends Block {
         }
         return ActionResult.SUCCESS;
     }
+
 }

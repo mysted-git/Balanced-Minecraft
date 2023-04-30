@@ -1,5 +1,5 @@
 {
-  "records.intro": {
+  "music_disc.intro": {
     "sounds": [
       {
         "name": "balancedmc:records/intro",
@@ -7,7 +7,7 @@
       }
     ]
   },
-  "records.droopy_likes_ricochet": {
+  "music_disc.droopy_likes_ricochet": {
     "sounds": [
       {
         "name": "balancedmc:records/droopy_likes_ricochet",
@@ -15,7 +15,7 @@
       }
     ]
   },
-  "records.droopy_likes_your_face": {
+  "music_disc.droopy_likes_your_face": {
     "sounds": [
       {
         "name": "balancedmc:records/droopy_likes_your_face",
@@ -23,7 +23,7 @@
       }
     ]
   },
-  "records.dog": {
+  "music_disc.dog": {
     "sounds": [
       {
         "name": "balancedmc:records/dog",
@@ -31,7 +31,7 @@
       }
     ]
   },
-  "records.death": {
+  "music_disc.death": {
     "sounds": [
       {
         "name": "balancedmc:records/death",

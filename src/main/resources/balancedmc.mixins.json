@@ -3,35 +3,31 @@
   "minVersion": "0.8",
   "package": "com.balancedmc.mixins",
   "compatibilityLevel": "JAVA_17",
-  "mixins": [
-
-  ],
   "client": [
-    "client.transport.M_FireworkRocketItem",
-    "client.transport.M_AbstractMinecartEntity",
-    "client.transport.M_BoatEntity",
     "client.M_ConduitBlockEntity",
-    "client.trident.M_TridentEntity",
+    "client.M_IronGolemEntity",
     "client.M_VillagerEntity",
+    "client.M_WitherSkullBlock",
     "client.enchanting.M_DamageEnchantment",
     "client.enchanting.M_Enchantments",
-    "client.enchanting.anvil.M_AnvilScreenHandler",
+    "client.enchanting.M_ProtectionEnchantment",
     "client.enchanting.anvil.M_AnvilScreen",
+    "client.enchanting.anvil.M_AnvilScreenHandler",
+    "client.enchanting.grindstone.M_GrindstoneScreen",
+    "client.enchanting.grindstone.M_GrindstoneScreenHandler",
     "client.potions.M_BrewingRecipeRegistry",
-    "client.M_IronGolemEntity",
     "client.potions.M_LivingEntity",
-    "client.M_WitherSkullBlock",
-    "client.trident.M_ImpalingEnchantment",
+    "client.transport.M_AbstractMinecartEntity",
+    "client.transport.M_BoatEntity",
+    "client.transport.M_FireworkRocketItem",
     "client.transport.horse.M_EnchantmentHelper",
     "client.transport.horse.M_FrostWalkerEnchantment",
     "client.transport.horse.M_ProtectionEnchantment",
     "client.transport.horse.M_SoulSpeedEnchantment",
-    "client.enchanting.grindstone.M_GrindstoneScreenHandler",
-    "client.enchanting.grindstone.M_GrindstoneScreen",
-    "client.enchanting.M_ProtectionEnchantment"
+    "client.trident.M_ImpalingEnchantment",
+    "client.trident.M_TridentEntity"
   ],
   "server": [
-
   ],
   "injectors": {
     "defaultRequire": 1
