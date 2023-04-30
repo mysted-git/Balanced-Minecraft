@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.client.enchanting;
+package com.balancedmc.mixins.client.enchantment;
 
 import net.minecraft.enchantment.DamageEnchantment;
 import net.minecraft.enchantment.Enchantment;

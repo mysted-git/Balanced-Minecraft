@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.client.enchanting.anvil;
+package com.balancedmc.mixins.client.enchantment.anvil;
 
 import net.minecraft.client.gui.screen.ingame.AnvilScreen;
 import net.minecraft.entity.player.PlayerAbilities;

@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.client.enchanting.grindstone;
+package com.balancedmc.mixins.client.enchantment.grindstone;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -35,11 +35,6 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
         super(type, syncId);
     }
 
-    /**
-     * @author HB0P
-     * @reason Grindstones transfer enchantments to books
-     */
-
     @Shadow
     Inventory input;
     @Shadow
@@ -64,7 +59,7 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
             case 0 -> {
                 return this.addSlot(new Slot(this.input, 0, 49, 19) {
                     public boolean canInsert(ItemStack stack) {
-                        return stack.hasEnchantments();
+                        return stack.hasEnchantments() && EnchantmentHelper.getLevel(Enchantments.MENDING, stack) == 0;
                     }
                 });
             }
@@ -103,14 +98,21 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
         }
     }
 
+    /**
+     * @author HB0P
+     * @reason Grindstones transfer enchantments to books
+     */
+
     @Overwrite
     public void updateResult() {
         ItemStack input = this.input.getStack(0);
 
+        // clear if there is no input
         if (input == ItemStack.EMPTY) {
             this.result.clear();
             return;
         }
+        // do not allow enchanted books remaining in second slot
         if (!this.getSlot(1).getStack().isOf(Items.BOOK) && this.getSlot(1).hasStack()) {
             this.result.clear();
             return;
@@ -121,6 +123,7 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
         Enchantment toRemove = enchantments[(int) (Math.random() * enchantments.length)];
         removedEnchantment = new EnchantmentLevelEntry(toRemove, enchantmentLevels.get(toRemove));
 
+        // stop if player does not have required experience
         experienceChange = removedEnchantment.level * 2;
         if (experienceChange > player.experienceLevel && this.getSlot(1).hasStack()) {
             this.result.clear();
@@ -131,11 +134,8 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
         result.removeSubNbt("Enchantments");
         result.removeSubNbt("StoredEnchantments");
 
+        // add all but one enchantment to output item
         for (Enchantment enchantment : enchantments) {
-            if (enchantment == Enchantments.MENDING) {
-                this.result.clear();
-                return;
-            }
             if (enchantment != removedEnchantment.enchantment) {
                 result.addEnchantment(enchantment, enchantmentLevels.get(enchantment));
             }

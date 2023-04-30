@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.client.enchanting.grindstone;
+package com.balancedmc.mixins.client.enchantment.grindstone;
 
 import net.minecraft.client.gui.screen.ingame.GrindstoneScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;

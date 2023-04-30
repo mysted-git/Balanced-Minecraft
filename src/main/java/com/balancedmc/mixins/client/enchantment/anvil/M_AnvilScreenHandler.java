@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.client.enchanting.anvil;
+package com.balancedmc.mixins.client.enchantment.anvil;
 
 import net.minecraft.screen.AnvilScreenHandler;
 import net.minecraft.screen.Property;

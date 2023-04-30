@@ -3,18 +3,21 @@
   "minVersion": "0.8",
   "package": "com.balancedmc.mixins",
   "compatibilityLevel": "JAVA_17",
+  "mixins": [
+
+  ],
   "client": [
     "client.M_ConduitBlockEntity",
     "client.M_IronGolemEntity",
     "client.M_VillagerEntity",
     "client.M_WitherSkullBlock",
-    "client.enchanting.M_DamageEnchantment",
-    "client.enchanting.M_Enchantments",
-    "client.enchanting.M_ProtectionEnchantment",
-    "client.enchanting.anvil.M_AnvilScreen",
-    "client.enchanting.anvil.M_AnvilScreenHandler",
-    "client.enchanting.grindstone.M_GrindstoneScreen",
-    "client.enchanting.grindstone.M_GrindstoneScreenHandler",
+    "client.enchantment.M_DamageEnchantment",
+    "client.enchantment.M_Enchantments",
+    "client.enchantment.M_ProtectionEnchantment",
+    "client.enchantment.anvil.M_AnvilScreen",
+    "client.enchantment.anvil.M_AnvilScreenHandler",
+    "client.enchantment.grindstone.M_GrindstoneScreen",
+    "client.enchantment.grindstone.M_GrindstoneScreenHandler",
     "client.potions.M_BrewingRecipeRegistry",
     "client.potions.M_LivingEntity",
     "client.transport.M_AbstractMinecartEntity",
@@ -25,7 +28,8 @@
     "client.transport.horse.M_ProtectionEnchantment",
     "client.transport.horse.M_SoulSpeedEnchantment",
     "client.trident.M_ImpalingEnchantment",
-    "client.trident.M_TridentEntity"
+    "client.trident.M_TridentEntity",
+    "client.enchantment.M_LivingEntity"
   ],
   "server": [
   ],
