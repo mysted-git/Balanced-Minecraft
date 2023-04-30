@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.client;
+package com.balancedmc.mixins.client.village;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.pathing.EntityNavigation;

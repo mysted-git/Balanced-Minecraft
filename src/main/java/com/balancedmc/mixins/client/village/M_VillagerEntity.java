@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.client;
+package com.balancedmc.mixins.client.village;
 
 import com.balancedmc.villagers.VillagerHelper;
 import net.minecraft.entity.passive.VillagerEntity;

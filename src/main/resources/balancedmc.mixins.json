@@ -8,8 +8,8 @@
   ],
   "client": [
     "client.M_ConduitBlockEntity",
-    "client.M_IronGolemEntity",
-    "client.M_VillagerEntity",
+    "client.village.M_IronGolemEntity",
+    "client.village.M_VillagerEntity",
     "client.M_WitherSkullBlock",
     "client.enchantment.M_DamageEnchantment",
     "client.enchantment.M_Enchantments",
@@ -29,7 +29,9 @@
     "client.transport.horse.M_SoulSpeedEnchantment",
     "client.trident.M_ImpalingEnchantment",
     "client.trident.M_TridentEntity",
-    "client.enchantment.M_LivingEntity"
+    "client.enchantment.M_LivingEntity",
+    "client.village.raid.M_EvokerEntity",
+    "client.village.raid.M_Raid"
   ],
   "server": [
   ],
