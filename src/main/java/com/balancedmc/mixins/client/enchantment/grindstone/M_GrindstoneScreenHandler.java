@@ -18,6 +18,7 @@ import net.minecraft.screen.slot.Slot;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import org.jetbrains.annotations.Nullable;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
@@ -28,6 +29,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Map;
 
+/**
+ * Grindstones transfer a single enchantment to a book<br>
+ * If no book is provided, they will refund xp as usual
+ */
 @Mixin(GrindstoneScreenHandler.class)
 public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
 
@@ -35,19 +40,31 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
         super(type, syncId);
     }
 
-    @Shadow
+    @Shadow @Final
     Inventory input;
-    @Shadow
-    Inventory result;
+    @Shadow @Final
+    private Inventory result;
     private EnchantmentLevelEntry removedEnchantment;
     private int experienceChange;
     private PlayerEntity player;
 
+    /**
+     * Store which player is using the screen
+     */
     @Inject(method = "<init>(ILnet/minecraft/entity/player/PlayerInventory;Lnet/minecraft/screen/ScreenHandlerContext;)V", at = @At("TAIL"))
     private void injected(int syncId, PlayerInventory playerInventory, final ScreenHandlerContext context, CallbackInfo ci) {
         this.player = playerInventory.player;
     }
 
+    /**
+     * Change which items are allowed to be inserted into slots<br>
+     * Input 1 can accept enchanted items without mending<br>
+     * Input 2 can accept only a single book
+     * <p>
+     * Set behaviour when items are taken from output slot<br>
+     * Enchants book if possible<br>
+     * Refunds or charges experience
+     */
     @Redirect(method = "<init>(ILnet/minecraft/entity/player/PlayerInventory;Lnet/minecraft/screen/ScreenHandlerContext;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/screen/GrindstoneScreenHandler;addSlot(Lnet/minecraft/screen/slot/Slot;)Lnet/minecraft/screen/slot/Slot;"))
     private Slot redirect(GrindstoneScreenHandler handler, Slot slot) {
 
@@ -56,6 +73,7 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
         }
 
         switch (slot.getIndex()) {
+            // input 1
             case 0 -> {
                 return this.addSlot(new Slot(this.input, 0, 49, 19) {
                     public boolean canInsert(ItemStack stack) {
@@ -63,7 +81,7 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
                     }
                 });
             }
-
+            // input 2
             case 1 -> {
                 return this.addSlot(new Slot(this.input, 1, 49, 40) {
                     public boolean canInsert(ItemStack stack) {
@@ -71,7 +89,7 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
                     }
                 });
             }
-
+            // output
             case 2 -> {
                 return this.addSlot(new Slot(this.result, 2, 129, 34) {
                     public boolean canInsert(ItemStack stack) {
@@ -100,9 +118,8 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
 
     /**
      * @author HB0P
-     * @reason Grindstones transfer enchantments to books
+     * @reason Update the output slot with one fewer enchantment than the input
      */
-
     @Overwrite
     public void updateResult() {
         ItemStack input = this.input.getStack(0);
