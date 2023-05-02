@@ -22,6 +22,7 @@ public abstract class M_GrindstoneScreen extends HandledScreen<GrindstoneScreenH
     /**
      * Add cost message to grindstone
      */
+    @Override
     public void drawForeground(MatrixStack matrices, int mouseX, int mouseY) {
         super.drawForeground(matrices, mouseX, mouseY);
         if (this.handler.getSlot(0).hasStack() && this.handler.getSlot(1).hasStack() && this.handler.getSlot(2).hasStack()) {
