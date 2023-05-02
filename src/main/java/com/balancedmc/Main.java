@@ -2,13 +2,11 @@ package com.balancedmc;
 
 import com.balancedmc.blocks.ModBlocks;
 import com.balancedmc.enchantments.ModEnchantments;
-import com.balancedmc.items.ModItems;
+import com.balancedmc.loot_tables.ModLootTables;
 import com.balancedmc.potions.ModPotionRecipes;
 import com.balancedmc.sounds.ModSoundEvents;
 import com.balancedmc.villagers.VillagerHelper;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,6 +22,7 @@ public class Main implements ModInitializer {
 		ModBlocks.registerBlocks();
 		ModEnchantments.registerEnchantments();
 		ModPotionRecipes.registerPotionRecipes();
+		ModLootTables.registerLootTables();
 
 		VillagerHelper.registerReloadListener();
 	}

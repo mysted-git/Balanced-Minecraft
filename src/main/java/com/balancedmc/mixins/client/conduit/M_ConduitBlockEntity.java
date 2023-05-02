@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.client;
+package com.balancedmc.mixins.client.conduit;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -26,7 +26,6 @@ public abstract class M_ConduitBlockEntity {
      * @author HB0P
      * @reason Conduit custom effects
      */
-
     @Overwrite
     public static void givePlayersEffects(World world, BlockPos pos, List<BlockPos> activatingBlocks) {
         HashMap<Block, Integer> blockCounts = new HashMap<>();
@@ -74,9 +73,11 @@ public abstract class M_ConduitBlockEntity {
         }
     }
 
-    @Inject(method = "updateActivatingBlocks(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Ljava/util/list;)Z", at = @At("TAIL"), cancellable = true)
+    /**
+     * Conduit will activate if there are 14 prismarine blocks
+     */
+    @Inject(method = "updateActivatingBlocks(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Ljava/util/List;)Z", at = @At("TAIL"), cancellable = true)
     private static void updateActivatingBlocks(World world, BlockPos pos, List<BlockPos> activatingBlocks, CallbackInfoReturnable<Boolean> cir) {
-        // conduit is active if there are 14 prismarine blocks
         int count = 0;
         for (BlockPos p : activatingBlocks) {
             BlockState blockState = world.getBlockState(p);
