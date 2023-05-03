@@ -2,6 +2,7 @@ package com.balancedmc;
 
 import com.balancedmc.blocks.ModBlocks;
 import com.balancedmc.enchantments.ModEnchantments;
+import com.balancedmc.items.ModItems;
 import com.balancedmc.loot_tables.ModLootTables;
 import com.balancedmc.potions.ModPotionRecipes;
 import com.balancedmc.sounds.ModSoundEvents;
@@ -17,6 +18,7 @@ public class Main implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
 		ModSoundEvents.registerSoundEvents();
 		ModItems.registerItems();
 		ModBlocks.registerBlocks();
@@ -25,5 +27,6 @@ public class Main implements ModInitializer {
 		ModLootTables.registerLootTables();
 
 		VillagerHelper.registerReloadListener();
+
 	}
 }

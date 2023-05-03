@@ -38,5 +38,21 @@
         "stream": true
       }
     ]
+  },
+  "music_disc.key": {
+    "sounds": [
+      {
+        "name": "balancedmc:records/key",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.door": {
+    "sounds": [
+      {
+        "name": "balancedmc:records/door",
+        "stream": true
+      }
+    ]
   }
 }

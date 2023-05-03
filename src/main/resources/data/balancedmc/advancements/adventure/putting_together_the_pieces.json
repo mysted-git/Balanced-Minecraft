@@ -1,0 +1,15 @@
+{
+  "display": {
+    "icon": {
+      "item": "balancedmc:music_disc_key"
+    },
+    "title": "Putting the Pieces Together",
+    "description": "Play Key and Door consecutively"
+  },
+  "parent": "minecraft:adventure/play_jukebox_in_meadows",
+  "criteria": {
+    "requirements": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

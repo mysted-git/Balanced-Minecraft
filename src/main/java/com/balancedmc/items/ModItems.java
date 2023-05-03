@@ -16,11 +16,13 @@ public class ModItems {
 
     public static void registerItems() {}
 
-    public static final Item MUSIC_DISC_INTRO;
-    public static final Item MUSIC_DISC_DROOPY_LIKES_RICOCHET;
-    public static final Item MUSIC_DISC_DROOPY_LIKES_YOUR_FACE;
-    public static final Item MUSIC_DISC_INTRO_DOG;
-    public static final Item MUSIC_DISC_INTRO_DEATH;
+    public static final Item MUSIC_DISC_INTRO = register("music_disc_intro", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_INTRO, 276));
+    public static final Item MUSIC_DISC_DROOPY_LIKES_RICOCHET = register("music_disc_droopy_likes_ricochet", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_DROOPY_LIKES_RICOCHET, 95));
+    public static final Item MUSIC_DISC_DROOPY_LIKES_YOUR_FACE = register("music_disc_droopy_likes_your_face", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_DROOPY_LIKES_YOUR_FACE, 117));
+    public static final Item MUSIC_DISC_DOG = register("music_disc_dog", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_DOG, 147));
+    public static final Item MUSIC_DISC_DEATH = register("music_disc_death", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_DEATH, 42));
+    public static final Item MUSIC_DISC_KEY = register("music_disc_key", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_KEY, 65));
+    public static final Item MUSIC_DISC_DOOR = register("music_disc_door", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_DOOR, 108));
 
     private static Item register(String name, Item item) {
         Item registeredItem;
@@ -32,21 +34,5 @@ public class ModItems {
         }
         return registeredItem;
     }
-    
-    static {
-        MUSIC_DISC_INTRO = register("music_disc_intro", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_INTRO, 10000));
-        MUSIC_DISC_DROOPY_LIKES_RICOCHET = register("music_disc_droopy_likes_ricochet", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_DROOPY_LIKES_RICOCHET, 10000));
-        MUSIC_DISC_DROOPY_LIKES_YOUR_FACE = register("music_disc_droopy_likes_your_face", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_DROOPY_LIKES_YOUR_FACE, 10000));
-        MUSIC_DISC_INTRO_DOG = register("music_disc_dog", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_DOG, 10000));
-        MUSIC_DISC_INTRO_DEATH = register("music_disc_death", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_DEATH, 10000));
-    }
-
-    /*
-           MUSIC_DISC_INTRO = register("music_disc_intro", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_INTRO, 276));
-        MUSIC_DISC_DROOPY_LIKES_RICOCHET = register("music_disc_droopy_likes_ricochet", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_DROOPY_LIKES_RICOCHET, 95));
-        MUSIC_DISC_DROOPY_LIKES_YOUR_FACE = register("music_disc_droopy_likes_your_face", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_DROOPY_LIKES_YOUR_FACE, 117));
-        MUSIC_DISC_INTRO_DOG = register("music_disc_dog", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_DOG, 147));
-        MUSIC_DISC_INTRO_DEATH = register("music_disc_death", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_DEATH, 42));
-     */
 
 }
