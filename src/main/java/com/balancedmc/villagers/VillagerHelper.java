@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.VillagerEntity;
@@ -33,10 +34,8 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 /**
- * @author HB0P
- * @reason Utility classes to generate random villager trades
+ * Utility classes to generate random villager trades
  */
-
 public class VillagerHelper {
 
     static ArrayList<TradeItem> buyItems;
@@ -47,11 +46,21 @@ public class VillagerHelper {
     static HashMap<String, Integer> potions;
     static final HashMap<String, String[]> potionVariants = new HashMap<>();
     static final HashMap<StatusEffect, Integer> suspiciousStewEffects = new HashMap<>();
+    static TradeItem emeraldItem;
 
+    /**
+     * Generate all trades for a villager
+     */
     public static TradeOffer[] generateTrades(VillagerEntity villager, int count) {
         int level = villager.getVillagerData().getLevel();
         VillagerProfession profession = villager.getVillagerData().getProfession();
-        TradeOffer[] trades = new TradeOffer[level == 5 ? count + 1 : count];
+        TradeOffer[] trades = new TradeOffer[level == 5 || level == 1 ? count + 1 : count];
+        if (level == 1) {
+            trades[count] = null;
+            while (trades[count] == null) {
+                trades[count] = generateTrade(villager, emeraldItem);
+            }
+        }
         for (int i = 0; i < count;) {
             TradeOffer trade = generateTrade(villager);
             if (trade != null) {
@@ -65,24 +74,50 @@ public class VillagerHelper {
         return trades;
     }
 
-    public static TradeOffer generateTrade(VillagerEntity villager) {
+    /**
+     * Get all items linked to a profession
+     */
+    private static ArrayList<TradeItem> getProfessionItems(VillagerProfession profession, ArrayList<TradeItem> items) {
+        ArrayList<TradeItem> result = new ArrayList<>();
+        for (TradeItem item : items) {
+            if (item.professions.contains(profession) || item.professions.isEmpty()) {
+                result.add(item);
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Generate a normal trade
+     */
+    private static TradeOffer generateTrade(VillagerEntity villager) {
         // match items to profession for buying or selling
         VillagerProfession profession = villager.getVillagerData().getProfession();
         Slot match = Slot.random();
-        ArrayList<TradeItem> buys1 = new ArrayList<>();
-        ArrayList<TradeItem> buys2 = new ArrayList<>();
-        ArrayList<TradeItem> sells = new ArrayList<>();
-        for (TradeItem item : (match == Slot.SELL ? sellItems : buyItems)) {
-            if (item.professions.contains(profession) || item.professions.size() == 0) {
-                if (match == Slot.BUY1) buys1.add(item);
-                else if (match == Slot.BUY2) buys2.add(item);
-                else sells.add(item);
-            }
-        }
-        if (match != Slot.BUY1) buys1 = buyItems;
-        if (match != Slot.BUY2) buys2 = buyItems;
-        if (match != Slot.SELL) sells = sellItems;
+        ArrayList<TradeItem> buys1 = match == Slot.BUY1 ? getProfessionItems(profession, buyItems)  : buyItems;
+        ArrayList<TradeItem> buys2 = match == Slot.BUY2 ? getProfessionItems(profession, buyItems)  : buyItems;
+        ArrayList<TradeItem> sells = match == Slot.SELL ? getProfessionItems(profession, sellItems) : sellItems;
 
+        return generateTrade(villager, buys1, buys2, sells, match);
+    }
+
+    /**
+     * Generate a trade with a specific sell item
+     */
+    private static TradeOffer generateTrade(VillagerEntity villager, TradeItem forceSell) {
+        // match items to profession for buying or selling
+        VillagerProfession profession = villager.getVillagerData().getProfession();
+        Slot match = Slot.randomBuy();
+        ArrayList<TradeItem> buys1 = match == Slot.BUY1 ? getProfessionItems(profession, buyItems)  : buyItems;
+        ArrayList<TradeItem> buys2 = match == Slot.BUY2 ? getProfessionItems(profession, buyItems)  : buyItems;
+
+        ArrayList<TradeItem> sells = new ArrayList<>();
+        sells.add(forceSell);
+
+        return generateTrade(villager, buys1, buys2, sells, match);
+    }
+
+    private static TradeOffer generateTrade(Entity entity, ArrayList<TradeItem> buys1, ArrayList<TradeItem> buys2, ArrayList<TradeItem> sells, Slot match) {
         // generate random trades
         Collections.shuffle(buys1);
         Collections.shuffle(buys2);
@@ -98,7 +133,7 @@ public class VillagerHelper {
             return new TradeOffer(new ItemStack(Items.AIR), new ItemStack(Items.AIR), 0, 0, 0);
         }
 
-        Pair<ItemStack, Integer> pair = sellItem.getItemStack(villager);
+        Pair<ItemStack, Integer> pair = sellItem.getItemStack(entity);
         ItemStack sellStack = pair.getLeft();
         int sellPrice = pair.getRight();
 
@@ -160,7 +195,10 @@ public class VillagerHelper {
         );
     }
 
-    public static TradeOffer generateConversion(VillagerProfession profession) {
+    /**
+     * Generate a conversion trade
+     */
+    private static TradeOffer generateConversion(VillagerProfession profession) {
         Conversion conversion = conversions.get(profession).get((int) (Math.random() * conversions.get(profession).size()));
         return new TradeOffer(
                 conversion.buyItem,
@@ -189,6 +227,10 @@ public class VillagerHelper {
                         TradeItem item = new TradeItem(info.items, info.price, info.professions, info.buy, info.sell);
                         if (item.canBuy) buyItems.add(item);
                         if (item.canSell) sellItems.add(item);
+                        if (item.isEmerald()) emeraldItem = item;
+                    }
+                    if (emeraldItem == null) {
+                        throw new RuntimeException("No emerald item found in trades.json");
                     }
                 }
                 catch (IOException e) {
@@ -285,7 +327,16 @@ class TradeItem {
         return items.get(0).getMaxCount();
     }
 
-    Pair<ItemStack, Integer /*price*/> getItemStack(VillagerEntity villager) {
+    /**
+     * Get a single item to sell
+     * <p>
+     * Includes special items such as:<br>
+     * Enchantable items<br>
+     * Potions and tipped arrows<br>
+     * Suspicious stew<br>
+     * Explorer maps<br>
+     */
+    Pair<ItemStack, Integer /*price*/> getItemStack(Entity entity) {
         Item item = items.get((int) (Math.random() * items.size()));
         int count = (int) (Math.random() * getMaxCount()) + 1;
         ItemStack itemStack = new ItemStack(item, count);
@@ -330,8 +381,8 @@ class TradeItem {
             TagKey<Structure> structure = bool ? StructureTags.ON_OCEAN_EXPLORER_MAPS : StructureTags.ON_WOODLAND_EXPLORER_MAPS;
             String nameKey = bool ? "filled_map.monument" : "filled_map.mansion";
             MapIcon.Type iconType = bool ? MapIcon.Type.MONUMENT : MapIcon.Type.MANSION;
-            if (villager.world instanceof ServerWorld serverWorld) {
-                BlockPos blockPos = serverWorld.locateStructure(structure, villager.getBlockPos(), 100, true);
+            if (entity.world instanceof ServerWorld serverWorld) {
+                BlockPos blockPos = serverWorld.locateStructure(structure, entity.getBlockPos(), 100, true);
                 if (blockPos != null) {
                     itemStack = FilledMapItem.createMap(serverWorld, blockPos.getX(), blockPos.getZ(), (byte)2, true, true);
                     FilledMapItem.fillExplorationMap(serverWorld, itemStack);
@@ -345,9 +396,16 @@ class TradeItem {
         return new Pair<>(itemStack, (price + priceBonus) * count);
     }
 
+    /**
+     * Get a stack of items to buy
+     */
     ItemStack getItemStack(int count) {
         Item item = items.get((int) (Math.random() * items.size()));
         return new ItemStack(item, count);
+    }
+
+    boolean isEmerald() {
+        return items.contains(Items.EMERALD);
     }
 }
 
@@ -372,9 +430,15 @@ enum Slot {
         if (r == 3) return SELL;
         return values()[r];
     }
+
+    static Slot randomBuy() {
+        return values()[(int)(Math.random() * 2)];
+    }
 }
 
-/** Intermediate classes for json parsing */
+/**
+ * Intermediate classes for json parsing
+ */
 class ItemInfo { String[] items; int price; String[] professions; boolean buy; boolean sell; }
 
 class ConversionInfo { String profession; ConversionItemInfo buy; int price; ConversionItemInfo sell; }

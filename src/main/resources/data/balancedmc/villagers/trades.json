@@ -75,5 +75,16 @@
     ],
     "buy": false,
     "sell": true
+  },
+  {
+    "items": [
+      "minecraft:emerald"
+    ],
+    "price": 1,
+    "professions": [
+
+    ],
+    "buy": true,
+    "sell": true
   }
 ]
