@@ -4,15 +4,15 @@
   "package": "com.balancedmc.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "client.conduit.M_OceanMonumentGenerator"
+    "client.conduit.M_OceanMonumentGenerator",
+    "client.village.M_WanderingTraderEntity"
   ],
   "client": [
-    "client.conduit.M_ConduitBlockEntity",
-    "client.village.M_IronGolemEntity",
-    "client.village.M_VillagerEntity",
     "client.M_WitherSkullBlock",
+    "client.conduit.M_ConduitBlockEntity",
     "client.enchantment.M_DamageEnchantment",
     "client.enchantment.M_Enchantments",
+    "client.enchantment.M_LivingEntity",
     "client.enchantment.M_ProtectionEnchantment",
     "client.enchantment.anvil.M_AnvilScreen",
     "client.enchantment.anvil.M_AnvilScreenHandler",
@@ -29,7 +29,8 @@
     "client.transport.horse.M_SoulSpeedEnchantment",
     "client.trident.M_ImpalingEnchantment",
     "client.trident.M_TridentEntity",
-    "client.enchantment.M_LivingEntity",
+    "client.village.M_IronGolemEntity",
+    "client.village.M_VillagerEntity",
     "client.village.raid.M_EvokerEntity",
     "client.village.raid.M_Raid"
   ],

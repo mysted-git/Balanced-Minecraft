@@ -10,6 +10,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.VillagerEntity;
+import net.minecraft.entity.passive.WanderingTraderEntity;
 import net.minecraft.item.*;
 import net.minecraft.item.map.MapIcon;
 import net.minecraft.item.map.MapState;
@@ -34,7 +35,16 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 /**
- * Utility classes to generate random villager trades
+ * Utility classes to generate random villager trades<p>
+ * The following methods generate all trades for a
+ * {@link #generateTrades(VillagerEntity, int) villager} or
+ * {@link #generateTrades(WanderingTraderEntity, int) wandering trader}<p>
+ * The following methods generate a single trade for a villager with
+ * {@link #generateTrade(VillagerEntity) normal generation},
+ * {@link #generateTrade(VillagerEntity, TradeItem) a specific sell item}, or
+ * {@link #generateConversion(VillagerProfession) a conversion}<p>
+ * {@link #generateTrade(WanderingTraderEntity) This method} generates a single trade for a wandering trader<p>
+ * The main logic is in the method which {@link #generateTrade(Entity, ArrayList, ArrayList, ArrayList, Slot) generates a trade for any merchant}
  */
 public class VillagerHelper {
 
@@ -49,25 +59,29 @@ public class VillagerHelper {
     static TradeItem emeraldItem;
 
     /**
-     * Generate all trades for a villager
+     * Generate all trades<br>
+     * For VILLAGER
      */
     public static TradeOffer[] generateTrades(VillagerEntity villager, int count) {
         int level = villager.getVillagerData().getLevel();
         VillagerProfession profession = villager.getVillagerData().getProfession();
         TradeOffer[] trades = new TradeOffer[level == 5 || level == 1 ? count + 1 : count];
-        if (level == 1) {
-            trades[count] = null;
-            while (trades[count] == null) {
-                trades[count] = generateTrade(villager, emeraldItem);
-            }
-        }
+        // standard trades
         for (int i = 0; i < count;) {
             TradeOffer trade = generateTrade(villager);
             if (trade != null) {
-                trades[i] = trade;
+                trades[level == 1 ? i + 1 : i] = trade;
                 i++;
             }
         }
+        // sell emerald trade for novice villagers
+        if (level == 1) {
+            trades[0] = null;
+            while (trades[0] == null) {
+                trades[0] = generateTrade(villager, emeraldItem);
+            }
+        }
+        // conversion trade for master villagers
         if (level == 5) {
             trades[count] = generateConversion(profession);
         }
@@ -75,6 +89,23 @@ public class VillagerHelper {
     }
 
     /**
+     * Generate all trades<br>
+     * For WANDERING TRADER
+     */
+    public static TradeOffer[] generateTrades(WanderingTraderEntity trader, int count) {
+        TradeOffer[] trades = new TradeOffer[count];
+        for (int i = 0; i < count;) {
+            TradeOffer trade = generateTrade(trader);
+            if (trade != null) {
+                trades[i] = trade;
+                i++;
+            }
+        }
+        return trades;
+    }
+
+    /**
+     * UTILITY<br>
      * Get all items linked to a profession
      */
     private static ArrayList<TradeItem> getProfessionItems(VillagerProfession profession, ArrayList<TradeItem> items) {
@@ -88,7 +119,9 @@ public class VillagerHelper {
     }
 
     /**
-     * Generate a normal trade
+     * Generate a trade<br>
+     * For VILLAGER<br>
+     * Normal generation
      */
     private static TradeOffer generateTrade(VillagerEntity villager) {
         // match items to profession for buying or selling
@@ -102,14 +135,15 @@ public class VillagerHelper {
     }
 
     /**
-     * Generate a trade with a specific sell item
+     * Generate a trade<br>
+     * For VILLAGER<br>
+     * Specific sell item
      */
     private static TradeOffer generateTrade(VillagerEntity villager, TradeItem forceSell) {
-        // match items to profession for buying or selling
         VillagerProfession profession = villager.getVillagerData().getProfession();
         Slot match = Slot.randomBuy();
-        ArrayList<TradeItem> buys1 = match == Slot.BUY1 ? getProfessionItems(profession, buyItems)  : buyItems;
-        ArrayList<TradeItem> buys2 = match == Slot.BUY2 ? getProfessionItems(profession, buyItems)  : buyItems;
+        ArrayList<TradeItem> buys1 = match == Slot.BUY1 ? getProfessionItems(profession, buyItems) : buyItems;
+        ArrayList<TradeItem> buys2 = match == Slot.BUY2 ? getProfessionItems(profession, buyItems) : buyItems;
 
         ArrayList<TradeItem> sells = new ArrayList<>();
         sells.add(forceSell);
@@ -117,6 +151,27 @@ public class VillagerHelper {
         return generateTrade(villager, buys1, buys2, sells, match);
     }
 
+    /**
+     * Generate a trade<br>
+     * For WANDERING TRADER<br>
+     * Normal generation
+     */
+    private static TradeOffer generateTrade(WanderingTraderEntity trader) {
+        Slot emeraldSlot = Slot.randomIO();
+        ArrayList<TradeItem> emerald = new ArrayList<>();
+        emerald.add(emeraldItem);
+        ArrayList<TradeItem> buys1 = emeraldSlot == Slot.BUY1 ? emerald : buyItems;
+        ArrayList<TradeItem> buys2 = new ArrayList<>();
+        ArrayList<TradeItem> sells = emeraldSlot == Slot.SELL ? emerald : sellItems;
+
+        return generateTrade(trader, buys1, buys2, sells, null);
+    }
+
+    /**
+     * Generate a trade<br>
+     * For ANY<br>
+     * From item lists
+     */
     private static TradeOffer generateTrade(Entity entity, ArrayList<TradeItem> buys1, ArrayList<TradeItem> buys2, ArrayList<TradeItem> sells, Slot match) {
         // generate random trades
         Collections.shuffle(buys1);
@@ -173,7 +228,7 @@ public class VillagerHelper {
                 break;
             }
         }
-        if (buyItem2 == null) return null;
+        if (buyItem2 == null && !buys2.isEmpty()) return null;
         if (buyCount2 == 0 && match == Slot.BUY2) return null;
 
         // swap buy items with random chance
@@ -187,16 +242,30 @@ public class VillagerHelper {
         }
 
         // create trade offer
-        return new TradeOffer(
-                buyItem1.getItemStack(buyCount1),
-                buyItem2.getItemStack(buyCount2),
-                sellStack,
-                10, 10, 0.05F
-        );
+        final int maxUses = 10;
+        final int experience = 10;
+        final float price = 0.05F;
+        if (buyItem2 == null) {
+            return new TradeOffer(
+                    buyItem1.getItemStack(buyCount1),
+                    sellStack,
+                    maxUses, experience, price
+            );
+        }
+        else {
+            return new TradeOffer(
+                    buyItem1.getItemStack(buyCount1),
+                    buyItem2.getItemStack(buyCount2),
+                    sellStack,
+                    maxUses, experience, price
+            );
+        }
     }
 
     /**
-     * Generate a conversion trade
+     * Generate a trade<br>
+     * For VILLAGER<br>
+     * Conversion
      */
     private static TradeOffer generateConversion(VillagerProfession profession) {
         Conversion conversion = conversions.get(profession).get((int) (Math.random() * conversions.get(profession).size()));
@@ -425,14 +494,21 @@ class Conversion {
 enum Slot {
     BUY1, BUY2, SELL;
 
+    // return BUY1, BUY2, SELL, SELL
     static Slot random() {
         int r = (int) (Math.random() * 4);
         if (r == 3) return SELL;
         return values()[r];
     }
 
+    // return BUY1, BUY2
     static Slot randomBuy() {
         return values()[(int)(Math.random() * 2)];
+    }
+
+    // return BUY1, SELL
+    static Slot randomIO() {
+        return values()[((int) (Math.random() * 2)) * 2];
     }
 }
 
