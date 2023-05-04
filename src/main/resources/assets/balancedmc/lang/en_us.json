@@ -1,7 +1,21 @@
 {
   "item.balancedmc.music_disc_intro": "Music Disc",
-  "item.balancedmc.music_disc_intro.desc": "C418 - Intro",
+  "item.balancedmc.music_disc_intro.desc": "C418 - intro",
+  "item.balancedmc.music_disc_droopy_likes_ricochet": "Music Disc",
+  "item.balancedmc.music_disc_droopy_likes_ricochet.desc": "C418 - droopy likes ricochet",
+  "item.balancedmc.music_disc_droopy_likes_your_face": "Music Disc",
+  "item.balancedmc.music_disc_droopy_likes_your_face.desc": "C418 - droopy likes your face",
+  "item.balancedmc.music_disc_dog": "Music Disc",
+  "item.balancedmc.music_disc_dog.desc": "C418 - dog",
+  "item.balancedmc.music_disc_death": "Music Disc",
+  "item.balancedmc.music_disc_death.desc": "C418 - death",
+  "item.balancedmc.music_disc_key": "Music Disc",
+  "item.balancedmc.music_disc_key.desc": "C418 - key",
+  "item.balancedmc.music_disc_door": "Music Disc",
+  "item.balancedmc.music_disc_door.desc": "C418 - door",
+
   "block.balancedmc.conduit_shell": "Conduit Shell",
+
   "enchantment.balancedmc.undead_protection": "Undead Protection",
   "enchantment.balancedmc.arthropod_protection": "Arthropod Protection",
   "enchantment.balancedmc.aquatic_protection": "Aquatic Protection",

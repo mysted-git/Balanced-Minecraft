@@ -10,6 +10,10 @@
   "client": [
     "client.M_WitherSkullBlock",
     "client.conduit.M_ConduitBlockEntity",
+    "client.M_WitherSkullBlock",
+    "client.conduit.M_ConduitBlockEntity",
+    "client.village.M_IronGolemEntity",
+    "client.village.M_VillagerEntity",
     "client.enchantment.M_DamageEnchantment",
     "client.enchantment.M_Enchantments",
     "client.enchantment.M_LivingEntity",
@@ -33,6 +37,7 @@
     "client.village.M_VillagerEntity",
     "client.village.raid.M_EvokerEntity",
     "client.village.raid.M_Raid"
+    "client.enchantment.M_LivingEntity"
   ],
   "server": [
   ],
