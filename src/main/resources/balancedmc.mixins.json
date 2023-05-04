@@ -36,7 +36,7 @@
     "client.village.M_IronGolemEntity",
     "client.village.M_VillagerEntity",
     "client.village.raid.M_EvokerEntity",
-    "client.village.raid.M_Raid"
+    "client.village.raid.M_Raid",
     "client.enchantment.M_LivingEntity"
   ],
   "server": [
