@@ -1,0 +1,90 @@
+[
+  {
+    "items": [
+      "minecraft:polished_granite"
+    ],
+    "price": 1,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "minecraft:beef"
+    ],
+    "price": 2,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "minecraft:diamond_sword"
+    ],
+    "price": 5,
+    "professions": [
+      "weaponsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "minecraft:potion"
+    ],
+    "price": 3,
+    "professions": [
+      "cleric"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "minecraft:tipped_arrow"
+    ],
+    "price": 3,
+    "professions": [
+      "fletcher"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "minecraft:suspicious_stew"
+    ],
+    "price": 10,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "minecraft:filled_map"
+    ],
+    "price": 4,
+    "professions": [
+      "cartographer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "minecraft:emerald"
+    ],
+    "price": 1,
+    "professions": [
+
+    ],
+    "buy": true,
+    "sell": true
+  }
+]

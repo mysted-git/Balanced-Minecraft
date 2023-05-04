@@ -17,21 +17,20 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:leather"
+          "name": "minecraft:clay_ball"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:leather_chestplate",
+          "name": "minecraft:flower_pot"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
           "weight": 2
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:leather_boots",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:leather_helmet",
+          "name": "minecraft:stone_bricks",
           "weight": 2
         },
         {
@@ -48,30 +47,18 @@
             }
           ],
           "name": "minecraft:bread",
-          "weight": 5
+          "weight": 4
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:leather_leggings",
-          "weight": 2
+          "name": "minecraft:yellow_dye"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:saddle"
+          "name": "minecraft:smooth_stone"
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 4.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
           "name": "minecraft:emerald"
         }
       ],

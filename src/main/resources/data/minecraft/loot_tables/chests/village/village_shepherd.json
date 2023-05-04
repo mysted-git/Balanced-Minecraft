@@ -6,12 +6,19 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:blue_ice"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:snow_block",
-          "weight": 4
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 8.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:white_wool",
+          "weight": 6
         },
         {
           "type": "minecraft:item",
@@ -20,14 +27,14 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 7.0,
+                "max": 3.0,
                 "min": 1.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:potato",
-          "weight": 10
+          "name": "minecraft:black_wool",
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -36,14 +43,14 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 4.0,
+                "max": 3.0,
                 "min": 1.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:bread",
-          "weight": 10
+          "name": "minecraft:gray_wool",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
@@ -52,22 +59,14 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 5.0,
+                "max": 3.0,
                 "min": 1.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:beetroot_seeds",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:beetroot_soup"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:furnace"
+          "name": "minecraft:brown_wool",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
@@ -76,29 +75,22 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 4.0,
+                "max": 3.0,
                 "min": 1.0
               },
               "function": "minecraft:set_count"
             }
           ],
+          "name": "minecraft:light_gray_wool",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
           "name": "minecraft:emerald"
         },
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 7.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:snowball",
-          "weight": 10
+          "name": "minecraft:shears"
         },
         {
           "type": "minecraft:item",
@@ -107,20 +99,20 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 4.0,
+                "max": 6.0,
                 "min": 1.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:coal",
-          "weight": 5
+          "name": "minecraft:wheat",
+          "weight": 6
         }
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 8.0,
-        "min": 3.0
+        "max": 5.0,
+        "min": 1.0
       }
     }
   ]

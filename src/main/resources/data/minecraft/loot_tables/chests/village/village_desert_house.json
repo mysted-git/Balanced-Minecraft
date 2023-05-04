@@ -10,11 +10,6 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 1,
-          "name": "balancedmc:music_disc_death"
-        },
-        {
-          "type": "minecraft:item",
           "name": "minecraft:green_dye"
         },
         {

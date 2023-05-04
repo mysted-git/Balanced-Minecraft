@@ -17,22 +17,8 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:leather"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:leather_chestplate",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:leather_boots",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:leather_helmet",
-          "weight": 2
+          "name": "minecraft:book",
+          "weight": 20
         },
         {
           "type": "minecraft:item",
@@ -41,44 +27,40 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 4.0,
-                "min": 1.0
+                "max": 7.0,
+                "min": 2.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:bread",
-          "weight": 5
+          "name": "minecraft:paper",
+          "weight": 20
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:leather_leggings",
-          "weight": 2
+          "name": "minecraft:map"
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:saddle"
+          "name": "minecraft:compass"
         },
         {
           "type": "minecraft:item",
           "functions": [
             {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 4.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
+              "function": "minecraft:enchant_with_levels",
+              "levels": 30.0,
+              "treasure": true
             }
           ],
-          "name": "minecraft:emerald"
+          "name": "minecraft:book",
+          "weight": 10
         }
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 5.0,
-        "min": 1.0
+        "max": 10.0,
+        "min": 2.0
       }
     }
   ]
