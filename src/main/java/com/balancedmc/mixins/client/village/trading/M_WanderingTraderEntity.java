@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Overwrite;
 import java.util.List;
 
 @Mixin(WanderingTraderEntity.class)
-public class M_WanderingTraderEntity {
+public abstract class M_WanderingTraderEntity {
 
     /**
      * @author HB0P

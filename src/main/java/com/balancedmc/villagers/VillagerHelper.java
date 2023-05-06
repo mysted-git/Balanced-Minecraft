@@ -407,7 +407,7 @@ class TradeItem {
      */
     Pair<ItemStack, Integer /*price*/> getItemStack(Entity entity) {
         Item item = items.get((int) (Math.random() * items.size()));
-        int count = (int) (Math.random() * getMaxCount()) + 1;
+        int count = (int) (Math.pow(Math.random(), 2) * getMaxCount()) + 1; // favours lower counts
         ItemStack itemStack = new ItemStack(item, count);
         int priceBonus = 0;
 
