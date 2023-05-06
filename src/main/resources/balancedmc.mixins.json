@@ -4,9 +4,7 @@
   "package": "com.balancedmc.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "client.conduit.M_OceanMonumentGenerator",
-    "client.potions.M_PlayerEntity",
-    "client.village.M_WanderingTraderEntity"
+    "client.conduit.M_OceanMonumentGenerator"
   ],
   "client": [
     "client.M_WitherSkullBlock",
@@ -31,9 +29,11 @@
     "client.trident.M_ImpalingEnchantment",
     "client.trident.M_TridentEntity",
     "client.village.M_IronGolemEntity",
-    "client.village.M_VillagerEntity",
+    "client.village.trading.M_VillagerEntity",
     "client.village.raid.M_EvokerEntity",
-    "client.village.raid.M_Raid"
+    "client.village.raid.M_Raid",
+    "client.potions.M_PlayerEntity",
+    "client.village.trading.M_WanderingTraderEntity"
   ],
   "server": [
   ],

@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.client.village;
+package com.balancedmc.mixins.client.village.trading;
 
 import com.balancedmc.villagers.VillagerHelper;
 import net.minecraft.entity.passive.WanderingTraderEntity;
