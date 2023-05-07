@@ -1,3 +1,18 @@
 {
-  "night_vision": 1
+  "regeneration": 150,
+  "swiftness": 130,
+  "fire_resistance": 150,
+  "healing": 150,
+  "night_vision": 100,
+  "strength": 150,
+  "leaping": 100,
+  "water_breathing": 130,
+  "invisibility": 80,
+  "slow_falling": 80,
+  "luck": 120,
+  "poison": 120,
+  "weakness": 120,
+  "slowness": 100,
+  "harming": 120,
+  "turtle_master": 100
 }

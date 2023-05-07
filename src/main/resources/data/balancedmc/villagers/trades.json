@@ -1644,7 +1644,7 @@
     ],
     "price": 20,
     "professions": [
-      "leatherworker"
+      "toolsmith"
     ],
     "buy": true,
     "sell": false
@@ -2427,7 +2427,7 @@
     ],
     "price": 8,
     "professions": [
-      "leatherworker"
+      "butcher"
     ],
     "buy": true,
     "sell": true
@@ -2438,7 +2438,7 @@
     ],
     "price": 50,
     "professions": [
-      "leatherworker"
+      "farmer"
     ],
     "buy": false,
     "sell": true

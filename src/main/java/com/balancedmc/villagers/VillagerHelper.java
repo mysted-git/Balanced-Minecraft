@@ -205,7 +205,10 @@ public class VillagerHelper {
             buyPrice1 = item.price * count;
             break;
         }
-        if (buyItem1 == null) return null;
+        if (buyItem1 == null) {
+            Main.LOGGER.warn("Failed to generate trade with " + sellStack + " (1)");
+            return null;
+        }
 
         // get second buy item
         TradeItem buyItem2 = null;
@@ -228,24 +231,27 @@ public class VillagerHelper {
                 break;
             }
         }
-        if (buyItem2 == null && !buys2.isEmpty()) return null;
-        if (buyCount2 == 0 && match == Slot.BUY2) return null;
-
-        // swap buy items with random chance
-        if (buyCount2 > 0 && Math.random() < 0.5) {
-            TradeItem temp = buyItem1;
-            buyItem1 = buyItem2;
-            buyItem2 = temp;
-            int t = buyCount1;
-            buyCount1 = buyCount2;
-            buyCount2 = t;
+        if (buyItem2 == null && !buys2.isEmpty()) {
+            Main.LOGGER.warn("Failed to generate trade with " + sellStack + " (2)");
+            return null;
+        }
+        if (buyCount2 == 0 && match == Slot.BUY2) {
+            Main.LOGGER.warn("Failed to generate trade with " + sellStack + " (3)");
+            return null;
         }
 
         // create trade offer
-        final int maxUses = 10;
-        final int experience = 10;
+        final int maxUses = 12;
+        final int experience = Math.min(sellPrice / 2, 30);
         final float price = 0.05F;
-        if (buyItem2 == null) {
+        if (buyItem2 == null || buyCount2 == 0) {
+            // divide by HCF
+            int hcf = VillagerMath.hcf(buyCount1, sellStack.getCount());
+            if (hcf != 1) {
+                buyCount1 /= hcf;
+                sellStack.setCount(sellStack.getCount() / hcf);
+            }
+            // return
             return new TradeOffer(
                     buyItem1.getItemStack(buyCount1),
                     sellStack,
@@ -253,6 +259,23 @@ public class VillagerHelper {
             );
         }
         else {
+            // swap buy items with random chance
+            if (Math.random() < 0.5) {
+                TradeItem temp = buyItem1;
+                buyItem1 = buyItem2;
+                buyItem2 = temp;
+                int t = buyCount1;
+                buyCount1 = buyCount2;
+                buyCount2 = t;
+            }
+            // divide by HCF
+            int hcf = VillagerMath.hcf(buyCount1, buyCount2, sellStack.getCount());
+            if (hcf != 1) {
+                buyCount1 /= hcf;
+                buyCount2 /= hcf;
+                sellStack.setCount(sellStack.getCount() / hcf);
+            }
+            // return
             return new TradeOffer(
                     buyItem1.getItemStack(buyCount1),
                     buyItem2.getItemStack(buyCount2),
@@ -325,6 +348,10 @@ public class VillagerHelper {
                     HashMap<String, Integer> enchantmentInfo = gson.fromJson(new InputStreamReader(stream), new TypeToken<HashMap<String, Integer>>(){}.getType());
                     for (String name : enchantmentInfo.keySet()) {
                         Enchantment enchantment = Registries.ENCHANTMENT.get(new Identifier(name));
+                        if (enchantment == null) {
+                            Main.LOGGER.error("Invalid enchantment " + name);
+                            continue;
+                        }
                         enchantments.put(enchantment, enchantmentInfo.get(name));
                     }
                 }
@@ -520,3 +547,27 @@ class ItemInfo { String[] items; int price; String[] professions; boolean buy; b
 class ConversionInfo { String profession; ConversionItemInfo buy; int price; ConversionItemInfo sell; }
 
 class ConversionItemInfo { String item ; int count; }
+
+/**
+ * Utility maths class
+ */
+class VillagerMath {
+
+    /**
+     * Find the highest common factor
+     */
+    public static int hcf(int a, int b) {
+        int result = Math.min(a, b);
+        while (result > 0) {
+            if (a % result == 0 && b % result == 0) {
+                break;
+            }
+            result--;
+        }
+        return result;
+    }
+
+    public static int hcf(int a, int b, int c) {
+        return hcf(hcf(a, b), c);
+    }
+}

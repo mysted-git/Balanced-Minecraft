@@ -1,14 +1,770 @@
 [
   {
-    "profession": "butcher",
+    "profession": "armorer",
     "buy": {
-      "item": "minecraft:mutton",
-      "count": 1
+      "item": "raw_copper",
+      "count": 8
     },
     "price": 1,
     "sell": {
-      "item": "minecraft:cooked_mutton",
+      "item": "copper_ingot",
+      "count": 8
+    }
+  },
+  {
+    "profession": "armorer",
+    "buy": {
+      "item": "raw_iron",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "iron_ingot",
+      "count": 8
+    }
+  },
+  {
+    "profession": "armorer",
+    "buy": {
+      "item": "raw_gold",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "gold_ingot",
+      "count": 8
+    }
+  },
+  {
+    "profession": "butcher",
+    "buy": {
+      "item": "mutton",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "cooked_mutton",
+      "count": 16
+    }
+  },
+  {
+    "profession": "butcher",
+    "buy": {
+      "item": "chicken",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "cooked_chicken",
+      "count": 16
+    }
+  },
+  {
+    "profession": "butcher",
+    "buy": {
+      "item": "rabbit",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "cooked_rabbit",
+      "count": 16
+    }
+  },
+  {
+    "profession": "butcher",
+    "buy": {
+      "item": "porkchop",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "cooked_porkchop",
+      "count": 16
+    }
+  },
+  {
+    "profession": "butcher",
+    "buy": {
+      "item": "beef",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "cooked_beef",
+      "count": 16
+    }
+  },
+  {
+    "profession": "cartographer",
+    "buy": {
+      "item": "map",
       "count": 1
+    },
+    "price": 32,
+    "sell": {
+      "item": "filled_map",
+      "count": 1
+    }
+  },
+  {
+    "profession": "cleric",
+    "buy": {
+      "item": "copper_block",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "exposed_copper",
+      "count": 16
+    }
+  },
+  {
+    "profession": "cleric",
+    "buy": {
+      "item": "exposed_copper",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "weathered_copper",
+      "count": 16
+    }
+  },
+  {
+    "profession": "cleric",
+    "buy": {
+      "item": "weathered_copper",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "oxidized_copper",
+      "count": 16
+    }
+  },
+  {
+    "profession": "farmer",
+    "buy": {
+      "item": "wheat_seeds",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "wheat",
+      "count": 8
+    }
+  },
+  {
+    "profession": "farmer",
+    "buy": {
+      "item": "beetroot_seeds",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "beetroot",
+      "count": 8
+    }
+  },
+  {
+    "profession": "fisherman",
+    "buy": {
+      "item": "wet_sponge",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "sponge",
+      "count": 8
+    }
+  },
+  {
+    "profession": "fisherman",
+    "buy": {
+      "item": "salmon",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "cooked_salmon",
+      "count": 16
+    }
+  },
+  {
+    "profession": "fisherman",
+    "buy": {
+      "item": "cod",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "cooked_cod",
+      "count": 16
+    }
+  },
+  {
+    "profession": "fletcher",
+    "buy": {
+      "item": "gravel",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "flint",
+      "count": 16
+    }
+  },
+  {
+    "profession": "librarian",
+    "buy": {
+      "item": "book",
+      "count": 1
+    },
+    "price": 48,
+    "sell": {
+      "item": "enchanted_book",
+      "count": 1
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "white_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "white_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "orange_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "orange_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "magenta_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "magenta_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "light_blue_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "light_blue_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "yellow_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "yellow_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "lime_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "lime_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "pink_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "pink_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "gray_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "gray_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "light_gray_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "light_gray_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "cyan_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "cyan_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "purple_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "purple_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "blue_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "blue_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "brown_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "brown_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "green_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "green_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "red_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "red_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "mason",
+    "buy": {
+      "item": "black_concrete_powder",
+      "count": 16
+    },
+    "price": 1,
+    "sell": {
+      "item": "black_concrete",
+      "count": 16
+    }
+  },
+  {
+    "profession": "shepherd",
+    "buy": {
+      "item": "white_wool",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "orange_wool",
+      "count": 8
+    }
+  },
+  {
+    "profession": "shepherd",
+    "buy": {
+      "item": "white_wool",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "magenta_wool",
+      "count": 8
+    }
+  },
+  {
+    "profession": "shepherd",
+    "buy": {
+      "item": "white_wool",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "light_blue_wool",
+      "count": 8
+    }
+  },
+  {
+    "profession": "shepherd",
+    "buy": {
+      "item": "white_wool",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "yellow_wool",
+      "count": 8
+    }
+  },
+  {
+    "profession": "shepherd",
+    "buy": {
+      "item": "white_wool",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "lime_wool",
+      "count": 8
+    }
+  },
+  {
+    "profession": "shepherd",
+    "buy": {
+      "item": "white_wool",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "pink_wool",
+      "count": 8
+    }
+  },
+  {
+    "profession": "shepherd",
+    "buy": {
+      "item": "white_wool",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "gray_wool",
+      "count": 8
+    }
+  },
+  {
+    "profession": "shepherd",
+    "buy": {
+      "item": "white_wool",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "light_gray_wool",
+      "count": 8
+    }
+  },
+  {
+    "profession": "shepherd",
+    "buy": {
+      "item": "white_wool",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "cyan_wool",
+      "count": 8
+    }
+  },
+  {
+    "profession": "shepherd",
+    "buy": {
+      "item": "white_wool",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "purple_wool",
+      "count": 8
+    }
+  },
+  {
+    "profession": "shepherd",
+    "buy": {
+      "item": "white_wool",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "blue_wool",
+      "count": 8
+    }
+  },
+  {
+    "profession": "shepherd",
+    "buy": {
+      "item": "white_wool",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "brown_wool",
+      "count": 8
+    }
+  },
+  {
+    "profession": "shepherd",
+    "buy": {
+      "item": "white_wool",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "green_wool",
+      "count": 8
+    }
+  },
+  {
+    "profession": "shepherd",
+    "buy": {
+      "item": "white_wool",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "red_wool",
+      "count": 8
+    }
+  },
+  {
+    "profession": "shepherd",
+    "buy": {
+      "item": "white_wool",
+      "count": 8
+    },
+    "price": 1,
+    "sell": {
+      "item": "black_wool",
+      "count": 8
+    }
+  },
+  {
+    "profession": "toolsmith",
+    "buy": {
+      "item": "iron_ore",
+      "count": 1
+    },
+    "price": 6,
+    "sell": {
+      "item": "raw_iron",
+      "count": 2
+    }
+  },
+  {
+    "profession": "toolsmith",
+    "buy": {
+      "item": "gold_ore",
+      "count": 1
+    },
+    "price": 6,
+    "sell": {
+      "item": "raw_gold",
+      "count": 2
+    }
+  },
+  {
+    "profession": "toolsmith",
+    "buy": {
+      "item": "copper_ore",
+      "count": 1
+    },
+    "price": 6,
+    "sell": {
+      "item": "raw_copper",
+      "count": 7
+    }
+  },
+  {
+    "profession": "toolsmith",
+    "buy": {
+      "item": "redstone_ore",
+      "count": 1
+    },
+    "price": 8,
+    "sell": {
+      "item": "redstone",
+      "count": 6
+    }
+  },
+  {
+    "profession": "toolsmith",
+    "buy": {
+      "item": "lapis_ore",
+      "count": 1
+    },
+    "price": 8,
+    "sell": {
+      "item": "lapis_lazuli",
+      "count": 14
+    }
+  },
+  {
+    "profession": "toolsmith",
+    "buy": {
+      "item": "diamond_ore",
+      "count": 1
+    },
+    "price": 10,
+    "sell": {
+      "item": "diamond",
+      "count": 2
+    }
+  },
+  {
+    "profession": "toolsmith",
+    "buy": {
+      "item": "coal_ore",
+      "count": 1
+    },
+    "price": 4,
+    "sell": {
+      "item": "coal",
+      "count": 2
+    }
+  },
+  {
+    "profession": "weaponsmith",
+    "buy": {
+      "item": "iron_ore",
+      "count": 1
+    },
+    "price": 6,
+    "sell": {
+      "item": "raw_iron",
+      "count": 2
+    }
+  },
+  {
+    "profession": "weaponsmith",
+    "buy": {
+      "item": "gold_ore",
+      "count": 1
+    },
+    "price": 6,
+    "sell": {
+      "item": "raw_gold",
+      "count": 2
+    }
+  },
+  {
+    "profession": "weaponsmith",
+    "buy": {
+      "item": "copper_ore",
+      "count": 1
+    },
+    "price": 6,
+    "sell": {
+      "item": "raw_copper",
+      "count": 7
+    }
+  },
+  {
+    "profession": "weaponsmith",
+    "buy": {
+      "item": "redstone_ore",
+      "count": 1
+    },
+    "price": 8,
+    "sell": {
+      "item": "redstone",
+      "count": 6
+    }
+  },
+  {
+    "profession": "weaponsmith",
+    "buy": {
+      "item": "lapis_ore",
+      "count": 1
+    },
+    "price": 8,
+    "sell": {
+      "item": "lapis_lazuli",
+      "count": 14
+    }
+  },
+  {
+    "profession": "weaponsmith",
+    "buy": {
+      "item": "diamond_ore",
+      "count": 1
+    },
+    "price": 10,
+    "sell": {
+      "item": "diamond",
+      "count": 2
+    }
+  },
+  {
+    "profession": "weaponsmith",
+    "buy": {
+      "item": "coal_ore",
+      "count": 1
+    },
+    "price": 4,
+    "sell": {
+      "item": "coal",
+      "count": 2
     }
   }
 ]

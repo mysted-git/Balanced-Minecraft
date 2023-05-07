@@ -19,6 +19,7 @@
     "client.enchantment.grindstone.M_GrindstoneScreenHandler",
     "client.potions.M_BrewingRecipeRegistry",
     "client.potions.M_LivingEntity",
+    "client.potions.M_PlayerEntity",
     "client.transport.M_AbstractMinecartEntity",
     "client.transport.M_BoatEntity",
     "client.transport.M_FireworkRocketItem",
@@ -29,11 +30,11 @@
     "client.trident.M_ImpalingEnchantment",
     "client.trident.M_TridentEntity",
     "client.village.M_IronGolemEntity",
-    "client.village.trading.M_VillagerEntity",
     "client.village.raid.M_EvokerEntity",
     "client.village.raid.M_Raid",
-    "client.potions.M_PlayerEntity",
-    "client.village.trading.M_WanderingTraderEntity"
+    "client.village.trading.M_VillagerEntity",
+    "client.village.trading.M_WanderingTraderEntity",
+    "client.village.M_VillagerProfession"
   ],
   "server": [
   ],

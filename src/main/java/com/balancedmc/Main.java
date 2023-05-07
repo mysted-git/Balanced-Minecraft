@@ -27,6 +27,5 @@ public class Main implements ModInitializer {
 		ModLootTables.registerLootTables();
 
 		VillagerHelper.registerReloadListener();
-
 	}
 }
