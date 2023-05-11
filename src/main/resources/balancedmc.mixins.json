@@ -15,6 +15,7 @@
     "enchantment.grindstone.M_GrindstoneScreenHandler",
     "phantom.M_FindTargetGoal",
     "phantom.M_PhantomEntity",
+    "phantom.M_PlayerEntity",
     "phantom.M_SwoopMovementGoal",
     "potions.M_BrewingRecipeRegistry",
     "potions.M_LivingEntity",
@@ -40,6 +41,7 @@
     "enchantment.grindstone.M_GrindstoneScreen",
     "phantom.M_BipedEntityModel",
     "phantom.M_ClientPlayNetworkHandler",
+    "phantom.M_InGameHud",
     "phantom.M_LivingEntityRenderer"
   ],
   "server": [

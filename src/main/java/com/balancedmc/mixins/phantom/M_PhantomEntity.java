@@ -1,6 +1,5 @@
 package com.balancedmc.mixins.phantom;
 
-import com.balancedmc.Main;
 import net.minecraft.entity.mob.PhantomEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
