@@ -13,10 +13,11 @@
     "enchantment.M_ProtectionEnchantment",
     "enchantment.anvil.M_AnvilScreenHandler",
     "enchantment.grindstone.M_GrindstoneScreenHandler",
-    "phantom.M_FindTargetGoal",
-    "phantom.M_PhantomEntity",
-    "phantom.M_PlayerEntity",
-    "phantom.M_SwoopMovementGoal",
+    "phantom.carry.M_FindTargetGoal",
+    "phantom.carry.M_PhantomEntity",
+    "phantom.carry.M_PlayerEntity",
+    "phantom.carry.M_SwoopMovementGoal",
+    "phantom.spawn.M_PhantomSpawner",
     "potions.M_BrewingRecipeRegistry",
     "potions.M_LivingEntity",
     "potions.M_PlayerEntity",
@@ -39,10 +40,10 @@
   "client": [
     "enchantment.anvil.M_AnvilScreen",
     "enchantment.grindstone.M_GrindstoneScreen",
-    "phantom.M_BipedEntityModel",
-    "phantom.M_ClientPlayNetworkHandler",
-    "phantom.M_InGameHud",
-    "phantom.M_LivingEntityRenderer"
+    "phantom.carry.M_BipedEntityModel",
+    "phantom.carry.M_ClientPlayNetworkHandler",
+    "phantom.carry.M_InGameHud",
+    "phantom.carry.M_LivingEntityRenderer"
   ],
   "server": [
   ],

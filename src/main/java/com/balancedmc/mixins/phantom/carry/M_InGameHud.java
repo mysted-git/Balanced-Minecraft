@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.phantom;
+package com.balancedmc.mixins.phantom.carry;
 
 import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.client.util.math.MatrixStack;

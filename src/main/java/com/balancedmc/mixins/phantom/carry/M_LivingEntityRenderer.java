@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.phantom;
+package com.balancedmc.mixins.phantom.carry;
 
 import net.minecraft.client.render.entity.LivingEntityRenderer;
 import net.minecraft.entity.LivingEntity;

@@ -1,6 +1,5 @@
-package com.balancedmc.mixins.phantom;
+package com.balancedmc.mixins.phantom.carry;
 
-import com.balancedmc.Main;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.mob.PhantomEntity;
 import org.spongepowered.asm.mixin.Mixin;
@@ -21,7 +20,10 @@ public abstract class M_SwoopMovementGoal {
             )
     )
     private boolean redirect(PhantomEntity phantom, Entity entity) {
-        entity.startRiding(phantom);
+        if (!entity.hasVehicle()) {
+            phantom.tryAttack(entity);
+            entity.startRiding(phantom);
+        }
         return false;
     }
 }
