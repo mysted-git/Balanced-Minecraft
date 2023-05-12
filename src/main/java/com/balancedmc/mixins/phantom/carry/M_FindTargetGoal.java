@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.phantom;
+package com.balancedmc.mixins.phantom.carry;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.PhantomEntity;
@@ -7,7 +7,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 /**
- * Prevent phantoms from attacking when they are carrying a player
+ * Phantoms cannot attack when<br>
+ * They are carrying a player<br>
+ * The player is being carried
  */
 @Mixin(targets = "net.minecraft.entity.mob.PhantomEntity$FindTargetGoal")
 public abstract class M_FindTargetGoal {
@@ -20,7 +22,7 @@ public abstract class M_FindTargetGoal {
             )
     )
     private void redirect(PhantomEntity phantom, LivingEntity entity) {
-        if (!phantom.hasPassengers()) {
+        if (!phantom.hasPassengers() && !entity.hasVehicle()) {
             phantom.setTarget(entity);
         }
     }

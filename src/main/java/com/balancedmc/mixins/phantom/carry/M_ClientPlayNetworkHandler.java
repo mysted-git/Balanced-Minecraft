@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.phantom;
+package com.balancedmc.mixins.phantom.carry;
 
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.entity.mob.PhantomEntity;
