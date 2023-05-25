@@ -1,6 +1,5 @@
 package com.balancedmc.mixins.village.raid;
 
-import com.balancedmc.Main;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
@@ -10,12 +9,10 @@ import net.minecraft.entity.mob.SpellcastingIllagerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.particle.DustParticleEffect;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import org.joml.Vector3f;
 import org.spongepowered.asm.mixin.Mixin;
 
 /**

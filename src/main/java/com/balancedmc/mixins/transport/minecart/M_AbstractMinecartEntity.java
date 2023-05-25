@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.transport;
+package com.balancedmc.mixins.transport.minecart;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;

@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.village;
+package com.balancedmc.mixins.village.golem;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.pathing.EntityNavigation;
@@ -18,16 +18,35 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(IronGolemEntity.class)
 public abstract class M_IronGolemEntity extends GolemEntity {
 
-    /**
-     * @author HB0P
-     * @reason Iron golems can climb walls
-     */
-
     private static final TrackedData<Byte> SPIDER_FLAGS;
 
     protected M_IronGolemEntity(EntityType<? extends GolemEntity> entityType, World world) {
         super(entityType, world);
     }
+
+    private double direction(double x) {
+        return x == 0 ? x : x / Math.abs(x);
+    }
+
+    private static final double SPEED_IN_WATER = 0.014;
+
+    /**
+     * Iron golems cannot be pushed by water
+     */
+
+    @Override
+    public boolean isPushedByFluids() {
+        return false;
+    }
+
+    @Override
+    public boolean isTouchingWater() {
+        return false;
+    }
+
+    /**
+     * Iron golems can climb walls
+     */
 
     @Inject(method = "initDataTracker()V", at = @At("TAIL"))
     private void injected(CallbackInfo ci) {

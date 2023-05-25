@@ -8,7 +8,7 @@ import net.minecraft.loot.LootTables;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetEnchantmentsLootFunction;
-import net.minecraft.loot.provider.number.*;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 
 public class ModLootTables {
 
