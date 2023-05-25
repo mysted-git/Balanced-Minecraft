@@ -4,6 +4,7 @@
   "package": "com.balancedmc.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "M_PistonBlock",
     "M_WitherSkullBlock",
     "conduit.M_ConduitBlockEntity",
     "conduit.M_OceanMonumentGenerator",
@@ -31,7 +32,7 @@
     "trident.M_ImpalingEnchantment",
     "trident.M_TridentEntity",
     "village.M_VillagerProfession",
-    "village.golem.M_IronGolemEntity",
+    "village.M_IronGolemEntity",
     "village.raid.M_EvokerEntity",
     "village.raid.M_Raid",
     "village.trading.M_VillagerEntity",

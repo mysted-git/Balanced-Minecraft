@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.village.golem;
+package com.balancedmc.mixins.village;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.pathing.EntityNavigation;
@@ -43,6 +43,7 @@ public abstract class M_IronGolemEntity extends GolemEntity {
     public boolean isTouchingWater() {
         return false;
     }
+
 
     /**
      * Iron golems can climb walls
