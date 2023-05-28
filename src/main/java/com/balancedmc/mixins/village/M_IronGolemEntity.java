@@ -24,12 +24,6 @@ public abstract class M_IronGolemEntity extends GolemEntity {
         super(entityType, world);
     }
 
-    private double direction(double x) {
-        return x == 0 ? x : x / Math.abs(x);
-    }
-
-    private static final double SPEED_IN_WATER = 0.014;
-
     /**
      * Iron golems cannot be pushed by water
      */
