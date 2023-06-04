@@ -15,6 +15,7 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.CraftingRecipe;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeType;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.screen.AbstractRecipeScreenHandler;
 import net.minecraft.screen.PlayerScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
@@ -52,7 +53,10 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
         int i = 1;
         for (CraftingRecipe recipe : recipes) {
             ItemStack output = recipe.getOutput(owner.world.getRegistryManager());
+            // handle special cases
             if (output.isEmpty() || output.isOf(Items.FIREWORK_ROCKET) || output.isOf(Items.FIREWORK_STAR)) continue;
+            if (output.isIn(ItemTags.STAIRS) && recipe.getIngredients().size() == 9) continue;
+            // check if valid
             boolean valid = true;
             int count = 0;
             for (Ingredient ingredient : recipe.getIngredients()) {
@@ -80,7 +84,11 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
     private void handleTakeItem(Item item) {
         List<CraftingRecipe> recipes = owner.world.getRecipeManager().listAllOfType(RecipeType.CRAFTING);
         for (CraftingRecipe recipe : recipes) {
-            if (recipe.getOutput(owner.world.getRegistryManager()).isOf(item)) {
+            ItemStack output = recipe.getOutput(owner.world.getRegistryManager());
+            // fix stairs double recipe
+            if (output.isIn(ItemTags.STAIRS) && recipe.getIngredients().size() == 9) continue;
+            // remove input items
+            if (output.isOf(item)) {
                 craftingInventory.removeStack(0, (int) recipe.getIngredients().stream().filter((ingredient) -> {
                     for (ItemStack iStack : ingredient.getMatchingStacks()) {
                         if (iStack.isOf(craftingInventory.getStack(0).getItem())) return true;
@@ -88,6 +96,7 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
                     return false;
                 }).count());
                 updateCrafting();
+                break;
             }
         }
     }
