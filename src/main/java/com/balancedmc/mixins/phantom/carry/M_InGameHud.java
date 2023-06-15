@@ -1,7 +1,7 @@
 package com.balancedmc.mixins.phantom.carry;
 
+import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.InGameHud;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.PhantomEntity;
 import org.spongepowered.asm.mixin.Mixin;
@@ -22,10 +22,10 @@ public abstract class M_InGameHud {
     protected abstract LivingEntity getRiddenEntity();
 
     @Shadow
-    protected abstract void renderMountHealth(MatrixStack matrices);
+    protected abstract void renderMountHealth(DrawContext context);
 
     @Redirect(
-            method = "renderStatusBars(Lnet/minecraft/client/util/math/MatrixStack;)V",
+            method = "renderStatusBars(Lnet/minecraft/client/gui/DrawContext;)V",
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/minecraft/client/gui/hud/InGameHud;getHeartCount(Lnet/minecraft/entity/LivingEntity;)I"
@@ -39,15 +39,15 @@ public abstract class M_InGameHud {
     }
 
     @Redirect(
-            method = "render(Lnet/minecraft/client/util/math/MatrixStack;F)V",
+            method = "render(Lnet/minecraft/client/gui/DrawContext;F)V",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/client/gui/hud/InGameHud;renderMountHealth(Lnet/minecraft/client/util/math/MatrixStack;)V"
+                    target = "Lnet/minecraft/client/gui/hud/InGameHud;renderMountHealth(Lnet/minecraft/client/gui/DrawContext;)V"
             )
     )
-    private void redirect(InGameHud hud, MatrixStack matrices) {
+    private void redirect(InGameHud instance, DrawContext context) {
         if (!(getRiddenEntity() instanceof PhantomEntity)) {
-            renderMountHealth(matrices);
+            renderMountHealth(context);
         }
     }
 }

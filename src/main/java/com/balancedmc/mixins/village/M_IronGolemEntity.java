@@ -51,7 +51,7 @@ public abstract class M_IronGolemEntity extends GolemEntity {
     @Override
     public void tick() {
         super.tick();
-        if (!this.world.isClient) {
+        if (!this.getWorld().isClient) {
             this.setClimbingWall(this.horizontalCollision);
         }
     }

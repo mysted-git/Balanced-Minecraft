@@ -91,11 +91,12 @@ public abstract class M_EnderDragonFight {
         }
     }
 
+    /* todo: fix ender dragon fight data storage
     @Inject(
-            method = "<init>(Lnet/minecraft/server/world/ServerWorld;JLnet/minecraft/nbt/NbtCompound;)V",
+            method = "<init>(Lnet/minecraft/server/world/ServerWorld;JLnet/minecraft/entity/boss/dragon/EnderDragonFight$Data;)V",
             at = @At("TAIL")
     )
-    private void injected(ServerWorld world, long gatewaysSeed, NbtCompound nbt, CallbackInfo ci) {
+    private void injected(ServerWorld world, long gatewaysSeed, EnderDragonFight.Data data, CallbackInfo ci) {
         if (nbt.contains("Stage")) {
             stage = nbt.getInt("Stage");
         }
@@ -109,4 +110,5 @@ public abstract class M_EnderDragonFight {
     private void injected(CallbackInfoReturnable<NbtCompound> cir, NbtCompound nbtCompound) {
         nbtCompound.putInt("Stage", stage);
     }
+    */
 }

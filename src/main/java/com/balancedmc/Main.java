@@ -1,6 +1,5 @@
 package com.balancedmc;
 
-import com.balancedmc.blocks.ModBlocks;
 import com.balancedmc.enchantments.ModEnchantments;
 import com.balancedmc.entity.EntitySpawns;
 import com.balancedmc.items.ModItems;
@@ -22,7 +21,6 @@ public class Main implements ModInitializer {
 
 		ModSoundEvents.registerSoundEvents();
 		ModItems.registerItems();
-		ModBlocks.registerBlocks();
 		ModEnchantments.registerEnchantments();
 		ModPotionRecipes.registerPotionRecipes();
 		ModLootTables.registerLootTables();

@@ -1,14 +1,12 @@
 package com.balancedmc.mixins.crafting;
 
+import com.balancedmc.Main;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.CraftingInventory;
-import net.minecraft.inventory.CraftingResultInventory;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.inventory.SimpleInventory;
+import net.minecraft.inventory.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -27,6 +25,7 @@ import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.List;
 
@@ -41,18 +40,18 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
     }
 
     private final Inventory craftingInventory = new SimpleInventory(16);
-    @Shadow @Final private CraftingInventory craftingInput;
+    @Shadow @Final private RecipeInputInventory craftingInput;
     @Shadow @Final private CraftingResultInventory craftingResult;
     @Shadow @Final private PlayerEntity owner;
     @Shadow static void onEquipStack(PlayerEntity player, EquipmentSlot slot, ItemStack newStack, ItemStack currentStack) {}
 
     private void updateCrafting() {
         ItemStack stack = craftingInventory.getStack(0);
-        List<CraftingRecipe> recipes = owner.world.getRecipeManager().listAllOfType(RecipeType.CRAFTING);
+        List<CraftingRecipe> recipes = owner.getWorld().getRecipeManager().listAllOfType(RecipeType.CRAFTING);
         for (int i = 1; i < 16; i++) {craftingInventory.removeStack(i);}
         int i = 1;
         for (CraftingRecipe recipe : recipes) {
-            ItemStack output = recipe.getOutput(owner.world.getRegistryManager());
+            ItemStack output = recipe.getOutput(owner.getWorld().getRegistryManager());
             // handle special cases
             if (output.isEmpty() || output.isOf(Items.FIREWORK_ROCKET) || output.isOf(Items.FIREWORK_STAR)) continue;
             if (output.isIn(ItemTags.STAIRS) && recipe.getIngredients().size() == 9) continue;
@@ -82,9 +81,9 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
     }
 
     private void handleTakeItem(Item item) {
-        List<CraftingRecipe> recipes = owner.world.getRecipeManager().listAllOfType(RecipeType.CRAFTING);
+        List<CraftingRecipe> recipes = owner.getWorld().getRecipeManager().listAllOfType(RecipeType.CRAFTING);
         for (CraftingRecipe recipe : recipes) {
-            ItemStack output = recipe.getOutput(owner.world.getRegistryManager());
+            ItemStack output = recipe.getOutput(owner.getWorld().getRegistryManager());
             // fix stairs double recipe
             if (output.isIn(ItemTags.STAIRS) && recipe.getIngredients().size() == 9) continue;
             // remove input items
@@ -96,11 +95,13 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
                     return false;
                 }).count());
                 updateCrafting();
-                break;
             }
         }
     }
 
+    /**
+     * Add slots
+     */
     @Inject(
             method = "<init>(Lnet/minecraft/entity/player/PlayerInventory;ZLnet/minecraft/entity/player/PlayerEntity;)V",
             at = @At("TAIL")
@@ -132,12 +133,18 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
         }
     }
 
+    /**
+     * Handle exiting the screen
+     */
     @Inject(
             method = "onClosed(Lnet/minecraft/entity/player/PlayerEntity;)V",
             at = @At("TAIL")
     )
     private void injected(PlayerEntity player, CallbackInfo ci) {
-        player.dropItem(this.craftingInventory.getStack(0), true);
+        ItemStack stack = this.craftingInventory.getStack(0);
+        if (!player.giveItemStack(stack)) {
+            player.dropItem(stack, true);
+        }
         this.craftingInventory.clear();
     }
 
@@ -154,7 +161,7 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
     )
     private Slot redirect(PlayerScreenHandler instance, Slot slot) {
         if (slot.inventory == this.craftingInput || slot.inventory == this.craftingResult) {
-            return null;
+            return this.addSlot(new Slot(slot.inventory, slot.getIndex(), Integer.MAX_VALUE, Integer.MAX_VALUE));
         }
         if (slot.getIndex() == 40) {
             return this.addSlot(new Slot(slot.inventory, 40, 26, 62){
@@ -173,54 +180,19 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
     }
 
     /**
-     * @author HB0P
-     * @reason Changes to quick move slots
+     * Prevent shift clicking out of crafting result
      */
-    @Overwrite
-    public ItemStack quickMove(PlayerEntity player, int slot) {
-        ItemStack itemStack = ItemStack.EMPTY;
-        Slot slot2 = this.slots.get(slot);
-        if (slot2.hasStack()) {
-            int i;
-            ItemStack itemStack2 = slot2.getStack();
-            itemStack = itemStack2.copy();
-            EquipmentSlot equipmentSlot = MobEntity.getPreferredEquipmentSlot(itemStack);
-
-            if (slot == 41) { // crafting input => inventory
-                if (!this.insertItem(itemStack2, 4, 40, false)) return ItemStack.EMPTY;
-            }
-            else if (slot >= 42) { // crafting output => BLOCK
-                return ItemStack.EMPTY;
-            }
-            else if (slot < 4) { // armour => inventory
-                if (!this.insertItem(itemStack2, 4, 40, false)) return ItemStack.EMPTY;
-            }
-            else if (equipmentSlot.getType() == EquipmentSlot.Type.ARMOR && !this.slots.get(3 - equipmentSlot.getEntitySlotId()).hasStack()) { // inventory => armour
-                if (!this.insertItem(itemStack2, i = 3 - equipmentSlot.getEntitySlotId(), i + 1, false)) return ItemStack.EMPTY;
-            }
-            else if (equipmentSlot == EquipmentSlot.OFFHAND && !this.slots.get(40).hasStack()) { // inventory => offhand
-                if (!this.insertItem(itemStack2, 40, 41, false)) return ItemStack.EMPTY;
-            }
-            else if (slot < 31) { // inner inventory => hotbar
-                if (!this.insertItem(itemStack2, 31, 40, false)) return ItemStack.EMPTY;
-            }
-            else if (slot < 40) { // hotbar => inner inventory
-                if (!this.insertItem(itemStack2, 4, 31, false)) return ItemStack.EMPTY;
-            }
-            else {
-                if (!this.insertItem(itemStack2, 4, 40, false)) return ItemStack.EMPTY;
-            }
-
-            if (itemStack2.isEmpty()) {
-                slot2.setStack(ItemStack.EMPTY);
-            } else {
-                slot2.markDirty();
-            }
-            if (itemStack2.getCount() == itemStack.getCount()) {
-                return ItemStack.EMPTY;
-            }
-            slot2.onTakeItem(player, itemStack2);
+    @Inject(
+            method = "quickMove(Lnet/minecraft/entity/player/PlayerEntity;I)Lnet/minecraft/item/ItemStack;",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/entity/mob/MobEntity;getPreferredEquipmentSlot(Lnet/minecraft/item/ItemStack;)Lnet/minecraft/entity/EquipmentSlot;"
+            ),
+            cancellable = true
+    )
+    private void injected(PlayerEntity player, int slot, CallbackInfoReturnable<ItemStack> cir) {
+        if (slot >= 47) {
+            cir.setReturnValue(ItemStack.EMPTY);
         }
-        return itemStack;
     }
 }

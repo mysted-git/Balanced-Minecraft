@@ -1,6 +1,6 @@
 package com.balancedmc.mixins.crafting;
 
-import net.minecraft.client.gui.Element;
+import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ingame.AbstractInventoryScreen;
 import net.minecraft.client.gui.screen.ingame.InventoryScreen;
 import net.minecraft.client.gui.screen.recipebook.RecipeBookProvider;
@@ -44,17 +44,16 @@ public abstract class M_InventoryScreen extends AbstractInventoryScreen<PlayerSc
      * Remove player model
      */
     @Inject(
-            method = "drawEntity(Lnet/minecraft/client/util/math/MatrixStack;IIIFFLnet/minecraft/entity/LivingEntity;)V",
+            method = "drawEntity(Lnet/minecraft/client/gui/DrawContext;IIIFFLnet/minecraft/entity/LivingEntity;)V",
             at = @At("HEAD"),
             cancellable = true
     )
-    private static void injected(MatrixStack matrices, int x, int y, int size, float mouseX, float mouseY, LivingEntity entity, CallbackInfo ci) {
+    private static void injected(DrawContext context, int x, int y, int size, float mouseX, float mouseY, LivingEntity entity, CallbackInfo ci) {
         ci.cancel();
     }
 
     /* *** REMOVE RECIPE BOOK *** */
 
-    @Shadow private boolean open;
     @Shadow private float mouseX;
     @Shadow private float mouseY;
 
@@ -76,7 +75,6 @@ public abstract class M_InventoryScreen extends AbstractInventoryScreen<PlayerSc
             cancellable = true
     )
     private void inject(CallbackInfo ci) {
-        this.open = true;
         ci.cancel();
     }
 
@@ -85,10 +83,10 @@ public abstract class M_InventoryScreen extends AbstractInventoryScreen<PlayerSc
      * @reason remove recipe book
      */
     @Overwrite
-    public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
-        this.renderBackground(matrices);
-        super.render(matrices, mouseX, mouseY, delta);
-        this.drawMouseoverTooltip(matrices, mouseX, mouseY);
+    public void render(DrawContext context, int mouseX, int mouseY, float delta) {
+        this.renderBackground(context);
+        super.render(context, mouseX, mouseY, delta);
+        this.drawMouseoverTooltip(context, mouseX, mouseY);
         this.mouseX = mouseX;
         this.mouseY = mouseY;
     }

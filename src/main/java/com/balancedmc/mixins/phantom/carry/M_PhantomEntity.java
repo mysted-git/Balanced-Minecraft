@@ -21,7 +21,7 @@ public abstract class M_PhantomEntity {
     )
     private void injected(CallbackInfo ci) {
         PhantomEntity phantom = (PhantomEntity)(Object)this;
-        if (phantom.hasPassengers() && !phantom.world.isClient) {
+        if (phantom.hasPassengers() && !phantom.getWorld().isClient) {
             if (carryingTicks == -1) {
                 carryingTicks = (int) (Math.random() * 100) + 100;
             }

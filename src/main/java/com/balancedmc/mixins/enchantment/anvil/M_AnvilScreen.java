@@ -15,7 +15,7 @@ public abstract class M_AnvilScreen {
      * @reason Remove "too expensive" text
      */
 
-    @Redirect(method = "drawForeground(Lnet/minecraft/client/util/math/MatrixStack;II)V", at = @At(value = "FIELD", target = "Lnet/minecraft/entity/player/PlayerAbilities;creativeMode:Z", opcode = Opcodes.GETFIELD))
+    @Redirect(method = "drawForeground(Lnet/minecraft/client/gui/DrawContext;II)V", at = @At(value = "FIELD", target = "Lnet/minecraft/entity/player/PlayerAbilities;creativeMode:Z", opcode = Opcodes.GETFIELD))
     private boolean redirect(PlayerAbilities abilities) {
         return true;
     }

@@ -121,7 +121,7 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
      * @reason Update the output slot with one fewer enchantment than the input
      */
     @Overwrite
-    public void updateResult() {
+    private void updateResult() {
         ItemStack input = this.input.getStack(0);
 
         // clear if there is no input

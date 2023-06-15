@@ -477,7 +477,7 @@ class TradeItem {
             TagKey<Structure> structure = bool ? StructureTags.ON_OCEAN_EXPLORER_MAPS : StructureTags.ON_WOODLAND_EXPLORER_MAPS;
             String nameKey = bool ? "filled_map.monument" : "filled_map.mansion";
             MapIcon.Type iconType = bool ? MapIcon.Type.MONUMENT : MapIcon.Type.MANSION;
-            if (entity.world instanceof ServerWorld serverWorld) {
+            if (entity.getWorld() instanceof ServerWorld serverWorld) {
                 BlockPos blockPos = serverWorld.locateStructure(structure, entity.getBlockPos(), 100, true);
                 if (blockPos != null) {
                     itemStack = FilledMapItem.createMap(serverWorld, blockPos.getX(), blockPos.getZ(), (byte)2, true, true);

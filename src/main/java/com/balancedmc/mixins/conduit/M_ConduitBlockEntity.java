@@ -27,7 +27,7 @@ public abstract class M_ConduitBlockEntity {
      * @reason Conduit custom effects
      */
     @Overwrite
-    public static void givePlayersEffects(World world, BlockPos pos, List<BlockPos> activatingBlocks) {
+    private static void givePlayersEffects(World world, BlockPos pos, List<BlockPos> activatingBlocks) {
         HashMap<Block, Integer> blockCounts = new HashMap<>();
         blockCounts.put(Blocks.PRISMARINE, 0);
         blockCounts.put(Blocks.PRISMARINE_BRICKS, 0);

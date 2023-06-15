@@ -14,8 +14,8 @@ public abstract class M_LivingEntity {
      * @reason Increase the effect of leaping
      */
 
-    @Inject(method = "getJumpBoostVelocityModifier()D", at = @At("RETURN"), cancellable = true)
-    private void injected(CallbackInfoReturnable<Double> cir) {
-        cir.setReturnValue(cir.getReturnValueD() * 1.6);
+    @Inject(method = "getJumpBoostVelocityModifier()F", at = @At("RETURN"), cancellable = true)
+    private void injected(CallbackInfoReturnable<Float> cir) {
+        cir.setReturnValue((float) (cir.getReturnValueF() * 1.6));
     }
 }

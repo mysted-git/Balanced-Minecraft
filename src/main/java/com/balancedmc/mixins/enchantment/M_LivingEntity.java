@@ -68,6 +68,6 @@ public abstract class M_LivingEntity extends Entity {
     }
 
     protected boolean isOnFrostWalkerBlock() {
-        return this.world.getBlockState(this.getVelocityAffectingPos()).isIn(BlockTags.ICE);
+        return this.getWorld().getBlockState(this.getVelocityAffectingPos()).isIn(BlockTags.ICE);
     }
 }
