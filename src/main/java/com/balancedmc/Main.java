@@ -4,7 +4,7 @@ import com.balancedmc.enchantments.ModEnchantments;
 import com.balancedmc.entity.EntitySpawns;
 import com.balancedmc.items.ModItems;
 import com.balancedmc.loot_tables.ModLootTables;
-import com.balancedmc.potions.ModPotionRecipes;
+import com.balancedmc.potion.ModPotionRecipes;
 import com.balancedmc.sounds.ModSoundEvents;
 import com.balancedmc.villagers.VillagerHelper;
 import net.fabricmc.api.ModInitializer;

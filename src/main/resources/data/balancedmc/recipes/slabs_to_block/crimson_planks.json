@@ -1,0 +1,16 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:crimson_slab"
+        },
+        {
+            "item": "minecraft:crimson_slab"
+        }
+    ],
+    "result": {
+        "item": "minecraft:crimson_planks",
+        "count": 1
+    },
+    "group": "slab_to_block"
+}

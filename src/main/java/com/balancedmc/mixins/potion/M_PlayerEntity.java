@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.potions;
+package com.balancedmc.mixins.potion;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;

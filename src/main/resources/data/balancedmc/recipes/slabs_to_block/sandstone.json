@@ -1,0 +1,16 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:sandstone_slab"
+        },
+        {
+            "item": "minecraft:sandstone_slab"
+        }
+    ],
+    "result": {
+        "item": "minecraft:sandstone",
+        "count": 1
+    },
+    "group": "slab_to_block"
+}

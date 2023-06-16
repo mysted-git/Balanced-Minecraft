@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.potions;
+package com.balancedmc.mixins.potion;
 
 import net.minecraft.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;

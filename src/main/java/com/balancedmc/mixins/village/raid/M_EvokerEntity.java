@@ -16,8 +16,7 @@ import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 
 /**
- * Prevent evokers in raids dropping totems
- * <p>
+ * Prevent evokers in raids dropping totems<br>
  * Only evokers from structures (mansions) can drop totems
  */
 

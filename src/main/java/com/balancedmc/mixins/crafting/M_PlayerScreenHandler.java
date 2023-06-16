@@ -54,7 +54,6 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
             ItemStack output = recipe.getOutput(owner.getWorld().getRegistryManager());
             // handle special cases
             if (output.isEmpty() || output.isOf(Items.FIREWORK_ROCKET) || output.isOf(Items.FIREWORK_STAR)) continue;
-            if (output.isIn(ItemTags.STAIRS) && recipe.getIngredients().size() == 9) continue;
             // check if valid
             boolean valid = true;
             int count = 0;
@@ -84,8 +83,6 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
         List<CraftingRecipe> recipes = owner.getWorld().getRecipeManager().listAllOfType(RecipeType.CRAFTING);
         for (CraftingRecipe recipe : recipes) {
             ItemStack output = recipe.getOutput(owner.getWorld().getRegistryManager());
-            // fix stairs double recipe
-            if (output.isIn(ItemTags.STAIRS) && recipe.getIngredients().size() == 9) continue;
             // remove input items
             if (output.isOf(item)) {
                 craftingInventory.removeStack(0, (int) recipe.getIngredients().stream().filter((ingredient) -> {

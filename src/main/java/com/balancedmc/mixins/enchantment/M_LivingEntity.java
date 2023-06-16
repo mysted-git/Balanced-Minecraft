@@ -1,6 +1,5 @@
 package com.balancedmc.mixins.enchantment;
 
-import net.minecraft.block.BlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
@@ -34,26 +33,12 @@ public abstract class M_LivingEntity extends Entity {
     private static UUID SOUL_SPEED_BOOST_ID;
     UUID FROST_WALKER_BOOST_ID = SOUL_SPEED_BOOST_ID;
 
-    @Inject(method = "applyMovementEffects(Lnet/minecraft/util/math/BlockPos;)V", at = @At("TAIL"))
+    @Inject(
+            method = "applyMovementEffects(Lnet/minecraft/util/math/BlockPos;)V",
+            at = @At("TAIL")
+    )
     private void injected(BlockPos pos, CallbackInfo ci) {
-        if (this.shouldRemoveFrostWalkerBoost(this.getLandingBlockState())) {
-            this.removeFrostWalkerBoost();
-        }
         this.addFrostWalkerBoostIfNeeded();
-    }
-
-    private boolean shouldRemoveFrostWalkerBoost(BlockState landingState) {
-        return !landingState.isAir() || ((LivingEntity)(Object)this).isFallFlying();
-    }
-
-    private void removeFrostWalkerBoost() {
-        EntityAttributeInstance entityAttributeInstance = ((LivingEntity)(Object)this).getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED);
-        if (entityAttributeInstance == null) {
-            return;
-        }
-        if (entityAttributeInstance.getModifier(FROST_WALKER_BOOST_ID) != null) {
-            entityAttributeInstance.removeModifier(FROST_WALKER_BOOST_ID);
-        }
     }
 
     private void addFrostWalkerBoostIfNeeded() {
