@@ -1,9 +1,6 @@
 package com.balancedmc.mixins.crafting;
 
-import com.balancedmc.Main;
-import com.mojang.datafixers.util.Pair;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.*;
@@ -13,20 +10,22 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.CraftingRecipe;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeType;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.screen.AbstractRecipeScreenHandler;
 import net.minecraft.screen.PlayerScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.slot.Slot;
+import net.minecraft.screen.slot.SlotActionType;
 import net.minecraft.util.Identifier;
+import com.mojang.datafixers.util.Pair;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import static net.minecraft.screen.PlayerScreenHandler.BLOCK_ATLAS_TEXTURE;
@@ -49,7 +48,7 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
         ItemStack stack = craftingInventory.getStack(0);
         List<CraftingRecipe> recipes = owner.getWorld().getRecipeManager().listAllOfType(RecipeType.CRAFTING);
         for (int i = 1; i < 16; i++) {craftingInventory.removeStack(i);}
-        int i = 1;
+        ArrayList<Pair<ItemStack, Integer>> items = new ArrayList<>();
         for (CraftingRecipe recipe : recipes) {
             ItemStack output = recipe.getOutput(owner.getWorld().getRegistryManager());
             // handle special cases
@@ -73,9 +72,13 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
                 }
             }
             if (valid && stack.getCount() >= count) {
-                craftingInventory.setStack(i, new ItemStack(output.getItem(), output.getCount()));
-                i++;
+                items.add(new Pair<>(new ItemStack(output.getItem(), output.getCount()), count));
             }
+        }
+        items.sort(Comparator.comparingInt(Pair::getSecond));
+        int i = 1;
+        for (Pair<ItemStack, Integer> pair : items) {
+            craftingInventory.setStack(i++, pair.getFirst());
         }
     }
 
@@ -119,11 +122,13 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
                         return false;
                     }
                     @Override
-                    public ItemStack takeStack(int amount) {
-                        Item item = this.getStack().getItem();
-                        ItemStack result = super.takeStack(this.getStack().getCount());
-                        handleTakeItem(item);
-                        return result;
+                    public void onTakeItem(PlayerEntity player, ItemStack stack) {
+                        super.onTakeItem(player, stack);
+                        handleTakeItem(stack.getItem());
+                    }
+                    @Override
+                    public boolean isEnabled() {
+                        return this.hasStack();
                     }
                 });
             }
@@ -177,19 +182,35 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
     }
 
     /**
-     * Prevent shift clicking out of crafting result
+     * Handle shift-clicking from crafting output
      */
-    @Inject(
+    @Redirect(
             method = "quickMove(Lnet/minecraft/entity/player/PlayerEntity;I)Lnet/minecraft/item/ItemStack;",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/entity/mob/MobEntity;getPreferredEquipmentSlot(Lnet/minecraft/item/ItemStack;)Lnet/minecraft/entity/EquipmentSlot;"
-            ),
-            cancellable = true
+                    target = "Lnet/minecraft/screen/slot/Slot;getStack()Lnet/minecraft/item/ItemStack;"
+            )
     )
-    private void injected(PlayerEntity player, int slot, CallbackInfoReturnable<ItemStack> cir) {
-        if (slot >= 47) {
-            cir.setReturnValue(ItemStack.EMPTY);
+    private ItemStack redirect(Slot slot, PlayerEntity player) {
+        ItemStack result = slot.getStack();
+        if (slot.inventory == this.craftingInventory && slot.getIndex() >= 1) {
+            slot.onTakeItem(player, result);
+        }
+        return result;
+    }
+
+    /**
+     * Prevent right-clicking crafting output<br>
+     * Update when crafting input is right-clicked
+     */
+    @Override
+    public void onSlotClick(int slotIndex, int button, SlotActionType actionType, PlayerEntity player) {
+        if (slotIndex >= 47 && button == 1) {
+            return;
+        }
+        super.onSlotClick(slotIndex, button, actionType, player);
+        if (slotIndex == 46) {
+            updateCrafting();
         }
     }
 }
