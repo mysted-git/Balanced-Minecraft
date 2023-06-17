@@ -18,10 +18,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.ArrayList;
 
 /**
- * Drop totems at the end of a raid
- * <p>
- * One totem dropped for every player
- * <p>
+ * Drop totems at the end of a raid<br>
+ * One totem dropped for every player<br>
  * Totems drop at village centre
  */
 

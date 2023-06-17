@@ -19,7 +19,6 @@ import org.spongepowered.asm.mixin.Mixin;
  * Prevent evokers in raids dropping totems<br>
  * Only evokers from structures (mansions) can drop totems
  */
-
 @Mixin(EvokerEntity.class)
 public abstract class M_EvokerEntity extends SpellcastingIllagerEntity {
 

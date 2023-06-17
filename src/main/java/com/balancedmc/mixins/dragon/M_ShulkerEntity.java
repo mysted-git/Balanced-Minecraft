@@ -1,6 +1,5 @@
 package com.balancedmc.mixins.dragon;
 
-import com.balancedmc.Main;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;

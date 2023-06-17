@@ -17,7 +17,6 @@ public abstract class M_VillagerEntity {
      * @author HB0P
      * @reason Custom random villager trades
      */
-
     @Overwrite
     public void fillRecipes() {
         VillagerEntity villager = (VillagerEntity) (Object) this;
