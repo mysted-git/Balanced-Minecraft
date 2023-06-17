@@ -213,6 +213,26 @@
           ]
         }
       ]
+    },
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "balancedmc:music_disc_droopy_likes_ricochet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "balancedmc:music_disc_droopy_likes_your_face"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.2
+        }
+      ]
     }
   ]
 }

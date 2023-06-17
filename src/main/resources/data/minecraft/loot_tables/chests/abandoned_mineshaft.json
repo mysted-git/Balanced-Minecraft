@@ -311,6 +311,26 @@
         }
       ],
       "rolls": 3.0
+    },
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "balancedmc:music_disc_key"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "balancedmc:music_disc_door"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.1
+        }
+      ]
     }
   ]
 }
