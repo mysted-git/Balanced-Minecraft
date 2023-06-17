@@ -16,7 +16,6 @@ public abstract class M_WanderingTraderEntity {
      * @author HB0P
      * @reason Custom random wandering trader trades
      */
-
     @Overwrite
     public void fillRecipes() {
         WanderingTraderEntity trader = (WanderingTraderEntity) (Object) this;

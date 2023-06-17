@@ -15,7 +15,11 @@ public abstract class M_ProtectionEnchantment {
      * @reason Reduce environmental protection amounts (for level 5 enchants)
      */
 
-    @Inject(method = "getProtectionAmount(ILnet/minecraft/entity/damage/DamageSource;)I", at = @At("RETURN"), cancellable = true)
+    @Inject(
+            method = "getProtectionAmount(ILnet/minecraft/entity/damage/DamageSource;)I",
+            at = @At("RETURN"),
+            cancellable = true
+    )
     private void injected(int level, DamageSource source, CallbackInfoReturnable<Integer> cir) {
         cir.setReturnValue((int) (cir.getReturnValue() * 0.8));
     }

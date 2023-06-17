@@ -15,10 +15,8 @@ import java.util.Objects;
 public abstract class M_EnchantmentHelper {
 
     /**
-     * @author HB0P
-     * @reason Frost walker and soul speed work on horse armor
+     * Frost walker and soul speed work on horse armor
      */
-
     @Inject(method = "getEquipmentLevel(Lnet/minecraft/enchantment/Enchantment;Lnet/minecraft/entity/LivingEntity;)I", at = @At("HEAD"), cancellable = true)
     private static void injected(Enchantment enchantment, LivingEntity entity, CallbackInfoReturnable<Integer> cir) {
         if (entity instanceof HorseEntity horse) {

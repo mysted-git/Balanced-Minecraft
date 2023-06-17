@@ -16,10 +16,8 @@ public abstract class M_SoulSpeedEnchantment extends Enchantment {
     }
 
     /**
-     * @author HB0P
-     * @reason Soul speed can be applied to horse armor
+     * Soul speed can be applied to horse armor
      */
-
     public boolean isAcceptableItem(ItemStack stack) {
         return stack.getItem() instanceof HorseArmorItem || super.isAcceptableItem(stack);
     }

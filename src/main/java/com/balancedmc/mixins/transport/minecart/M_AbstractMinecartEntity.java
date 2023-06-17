@@ -15,8 +15,7 @@ import java.util.List;
 public abstract class M_AbstractMinecartEntity {
 
     /**
-     * @author HB0P
-     * @reason Minecart speed doubled with player riding
+     * Minecart speed doubled with player riding
      */
     @Inject(method = "getMaxSpeed()D", at = @At("RETURN"), cancellable = true)
     private void inject(CallbackInfoReturnable<Double> cir) {

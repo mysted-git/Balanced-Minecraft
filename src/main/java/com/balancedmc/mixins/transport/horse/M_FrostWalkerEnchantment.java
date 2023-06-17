@@ -16,10 +16,8 @@ public abstract class M_FrostWalkerEnchantment extends Enchantment {
     }
 
     /**
-     * @author HB0P
-     * @reason Frost walker can be applied to horse armor
+     * Frost walker can be applied to horse armor
      */
-
     public boolean isAcceptableItem(ItemStack stack) {
         return stack.getItem() instanceof HorseArmorItem || super.isAcceptableItem(stack);
     }

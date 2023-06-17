@@ -27,7 +27,6 @@ public abstract class M_IronGolemEntity extends GolemEntity {
     /**
      * Iron golems cannot be pushed by water
      */
-
     @Override
     public boolean isPushedByFluids() {
         return false;
@@ -42,7 +41,6 @@ public abstract class M_IronGolemEntity extends GolemEntity {
     /**
      * Iron golems can climb walls
      */
-
     @Inject(method = "initDataTracker()V", at = @At("TAIL"))
     private void injected(CallbackInfo ci) {
         this.dataTracker.startTracking(SPIDER_FLAGS, (byte)0);

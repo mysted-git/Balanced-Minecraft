@@ -13,10 +13,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class M_BoatEntity {
 
     /**
-     * @author HB0P
-     * @reason Slippery blocks now have no effect on boats
+     * Slippery blocks now have no effect on boats
      */
-
     @Inject(method = "getNearbySlipperiness()F", at = @At("RETURN"), cancellable = true)
     private void injected(CallbackInfoReturnable<Float> cir) {
         float slipperiness = cir.getReturnValue();
@@ -28,17 +26,15 @@ public abstract class M_BoatEntity {
         cir.setReturnValue(slipperiness);
     }
 
-    /**
-     * @author HB0P
-     * @reason Boats travel faster
-     */
-
     @Shadow
     private float velocityDecay;
 
     @Shadow
     private boolean pressingForward;
 
+    /**
+     * Boats travel faster
+     */
     @Redirect(method = "updateVelocity()V", at = @At(value = "FIELD", target = "Lnet/minecraft/entity/vehicle/BoatEntity;velocityDecay:F", opcode = Opcodes.GETFIELD))
     private float redirect(BoatEntity entity) {
         return pressingForward ? (1 + velocityDecay) / 2 : velocityDecay;

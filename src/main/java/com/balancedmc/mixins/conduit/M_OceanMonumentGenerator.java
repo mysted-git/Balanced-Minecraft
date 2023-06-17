@@ -1,6 +1,5 @@
 package com.balancedmc.mixins.conduit;
 
-import com.balancedmc.Main;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.nbt.NbtCompound;

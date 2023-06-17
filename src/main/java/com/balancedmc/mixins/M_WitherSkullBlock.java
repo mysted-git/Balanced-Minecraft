@@ -12,10 +12,8 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class M_WitherSkullBlock {
 
     /**
-     * @author HB0P
-     * @reason Wither requires sky access or nether to spawn
+     * Wither requires sky access or nether to spawn
      */
-
     @Redirect(method = "onPlaced(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/entity/SkullBlockEntity;)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/pattern/BlockPattern;searchAround(Lnet/minecraft/world/WorldView;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/pattern/BlockPattern$Result;"))
     private static BlockPattern.Result redirect(BlockPattern pattern, WorldView world, BlockPos pos) {
         // allow nether

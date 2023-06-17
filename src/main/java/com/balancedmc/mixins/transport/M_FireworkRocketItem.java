@@ -20,5 +20,4 @@ public abstract class M_FireworkRocketItem {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         return TypedActionResult.pass(user.getStackInHand(hand));
     }
-
 }
