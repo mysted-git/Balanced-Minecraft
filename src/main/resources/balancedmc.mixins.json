@@ -34,6 +34,7 @@
     "transport.horse.M_ProtectionEnchantment",
     "transport.horse.M_SoulSpeedEnchantment",
     "transport.minecart.M_AbstractMinecartEntity",
+    "transport.minecart.M_FurnaceMinecartEntity",
     "trident.M_ImpalingEnchantment",
     "trident.M_TridentEntity",
     "village.M_IronGolemEntity",
