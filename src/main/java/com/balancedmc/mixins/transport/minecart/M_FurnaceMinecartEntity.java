@@ -83,4 +83,16 @@ public abstract class M_FurnaceMinecartEntity {
     private void injected(PlayerEntity player, Hand hand, CallbackInfoReturnable<ActionResult> cir) {
         this.fuel += (AbstractFurnaceBlockEntity.createFuelTimeMap().getOrDefault(player.getStackInHand(hand).getItem(), 0) * 2.25);
     }
+
+    /**
+     * Double furnace minecart speed
+     */
+    @Inject(
+            method = "getMaxSpeed()D",
+            at = @At("RETURN"),
+            cancellable = true
+    )
+    private void injected(CallbackInfoReturnable<Double> cir) {
+        cir.setReturnValue(cir.getReturnValueD() * 2);
+    }
 }
