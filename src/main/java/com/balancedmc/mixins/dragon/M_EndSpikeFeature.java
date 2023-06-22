@@ -1,9 +1,8 @@
 package com.balancedmc.mixins.dragon;
 
+import com.balancedmc.Main;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.mob.ShulkerEntity;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
@@ -40,7 +39,10 @@ public abstract class M_EndSpikeFeature {
             int z = spike.getCenterZ() + (direction.getOffsetZ() * r);
             int top = world.getTopY(Heightmap.Type.MOTION_BLOCKING, x, z);
             int y = (int) (Math.random() * (spike.getHeight() - top)) + top;
-            EntityType.SHULKER.spawn(world.toServerWorld(), new BlockPos(x, y, z), SpawnReason.NATURAL);
+            ShulkerEntity shulker = EntityType.SHULKER.create(world.toServerWorld());
+            shulker.setPosition(x, y, z);
+            world.spawnEntity(shulker);
+            Main.LOGGER.info("Spawn at " + x + " " + y + " " + z);
         }
     }
 }
