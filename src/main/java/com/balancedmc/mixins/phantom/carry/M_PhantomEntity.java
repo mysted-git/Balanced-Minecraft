@@ -2,6 +2,7 @@ package com.balancedmc.mixins.phantom.carry;
 
 import net.minecraft.entity.mob.PhantomEntity;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -35,6 +36,11 @@ public abstract class M_PhantomEntity {
         }
     }
 
+    /**
+     * @author HB0P
+     * @reason Players render lower when riding phantoms
+     */
+    @Overwrite
     public double getMountedHeightOffset() {
         return -1.3;
     }

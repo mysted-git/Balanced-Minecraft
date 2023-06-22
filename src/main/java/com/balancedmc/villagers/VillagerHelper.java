@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentLevelEntry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
@@ -301,72 +302,8 @@ public class VillagerHelper {
     }
 
     public static void registerReloadListener() {
-        ResourceManagerHelper.get(ResourceType.SERVER_DATA).registerReloadListener(new SimpleSynchronousResourceReloadListener() {
-            @Override
-            public Identifier getFabricId() {
-                return new Identifier(Main.MOD_ID, "");
-            }
-
-            @Override
-            public void reload(ResourceManager manager) {
-                Gson gson = new Gson();
-                // trades.json
-                try (InputStream stream = manager.getResource(new Identifier(Main.MOD_ID, "villagers/trades.json")).get().getInputStream()) {
-                    ItemInfo[] itemInfo = gson.fromJson(new InputStreamReader(stream), ItemInfo[].class);
-                    VillagerHelper.buyItems = new ArrayList<>();
-                    VillagerHelper.sellItems = new ArrayList<>();
-                    for (ItemInfo info : itemInfo) {
-                        TradeItem item = new TradeItem(info.items, info.price, info.professions, info.buy, info.sell);
-                        if (item.canBuy) buyItems.add(item);
-                        if (item.canSell) sellItems.add(item);
-                        if (item.isEmerald()) emeraldItem = item;
-                    }
-                    if (emeraldItem == null) {
-                        throw new RuntimeException("No emerald item found in trades.json");
-                    }
-                }
-                catch (IOException e) {
-                    throw new RuntimeException("Failed to read trades.json", e);
-                }
-                // conversions.json
-                try (InputStream stream = manager.getResource(new Identifier(Main.MOD_ID, "villagers/conversions.json")).get().getInputStream()) {
-                    ConversionInfo[] conversionInfo = gson.fromJson(new InputStreamReader(stream), ConversionInfo[].class);
-                    for (ConversionInfo info : conversionInfo) {
-                        VillagerProfession profession = Registries.VILLAGER_PROFESSION.get(new Identifier(info.profession));
-                        Conversion conversion = new Conversion(info.buy, info.sell, info.price);
-                        if (!conversions.containsKey(profession)) {
-                            conversions.put(profession, new ArrayList<>());
-                        }
-                        conversions.get(profession).add(conversion);
-                    }
-                }
-                catch (IOException e) {
-                    throw new RuntimeException("Failed to read conversions.json", e);
-                }
-                // enchantments.json
-                try (InputStream stream = manager.getResource(new Identifier(Main.MOD_ID, "villagers/enchantments.json")).get().getInputStream()) {
-                    HashMap<String, Integer> enchantmentInfo = gson.fromJson(new InputStreamReader(stream), new TypeToken<HashMap<String, Integer>>(){}.getType());
-                    for (String name : enchantmentInfo.keySet()) {
-                        Enchantment enchantment = Registries.ENCHANTMENT.get(new Identifier(name));
-                        if (enchantment == null) {
-                            Main.LOGGER.error("Invalid enchantment " + name);
-                            continue;
-                        }
-                        enchantments.put(enchantment, enchantmentInfo.get(name));
-                    }
-                }
-                catch (IOException e) {
-                    throw new RuntimeException("Failed to read enchantments.json", e);
-                }
-                // potions.json
-                try (InputStream stream = manager.getResource(new Identifier(Main.MOD_ID, "villagers/potions.json")).get().getInputStream()) {
-                    potions = gson.fromJson(new InputStreamReader(stream), new TypeToken<HashMap<String, Integer>>(){}.getType());
-                }
-                catch (IOException e) {
-                    throw new RuntimeException("Failed to read potions.json", e);
-                }
-            }
-        });
+        ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new ReloadListener());
+        ResourceManagerHelper.get(ResourceType.SERVER_DATA).registerReloadListener(new ReloadListener());
     }
 
     static {
@@ -426,7 +363,8 @@ class TradeItem {
     /**
      * Get a single item to sell
      * <p>
-     * Includes special items such as:<br>
+     * Includes special items such as:
+     * <p>
      * Enchantable items<br>
      * Potions and tipped arrows<br>
      * Suspicious stew<br>
@@ -439,14 +377,19 @@ class TradeItem {
         int priceBonus = 0;
 
         // enchantments
-        if (itemStack.isEnchantable()) {
+        if (itemStack.isEnchantable() || itemStack.isOf(Items.ENCHANTED_BOOK)) {
             List<Enchantment> enchantments = Arrays.asList(VillagerHelper.enchantments.keySet().toArray(new Enchantment[0]));
             Collections.shuffle(enchantments);
             for (Enchantment enchantment : enchantments) {
-                if (enchantment.isAcceptableItem(itemStack)) {
+                if (enchantment.isAcceptableItem(itemStack) || itemStack.isOf(Items.ENCHANTED_BOOK)) {
                     int level = (int) (Math.random() * (enchantment.getMaxLevel() + 1));
                     if (level == 0) break;
-                    itemStack.addEnchantment(enchantment, level);
+                    if (itemStack.isOf(Items.ENCHANTED_BOOK)) {
+                        itemStack = EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(enchantment, level));
+                    }
+                    else {
+                        itemStack.addEnchantment(enchantment, level);
+                    }
                     priceBonus = VillagerHelper.enchantments.get(enchantment) * level;
                     break;
                 }
@@ -547,6 +490,71 @@ class ItemInfo { String[] items; int price; String[] professions; boolean buy; b
 class ConversionInfo { String profession; ConversionItemInfo buy; int price; ConversionItemInfo sell; }
 
 class ConversionItemInfo { String item ; int count; }
+
+class ReloadListener implements SimpleSynchronousResourceReloadListener {
+    @Override
+    public Identifier getFabricId() {
+        return new Identifier(Main.MOD_ID, "");
+    }
+
+    @Override
+    public void reload(ResourceManager manager) {
+        Gson gson = new Gson();
+        // trades.json
+        try (InputStream stream = manager.getResource(new Identifier(Main.MOD_ID, "villagers/trades.json")).get().getInputStream()) {
+            ItemInfo[] itemInfo = gson.fromJson(new InputStreamReader(stream), ItemInfo[].class);
+            VillagerHelper.buyItems = new ArrayList<>();
+            VillagerHelper.sellItems = new ArrayList<>();
+            for (ItemInfo info : itemInfo) {
+                TradeItem item = new TradeItem(info.items, info.price, info.professions, info.buy, info.sell);
+                if (item.canBuy) VillagerHelper.buyItems.add(item);
+                if (item.canSell) VillagerHelper.sellItems.add(item);
+                if (item.isEmerald()) VillagerHelper.emeraldItem = item;
+            }
+            if (VillagerHelper.emeraldItem == null) {
+                throw new RuntimeException("No emerald item found in trades.json");
+            }
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to read trades.json", e);
+        }
+        // conversions.json
+        try (InputStream stream = manager.getResource(new Identifier(Main.MOD_ID, "villagers/conversions.json")).get().getInputStream()) {
+            ConversionInfo[] conversionInfo = gson.fromJson(new InputStreamReader(stream), ConversionInfo[].class);
+            for (ConversionInfo info : conversionInfo) {
+                VillagerProfession profession = Registries.VILLAGER_PROFESSION.get(new Identifier(info.profession));
+                Conversion conversion = new Conversion(info.buy, info.sell, info.price);
+                if (!VillagerHelper.conversions.containsKey(profession)) {
+                    VillagerHelper.conversions.put(profession, new ArrayList<>());
+                }
+                VillagerHelper.conversions.get(profession).add(conversion);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to read conversions.json", e);
+        }
+        // enchantments.json
+        try (InputStream stream = manager.getResource(new Identifier(Main.MOD_ID, "villagers/enchantments.json")).get().getInputStream()) {
+            HashMap<String, Integer> enchantmentInfo = gson.fromJson(new InputStreamReader(stream), new TypeToken<HashMap<String, Integer>>() {
+            }.getType());
+            for (String name : enchantmentInfo.keySet()) {
+                Enchantment enchantment = Registries.ENCHANTMENT.get(new Identifier(name));
+                if (enchantment == null) {
+                    Main.LOGGER.error("Invalid enchantment " + name);
+                    continue;
+                }
+                VillagerHelper.enchantments.put(enchantment, enchantmentInfo.get(name));
+            }
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to read enchantments.json", e);
+        }
+        // potions.json
+        try (InputStream stream = manager.getResource(new Identifier(Main.MOD_ID, "villagers/potions.json")).get().getInputStream()) {
+            VillagerHelper.potions = gson.fromJson(new InputStreamReader(stream), new TypeToken<HashMap<String, Integer>>() {
+            }.getType());
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to read potions.json", e);
+        }
+    }
+}
 
 /**
  * Utility maths class

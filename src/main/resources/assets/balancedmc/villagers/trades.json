@@ -1,0 +1,3726 @@
+[
+  {
+    "items": [
+      "polished_granite"
+    ],
+    "price": 2,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "polished_diorite"
+    ],
+    "price": 2,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "polished_andesite"
+    ],
+    "price": 2,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "polished_deepslate"
+    ],
+    "price": 2,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "calcite"
+    ],
+    "price": 4,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "tuff"
+    ],
+    "price": 4,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "dripstone_block"
+    ],
+    "price": 4,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "oak_planks",
+      "spruce_planks",
+      "birch_planks",
+      "jungle_planks",
+      "acacia_planks",
+      "dark_oak_planks",
+      "mangrove_planks"
+    ],
+    "price": 2,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "oak_sapling",
+      "spruce_sapling",
+      "birch_sapling",
+      "jungle_sapling",
+      "acacia_sapling",
+      "dark_oak_sapling",
+      "mangrove_propagule"
+    ],
+    "price": 8,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "sand"
+    ],
+    "price": 2,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "red_sand"
+    ],
+    "price": 5,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "gravel"
+    ],
+    "price": 2,
+    "professions": [
+      "fletcher"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "coal_ore"
+    ],
+    "price": 50,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "deepslate_coal_ore"
+    ],
+    "price": 60,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "iron_ore"
+    ],
+    "price": 80,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "deepslate_iron_ore"
+    ],
+    "price": 80,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "copper_ore"
+    ],
+    "price": 50,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "deepslate_copper_ore"
+    ],
+    "price": 50,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "gold_ore"
+    ],
+    "price": 80,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "deepslate_gold_ore"
+    ],
+    "price": 80,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "redstone_ore"
+    ],
+    "price": 100,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "deepslate_redstone_ore"
+    ],
+    "price": 100,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "lapis_ore"
+    ],
+    "price": 100,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "deepslate_lapis_ore"
+    ],
+    "price": 100,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "diamond_ore"
+    ],
+    "price": 1000,
+    "professions": [
+      "armorer",
+      "toolsmith",
+      "weaponsmith"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "deepslate_diamond_ore"
+    ],
+    "price": 1000,
+    "professions": [
+      "armorer",
+      "toolsmith",
+      "weaponsmith"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "nether_gold_ore"
+    ],
+    "price": 70,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "nether_quartz_ore"
+    ],
+    "price": 40,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "coal_block"
+    ],
+    "price": 90,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "raw_iron_block"
+    ],
+    "price": 180,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "raw_copper_block"
+    ],
+    "price": 108,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "raw_gold_block"
+    ],
+    "price": 180,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "amethyst_block"
+    ],
+    "price": 50,
+    "professions": [
+      "cleric"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "iron_block"
+    ],
+    "price": 225,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "copper_block"
+    ],
+    "price": 135,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "gold_block"
+    ],
+    "price": 225,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "diamond_block"
+    ],
+    "price": 4500,
+    "professions": [
+      "armorer",
+      "toolsmith",
+      "weaponsmith"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "exposed_copper"
+    ],
+    "price": 140,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "weathered_copper"
+    ],
+    "price": 145,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "oxidized_copper"
+    ],
+    "price": 150,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "cut_copper"
+    ],
+    "price": 135,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "exposed_cut_copper"
+    ],
+    "price": 140,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "weathered_cut_copper"
+    ],
+    "price": 145,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "oxidized_cut_copper"
+    ],
+    "price": 150,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "oak_log",
+      "spruce_log",
+      "birch_log",
+      "jungle_log",
+      "acacia_log",
+      "dark_oak_log",
+      "mangrove_log"
+    ],
+    "price": 8,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "sponge"
+    ],
+    "price": 200,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "glass"
+    ],
+    "price": 6,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "tinted_glass"
+    ],
+    "price": 20,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "lapis_block"
+    ],
+    "price": 225,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "chiseled_sandstone"
+    ],
+    "price": 16,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "cut_sandstone"
+    ],
+    "price": 16,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "azalea"
+    ],
+    "price": 40,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "flowering_azalea"
+    ],
+    "price": 45,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "sea_pickle"
+    ],
+    "price": 7,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "white_wool",
+      "orange_wool",
+      "magenta_wool",
+      "light_blue_wool",
+      "yellow_wool",
+      "lime_wool",
+      "pink_wool",
+      "gray_wool",
+      "light_gray_wool",
+      "cyan_wool",
+      "purple_wool",
+      "blue_wool",
+      "brown_wool",
+      "green_wool",
+      "red_wool",
+      "black_wool"
+    ],
+    "price": 12,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "dandelion"
+    ],
+    "price": 4,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "poppy"
+    ],
+    "price": 4,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "blue_orchid"
+    ],
+    "price": 5,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "allium"
+    ],
+    "price": 5,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "azure_bluet"
+    ],
+    "price": 5,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "red_tulip"
+    ],
+    "price": 6,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "orange_tulip"
+    ],
+    "price": 6,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "white_tulip"
+    ],
+    "price": 6,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "pink_tulip"
+    ],
+    "price": 6,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "oxeye_daisy"
+    ],
+    "price": 5,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "cornflower"
+    ],
+    "price": 5,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "lily_of_the_valley"
+    ],
+    "price": 5,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "sugar_cane"
+    ],
+    "price": 5,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "kelp"
+    ],
+    "price": 4,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "moss_block"
+    ],
+    "price": 6,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "big_dripleaf"
+    ],
+    "price": 8,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "small_dripleaf"
+    ],
+    "price": 8,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "bamboo"
+    ],
+    "price": 4,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "smooth_quartz"
+    ],
+    "price": 45,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "smooth_red_sandstone"
+    ],
+    "price": 20,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "smooth_sandstone"
+    ],
+    "price": 20,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "smooth_stone"
+    ],
+    "price": 2,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "bricks"
+    ],
+    "price": 12,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "bookshelf"
+    ],
+    "price": 80,
+    "professions": [
+      "librarian"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "obsidian"
+    ],
+    "price": 80,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "ice"
+    ],
+    "price": 10,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "cactus"
+    ],
+    "price": 5,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "clay"
+    ],
+    "price": 8,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "jukebox"
+    ],
+    "price": 400,
+    "professions": [
+      "librarian"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "pumpkin"
+    ],
+    "price": 10,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "carved_pumpkin"
+    ],
+    "price": 10,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "jack_o_lantern"
+    ],
+    "price": 10,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "glowstone"
+    ],
+    "price": 10,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "stone_bricks"
+    ],
+    "price": 2,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "deepslate_bricks"
+    ],
+    "price": 2,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "deepslate_tiles"
+    ],
+    "price": 2,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "chiseled_deepslate"
+    ],
+    "price": 2,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "melon"
+    ],
+    "price": 10,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "vine"
+    ],
+    "price": 1,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "enchanting_table"
+    ],
+    "price": 800,
+    "professions": [
+      "librarian"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "emerald_block"
+    ],
+    "price": 450,
+    "professions": [
+      "ANY"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "anvil"
+    ],
+    "price": 675,
+    "professions": [
+      "weaponsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "chiseled_quartz_block"
+    ],
+    "price": 40,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "quartz_block"
+    ],
+    "price": 40,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "quartz_bricks"
+    ],
+    "price": 40,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "quartz_pillar"
+    ],
+    "price": 40,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "white_terracotta",
+      "orange_terracotta",
+      "magenta_terracotta",
+      "light_blue_terracotta",
+      "yellow_terracotta",
+      "lime_terracotta",
+      "pink_terracotta",
+      "gray_terracotta",
+      "light_gray_terracotta",
+      "cyan_terracotta",
+      "purple_terracotta",
+      "blue_terracotta",
+      "brown_terracotta",
+      "green_terracotta",
+      "red_terracotta",
+      "black_terracotta"
+    ],
+    "price": 3,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "hay_block"
+    ],
+    "price": 20,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "white_carpet",
+      "orange_carpet",
+      "magenta_carpet",
+      "light_blue_carpet",
+      "yellow_carpet",
+      "lime_carpet",
+      "pink_carpet",
+      "gray_carpet",
+      "light_gray_carpet",
+      "cyan_carpet",
+      "purple_carpet",
+      "blue_carpet",
+      "brown_carpet",
+      "green_carpet",
+      "red_carpet",
+      "black_carpet"
+    ],
+    "price": 8,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "terracotta"
+    ],
+    "price": 3,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "packed_ice"
+    ],
+    "price": 3,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "sunflower"
+    ],
+    "price": 5,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "lilac"
+    ],
+    "price": 5,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "rose_bush"
+    ],
+    "price": 5,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "peony"
+    ],
+    "price": 5,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "white_stained_glass",
+      "orange_stained_glass",
+      "magenta_stained_glass",
+      "light_blue_stained_glass",
+      "yellow_stained_glass",
+      "lime_stained_glass",
+      "pink_stained_glass",
+      "gray_stained_glass",
+      "light_gray_stained_glass",
+      "cyan_stained_glass",
+      "purple_stained_glass",
+      "blue_stained_glass",
+      "brown_stained_glass",
+      "green_stained_glass",
+      "red_stained_glass",
+      "black_stained_glass"
+    ],
+    "price": 7,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "prismarine"
+    ],
+    "price": 20,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "prismarine_bricks"
+    ],
+    "price": 20,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "dark_prismarine"
+    ],
+    "price": 25,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "sea_lantern"
+    ],
+    "price": 30,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "chiseled_red_sandstone"
+    ],
+    "price": 16,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "cut_red_sandstone"
+    ],
+    "price": 16,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "bone_block"
+    ],
+    "price": 4,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "white_glazed_terracotta",
+      "orange_glazed_terracotta",
+      "magenta_glazed_terracotta",
+      "light_blue_glazed_terracotta",
+      "yellow_glazed_terracotta",
+      "lime_glazed_terracotta",
+      "pink_glazed_terracotta",
+      "gray_glazed_terracotta",
+      "light_gray_glazed_terracotta",
+      "cyan_glazed_terracotta",
+      "purple_glazed_terracotta",
+      "blue_glazed_terracotta",
+      "brown_glazed_terracotta",
+      "green_glazed_terracotta",
+      "red_glazed_terracotta",
+      "black_glazed_terracotta"
+    ],
+    "price": 4,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "white_concrete",
+      "orange_concrete",
+      "magenta_concrete",
+      "light_blue_concrete",
+      "yellow_concrete",
+      "lime_concrete",
+      "pink_concrete",
+      "gray_concrete",
+      "light_gray_concrete",
+      "cyan_concrete",
+      "purple_concrete",
+      "blue_concrete",
+      "brown_concrete",
+      "green_concrete",
+      "red_concrete",
+      "black_concrete"
+    ],
+    "price": 4,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "white_concrete_powder",
+      "orange_concrete_powder",
+      "magenta_concrete_powder",
+      "light_blue_concrete_powder",
+      "yellow_concrete_powder",
+      "lime_concrete_powder",
+      "pink_concrete_powder",
+      "gray_concrete_powder",
+      "light_gray_concrete_powder",
+      "cyan_concrete_powder",
+      "purple_concrete_powder",
+      "blue_concrete_powder",
+      "brown_concrete_powder",
+      "green_concrete_powder",
+      "red_concrete_powder",
+      "black_concrete_powder"
+    ],
+    "price": 3,
+    "professions": [
+      "fletcher"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "tube_coral_block",
+      "brain_coral_block",
+      "bubble_coral_block",
+      "fire_coral_block",
+      "horn_coral_block",
+      "tube_coral",
+      "brain_coral",
+      "bubble_coral",
+      "fire_coral",
+      "horn_coral",
+      "tube_coral_fan",
+      "brain_coral_fan",
+      "bubble_coral_fan",
+      "fire_coral_fan",
+      "horn_coral_fan"
+    ],
+    "price": 5,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "blue_ice"
+    ],
+    "price": 4,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "scaffolding"
+    ],
+    "price": 5,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "redstone"
+    ],
+    "price": 25,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "redstone_torch"
+    ],
+    "price": 25,
+    "professions": [
+      "cleric"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "redstone_block"
+    ],
+    "price": 225,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "slime_block"
+    ],
+    "price": 50,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "honey_block"
+    ],
+    "price": 60,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "lectern"
+    ],
+    "price": 80,
+    "professions": [
+      "librarian"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "target"
+    ],
+    "price": 30,
+    "professions": [
+      "fletcher"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "tnt"
+    ],
+    "price": 20,
+    "professions": [
+      "weaponsmith"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "powered_rail"
+    ],
+    "price": 30,
+    "professions": [
+      "cartographer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "detector_rail"
+    ],
+    "price": 30,
+    "professions": [
+      "cartographer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "rail"
+    ],
+    "price": 10,
+    "professions": [
+      "cartographer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "activator_rail"
+    ],
+    "price": 30,
+    "professions": [
+      "cartographer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "saddle"
+    ],
+    "price": 20,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "minecart"
+    ],
+    "price": 100,
+    "professions": [
+      "cartographer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "oak_boat",
+      "spruce_boat",
+      "birch_boat",
+      "jungle_boat",
+      "acacia_boat",
+      "dark_oak_boat",
+      "mangrove_boat"
+    ],
+    "price": 2,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "turtle_helmet"
+    ],
+    "price": 100,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "scute"
+    ],
+    "price": 20,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "flint_and_steel"
+    ],
+    "price": 25,
+    "professions": [
+      "weaponsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "apple"
+    ],
+    "price": 7,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "bow"
+    ],
+    "price": 15,
+    "professions": [
+      "fletcher"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "arrow"
+    ],
+    "price": 3,
+    "professions": [
+      "fletcher"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "coal"
+    ],
+    "price": 10,
+    "professions": [
+      "armorer"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "charcoal"
+    ],
+    "price": 9,
+    "professions": [
+      "armorer"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "diamond"
+    ],
+    "price": 500,
+    "professions": [
+      "armorer",
+      "toolsmith",
+      "weaponsmith"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "emerald"
+    ],
+    "price": 50,
+    "professions": [
+      "ANY"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "lapis_lazuli"
+    ],
+    "price": 25,
+    "professions": [
+      "cleric",
+      "librarian"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "quartz"
+    ],
+    "price": 10,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "amethyst_shard"
+    ],
+    "price": 10,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "raw_iron"
+    ],
+    "price": 20,
+    "professions": [
+      "armorer",
+      "toolsmith",
+      "weaponsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "iron_ingot"
+    ],
+    "price": 25,
+    "professions": [
+      "armorer",
+      "toolsmith",
+      "weaponsmith"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "raw_copper"
+    ],
+    "price": 12,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "copper_ingot"
+    ],
+    "price": 15,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "raw_gold"
+    ],
+    "price": 20,
+    "professions": [
+      "cleric"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "gold_ingot"
+    ],
+    "price": 25,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "wooden_sword"
+    ],
+    "price": 4,
+    "professions": [
+      "weaponsmith"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "wooden_shovel"
+    ],
+    "price": 2,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "wooden_pickaxe"
+    ],
+    "price": 6,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "wooden_axe"
+    ],
+    "price": 6,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "wooden_hoe"
+    ],
+    "price": 4,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "stone_sword"
+    ],
+    "price": 4,
+    "professions": [
+      "weaponsmith"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "stone_shovel"
+    ],
+    "price": 2,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "stone_pickaxe"
+    ],
+    "price": 6,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "stone_axe"
+    ],
+    "price": 6,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "iron_sword"
+    ],
+    "price": 50,
+    "professions": [
+      "weaponsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "iron_shovel"
+    ],
+    "price": 25,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "iron_pickaxe"
+    ],
+    "price": 75,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "iron_axe"
+    ],
+    "price": 75,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "iron_hoe"
+    ],
+    "price": 30,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "diamond_sword"
+    ],
+    "price": 1000,
+    "professions": [
+      "weaponsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "diamond_shovel"
+    ],
+    "price": 500,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "diamond_pickaxe"
+    ],
+    "price": 1500,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "diamond_axe"
+    ],
+    "price": 1500,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "diamond_hoe"
+    ],
+    "price": 750,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "string"
+    ],
+    "price": 3,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "feather"
+    ],
+    "price": 3,
+    "professions": [
+      "fletcher"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "gunpowder"
+    ],
+    "price": 5,
+    "professions": [
+      "weaponsmith"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "wheat_seeds"
+    ],
+    "price": 1,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "wheat"
+    ],
+    "price": 4,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "bread"
+    ],
+    "price": 12,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "leather_helmet"
+    ],
+    "price": 40,
+    "professions": [
+      "armorer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "leather_chestplate"
+    ],
+    "price": 64,
+    "professions": [
+      "armorer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "leather_leggings"
+    ],
+    "price": 56,
+    "professions": [
+      "armorer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "leather_boots"
+    ],
+    "price": 32,
+    "professions": [
+      "armorer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "chainmail_helmet"
+    ],
+    "price": 30,
+    "professions": [
+      "armorer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "chainmail_chestplate"
+    ],
+    "price": 30,
+    "professions": [
+      "armorer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "chainmail_leggings"
+    ],
+    "price": 30,
+    "professions": [
+      "armorer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "chainmail_boots"
+    ],
+    "price": 30,
+    "professions": [
+      "armorer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "iron_helmet"
+    ],
+    "price": 125,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "iron_chestplate"
+    ],
+    "price": 200,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "iron_leggings"
+    ],
+    "price": 175,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "iron_boots"
+    ],
+    "price": 100,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "diamond_helmet"
+    ],
+    "price": 2500,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "diamond_chestplate"
+    ],
+    "price": 4000,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "diamond_leggings"
+    ],
+    "price": 3500,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "diamond_boots"
+    ],
+    "price": 2000,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "flint"
+    ],
+    "price": 2,
+    "professions": [
+      "fletcher"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "porkchop"
+    ],
+    "price": 4,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "cooked_porkchop"
+    ],
+    "price": 5,
+    "professions": [
+      "butcher"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "golden_apple"
+    ],
+    "price": 100,
+    "professions": [
+      "cleric"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "bucket"
+    ],
+    "price": 50,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "water_bucket"
+    ],
+    "price": 50,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "lava_bucket"
+    ],
+    "price": 55,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "leather"
+    ],
+    "price": 8,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "milk_bucket"
+    ],
+    "price": 50,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "pufferfish_bucket"
+    ],
+    "price": 55,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "salmon_bucket"
+    ],
+    "price": 55,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "cod_bucket"
+    ],
+    "price": 55,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "tropical_fish_bucket"
+    ],
+    "price": 55,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "axolotl_bucket"
+    ],
+    "price": 55,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "tadpole_bucket"
+    ],
+    "price": 55,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "brick"
+    ],
+    "price": 3,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "clay_ball"
+    ],
+    "price": 2,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "paper"
+    ],
+    "price": 5,
+    "professions": [
+      "librarian"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "book"
+    ],
+    "price": 23,
+    "professions": [
+      "librarian"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "slime_ball"
+    ],
+    "price": 10,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "compass"
+    ],
+    "price": 100,
+    "professions": [
+      "cartographer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "recovery_compass"
+    ],
+    "price": 500,
+    "professions": [
+      "cartographer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "fishing_rod"
+    ],
+    "price": 15,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "clock"
+    ],
+    "price": 75,
+    "professions": [
+      "cartographer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "spyglass"
+    ],
+    "price": 30,
+    "professions": [
+      "cartographer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "glowstone_dust"
+    ],
+    "price": 3,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "cod"
+    ],
+    "price": 2,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "salmon"
+    ],
+    "price": 2,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "tropical_fish"
+    ],
+    "price": 2,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "pufferfish"
+    ],
+    "price": 2,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "cooked_cod"
+    ],
+    "price": 3,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "cooked_salmon"
+    ],
+    "price": 3,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "ink_sac"
+    ],
+    "price": 2,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "glow_ink_sac"
+    ],
+    "price": 4,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "white_dye",
+      "orange_dye",
+      "magenta_dye",
+      "light_blue_dye",
+      "yellow_dye",
+      "lime_dye",
+      "pink_dye",
+      "gray_dye",
+      "light_gray_dye",
+      "cyan_dye",
+      "purple_dye",
+      "blue_dye",
+      "brown_dye",
+      "green_dye",
+      "red_dye",
+      "black_dye"
+    ],
+    "price": 4,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "bone_meal"
+    ],
+    "price": 3,
+    "professions": [
+      "butcher",
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "bone"
+    ],
+    "price": 3,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "sugar"
+    ],
+    "price": 5,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "cookie"
+    ],
+    "price": 4,
+    "professions": [
+      "ANY"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "filled_map"
+    ],
+    "price": 300,
+    "professions": [
+      "cartographer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "shears"
+    ],
+    "price": 45,
+    "professions": [
+      "shepherd",
+      "toolsmith"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "melon_slice"
+    ],
+    "price": 3,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "dried_kelp"
+    ],
+    "price": 2,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "pumpkin_seeds"
+    ],
+    "price": 2,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "melon_seeds"
+    ],
+    "price": 2,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "beef"
+    ],
+    "price": 3,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "cooked_beef"
+    ],
+    "price": 4,
+    "professions": [
+      "butcher"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "chicken"
+    ],
+    "price": 3,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "cooked_chicken"
+    ],
+    "price": 4,
+    "professions": [
+      "butcher"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "ender_pearl"
+    ],
+    "price": 10,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "gold_nugget"
+    ],
+    "price": 3,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "potion"
+    ],
+    "price": 18,
+    "professions": [
+      "cleric"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "glass_bottle"
+    ],
+    "price": 18,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "spider_eye"
+    ],
+    "price": 4,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "fermented_spider_eye"
+    ],
+    "price": 6,
+    "professions": [
+      "cleric"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "magma_cream"
+    ],
+    "price": 6,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "brewing_stand"
+    ],
+    "price": 40,
+    "professions": [
+      "cleric"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "cauldron"
+    ],
+    "price": 130,
+    "professions": [
+      "cleric"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "glistering_melon_slice"
+    ],
+    "price": 30,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "experience_bottle"
+    ],
+    "price": 20,
+    "professions": [
+      "cleric",
+      "librarian"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "fire_charge"
+    ],
+    "price": 10,
+    "professions": [
+      "weaponsmith"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "writable_book"
+    ],
+    "price": 25,
+    "professions": [
+      "librarian"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "flower_pot"
+    ],
+    "price": 9,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "carrot"
+    ],
+    "price": 3,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "potato"
+    ],
+    "price": 2,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "baked_potato"
+    ],
+    "price": 4,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "poisonous_potato"
+    ],
+    "price": 1,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "map"
+    ],
+    "price": 100,
+    "professions": [
+      "cartographer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "golden_carrot"
+    ],
+    "price": 30,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "skeleton_skull"
+    ],
+    "price": 200,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "wither_skeleton_skull"
+    ],
+    "price": 100,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "zombie_head"
+    ],
+    "price": 200,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "creeper_head"
+    ],
+    "price": 200,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "pumpkin_pie"
+    ],
+    "price": 30,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "firework_rocket"
+    ],
+    "price": 5,
+    "professions": [
+      "fletcher"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "enchanted_book"
+    ],
+    "price": 25,
+    "professions": [
+      "librarian"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "prismarine_shard"
+    ],
+    "price": 10,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "prismarine_crystals"
+    ],
+    "price": 10,
+    "professions": [
+      "fisherman"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "rabbit"
+    ],
+    "price": 3,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "cooked_rabbit"
+    ],
+    "price": 4,
+    "professions": [
+      "butcher"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "rabbit_stew"
+    ],
+    "price": 7,
+    "professions": [
+      "butcher"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "rabbit_foot"
+    ],
+    "price": 15,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "rabbit_hide"
+    ],
+    "price": 13,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "armor_stand"
+    ],
+    "price": 4,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "iron_horse_armor"
+    ],
+    "price": 150,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "golden_horse_armor"
+    ],
+    "price": 150,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "diamond_horse_armor"
+    ],
+    "price": 2500,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "leather_horse_armor"
+    ],
+    "price": 48,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "lead"
+    ],
+    "price": 13,
+    "professions": [
+      "farmer",
+      "shepherd"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "name_tag"
+    ],
+    "price": 20,
+    "professions": [
+      "librarian"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "mutton"
+    ],
+    "price": 3,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "cooked_mutton"
+    ],
+    "price": 4,
+    "professions": [
+      "butcher"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "white_banner",
+      "orange_banner",
+      "magenta_banner",
+      "light_blue_banner",
+      "yellow_banner",
+      "lime_banner",
+      "pink_banner",
+      "gray_banner",
+      "light_gray_banner",
+      "cyan_banner",
+      "purple_banner",
+      "blue_banner",
+      "brown_banner",
+      "green_banner",
+      "red_banner",
+      "black_banner"
+    ],
+    "price": 12,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "beetroot"
+    ],
+    "price": 2,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "beetroot_seeds"
+    ],
+    "price": 2,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "beetroot_soup"
+    ],
+    "price": 6,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "splash_potion"
+    ],
+    "price": 20,
+    "professions": [
+      "cleric"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "spectral_arrow"
+    ],
+    "price": 8,
+    "professions": [
+      "fletcher"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "tipped_arrow"
+    ],
+    "price": 6,
+    "professions": [
+      "fletcher"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "lingering_potion"
+    ],
+    "price": 25,
+    "professions": [
+      "cleric"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "shield"
+    ],
+    "price": 25,
+    "professions": [
+      "armorer",
+      "weaponsmith"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "iron_nugget"
+    ],
+    "price": 3,
+    "professions": [
+      "mason"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "phantom_membrane"
+    ],
+    "price": 18,
+    "professions": [
+      "cleric"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "crossbow"
+    ],
+    "price": 30,
+    "professions": [
+      "fletcher"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "suspicious_stew"
+    ],
+    "price": 8,
+    "professions": [
+      "butcher",
+      "cleric",
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "loom"
+    ],
+    "price": 8,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "composter"
+    ],
+    "price": 8,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "smoker"
+    ],
+    "price": 8,
+    "professions": [
+      "butcher"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "blast_furnace"
+    ],
+    "price": 80,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "cartography_table"
+    ],
+    "price": 8,
+    "professions": [
+      "cartographer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "fletching_table"
+    ],
+    "price": 8,
+    "professions": [
+      "fletcher"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "grindstone"
+    ],
+    "price": 8,
+    "professions": [
+      "weaponsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "smithing_table"
+    ],
+    "price": 30,
+    "professions": [
+      "toolsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "stonecutter"
+    ],
+    "price": 30,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "bell"
+    ],
+    "price": 20,
+    "professions": [
+      "ANY"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "lantern"
+    ],
+    "price": 10,
+    "professions": [
+      "cartographer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "sweet_berries"
+    ],
+    "price": 3,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "glow_berries"
+    ],
+    "price": 4,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "honeycomb"
+    ],
+    "price": 10,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "beehive"
+    ],
+    "price": 20,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "honey_bottle"
+    ],
+    "price": 10,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "honeycomb_block"
+    ],
+    "price": 15,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": true
+  }
+]

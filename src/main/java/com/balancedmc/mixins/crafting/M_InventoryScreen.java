@@ -48,24 +48,10 @@ public abstract class M_InventoryScreen extends AbstractInventoryScreen<PlayerSc
             cancellable = true
     )
     private static void injected(DrawContext context, int x, int y, int size, float mouseX, float mouseY, LivingEntity entity, CallbackInfo ci) {
-        ci.cancel();
-    }
-
-    /*/**
-     * Remove background when all slots are empty
-     *
-    @Inject(
-            method = "drawForeground(Lnet/minecraft/client/gui/DrawContext;II)V",
-            at = @At("TAIL")
-    )
-    private void injected(DrawContext context, int mouseX, int mouseY, CallbackInfo ci) {
-        for (int i = 47; i < 62; i++) {
-            if (this.handler.getSlot(i).hasStack()) {
-                return;
-            }
+        if (entity instanceof PlayerEntity player && player.currentScreenHandler instanceof PlayerScreenHandler) {
+            ci.cancel();
         }
-        context.fill(78, 15, 169, 60, -3750202);
-    }*/
+    }
 
     /* *** REMOVE RECIPE BOOK *** */
 

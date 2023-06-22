@@ -100,7 +100,9 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
                         input.setStack(0, ItemStack.EMPTY);
                         if (input.getStack(1).isOf(Items.BOOK)) {
                             input.setStack(1, EnchantedBookItem.forEnchantment(removedEnchantment));
-                            player.addExperienceLevels(-experienceChange);
+                            if (!player.getAbilities().creativeMode) {
+                                player.addExperienceLevels(-experienceChange);
+                            }
                         }
                         else {
                             player.addExperience(experienceChange * 4);
@@ -142,7 +144,7 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
 
         // stop if player does not have required experience
         experienceChange = removedEnchantment.level * 2;
-        if (experienceChange > player.experienceLevel && this.getSlot(1).hasStack()) {
+        if (!player.getAbilities().creativeMode && experienceChange > player.experienceLevel && this.getSlot(1).hasStack()) {
             this.result.clear();
             return;
         }
