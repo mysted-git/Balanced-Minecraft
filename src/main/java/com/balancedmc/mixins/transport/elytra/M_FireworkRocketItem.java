@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.transport;
+package com.balancedmc.mixins.transport.elytra;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FireworkRocketItem;
