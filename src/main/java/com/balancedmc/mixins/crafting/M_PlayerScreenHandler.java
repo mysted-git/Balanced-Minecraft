@@ -14,6 +14,7 @@ import net.minecraft.recipe.RecipeType;
 import net.minecraft.screen.AbstractRecipeScreenHandler;
 import net.minecraft.screen.PlayerScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
+import net.minecraft.screen.slot.CraftingResultSlot;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.screen.slot.SlotActionType;
 import net.minecraft.util.Identifier;
@@ -39,6 +40,7 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
         super(screenHandlerType, i);
     }
 
+    private int mode = 0;
     private final Inventory craftingInventory = new SimpleInventory(16);
     @Shadow @Final private RecipeInputInventory craftingInput;
     @Shadow @Final private CraftingResultInventory craftingResult;
@@ -114,6 +116,10 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
                 super.setStack(stack);
                 updateCrafting();
             }
+            @Override
+            public boolean isEnabled() {
+                return mode == 1;
+            }
         });
         for (int x = 0; x < 5; x++) {
             for (int y = 0; y < 3; y++) {
@@ -129,7 +135,7 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
                     }
                     @Override
                     public boolean isEnabled() {
-                        return this.hasStack();
+                        return this.hasStack() && mode == 1;
                     }
                 });
             }
@@ -163,8 +169,23 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
             )
     )
     private Slot redirect(PlayerScreenHandler instance, Slot slot) {
-        if (slot.inventory == this.craftingInput || slot.inventory == this.craftingResult) {
-            return this.addSlot(new Slot(slot.inventory, slot.getIndex(), Integer.MAX_VALUE, Integer.MAX_VALUE));
+        if (slot.inventory == this.craftingResult) {
+            return this.addSlot(new CraftingResultSlot(this.owner, this.craftingInput, this.craftingResult, slot.getIndex(), 90, 35) {
+                @Override
+                public boolean isEnabled() {
+                    return mode == 0;
+                }
+            });
+        }
+        if (slot.inventory == this.craftingInput) {
+            int x = slot.getIndex() == 0 || slot.getIndex() == 2 ? 52 : Integer.MAX_VALUE;
+            int y = slot.getIndex() == 0 ? 25 : slot.getIndex() == 2 ? 43 : Integer.MAX_VALUE;
+            return this.addSlot(new Slot(slot.inventory, slot.getIndex(), x, y) {
+                @Override
+                public boolean isEnabled() {
+                    return mode == 0;
+                }
+            });
         }
         if (slot.getIndex() == 40) {
             return this.addSlot(new Slot(slot.inventory, 40, 26, 62){
@@ -213,5 +234,17 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
         if (slotIndex == 46) {
             updateCrafting();
         }
+    }
+
+    /**
+     * Handle clicking "switch mode" button
+     */
+    @Override
+    public boolean onButtonClick(PlayerEntity player, int id) {
+        if (id == 0) {
+            this.mode = this.mode == 0 ? 1 : 0;
+            return true;
+        }
+        return false;
     }
 }

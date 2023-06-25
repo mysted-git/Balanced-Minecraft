@@ -1,6 +1,5 @@
 package com.balancedmc.mixins.dragon;
 
-import com.balancedmc.Main;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.ShulkerEntity;
 import net.minecraft.util.math.Box;
@@ -42,7 +41,6 @@ public abstract class M_EndSpikeFeature {
             ShulkerEntity shulker = EntityType.SHULKER.create(world.toServerWorld());
             shulker.setPosition(x, y, z);
             world.spawnEntity(shulker);
-            Main.LOGGER.info("Spawn at " + x + " " + y + " " + z);
         }
     }
 }

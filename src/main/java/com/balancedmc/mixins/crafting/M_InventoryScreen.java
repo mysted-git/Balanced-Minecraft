@@ -17,6 +17,7 @@ import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
@@ -36,11 +37,11 @@ public abstract class M_InventoryScreen extends AbstractInventoryScreen<PlayerSc
     )
     private void injected(PlayerEntity player, CallbackInfo ci) {
         this.titleX = 33;
-        this.titleY = 20;
+        this.titleY = 13;
     }
 
     /**
-     * Remove player model
+     * Remove player model if mode is 1
      */
     @Inject(
             method = "drawEntity(Lnet/minecraft/client/gui/DrawContext;IIIFFLnet/minecraft/entity/LivingEntity;)V",
@@ -48,8 +49,67 @@ public abstract class M_InventoryScreen extends AbstractInventoryScreen<PlayerSc
             cancellable = true
     )
     private static void injected(DrawContext context, int x, int y, int size, float mouseX, float mouseY, LivingEntity entity, CallbackInfo ci) {
-        if (entity instanceof PlayerEntity player && player.currentScreenHandler instanceof PlayerScreenHandler) {
+        if (entity instanceof PlayerEntity player && player.currentScreenHandler instanceof PlayerScreenHandler && !player.currentScreenHandler.getSlot(0).isEnabled()) {
             ci.cancel();
+        }
+    }
+
+    /**
+     * Move player model to the right
+     */
+    @ModifyVariable(
+            method = "drawEntity(Lnet/minecraft/client/gui/DrawContext;IIIFFLnet/minecraft/entity/LivingEntity;)V",
+            at = @At("HEAD"),
+            ordinal = 0,
+            argsOnly = true
+    )
+    private static int modifyInt(int x) {
+        return x + 93;
+    }
+
+    @Inject(
+            method = "drawForeground",
+            at = @At("TAIL")
+    )
+    private void injected(DrawContext context, int mouseX, int mouseY, CallbackInfo ci) {
+        mouseX -= this.x;
+        mouseY -= this.y;
+        int y;
+        if (this.handler.getSlot(0).isEnabled()) {
+            if (mouseX >= 46 && mouseY >= 61 && mouseX <= 65 && mouseY <= 78) {
+                y = 55;
+            }
+            else {
+                y = 37;
+            }
+        }
+        else {
+            if (mouseX >= 46 && mouseY >= 61 && mouseX <= 65 && mouseY <= 78) {
+                y = 18;
+            }
+            else {
+                y = 0;
+            }
+        }
+        context.drawTexture(BACKGROUND_TEXTURE, 46, 61, 178, y, 20, 18);
+    }
+
+    @Inject(
+            method = "drawBackground",
+            at = @At("TAIL")
+    )
+    private void injected(DrawContext context, float delta, int mouseX, int mouseY, CallbackInfo ci) {
+        if (this.handler.getSlot(0).isEnabled()) {
+            // crafting grid
+            context.drawTexture(BACKGROUND_TEXTURE, this.x + 51, this.y + 24, 178, 74, 56, 36);
+            // player background
+            context.drawTexture(BACKGROUND_TEXTURE, this.x + 118, this.y + 7, 205, 0, 51, 72);
+        }
+        else {
+            // input & arrow
+            context.drawTexture(BACKGROUND_TEXTURE, this.x + 41, this.y + 34, 178, 112, 36, 18);
+            // output
+            context.drawTexture(BACKGROUND_TEXTURE, this.x + 78, this.y + 15, 164, 200, 92, 56);
         }
     }
 
@@ -57,6 +117,8 @@ public abstract class M_InventoryScreen extends AbstractInventoryScreen<PlayerSc
 
     @Shadow private float mouseX;
     @Shadow private float mouseY;
+
+    @Shadow private boolean mouseDown;
 
     @Redirect(
             method = "handledScreenTick()V",
@@ -107,6 +169,11 @@ public abstract class M_InventoryScreen extends AbstractInventoryScreen<PlayerSc
      */
     @Overwrite
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
+        double x = mouseX - this.x;
+        double y = mouseY - this.y;
+        if (x >= 46 && y >= 61 && x <= 65 && y <= 78) {
+            this.handler.onButtonClick(this.client.player, 0);
+        }
         return super.mouseClicked(mouseX, mouseY, button);
     }
 

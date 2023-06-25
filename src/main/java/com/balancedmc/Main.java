@@ -28,4 +28,13 @@ public class Main implements ModInitializer {
 
 		VillagerHelper.registerReloadListener();
 	}
+
+	public void log(Object ... objs) {
+		StringBuilder builder = new StringBuilder();
+		for (Object o : objs) {
+			builder.append(" ");
+			builder.append(o);
+		}
+		Main.LOGGER.info(builder.substring(1));
+	}
 }

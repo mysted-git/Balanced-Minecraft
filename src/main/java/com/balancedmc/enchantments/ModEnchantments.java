@@ -2,11 +2,14 @@ package com.balancedmc.enchantments;
 
 import com.balancedmc.Main;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.enchantment.DamageEnchantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentLevelEntry;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -18,16 +21,21 @@ import java.util.List;
 
 public class ModEnchantments {
 
-    public static Enchantment UNDEAD_PROTECTION = new MobProtectionEnchantment(EntityGroup.UNDEAD);
-    public static Enchantment ARTHROPOD_PROTECTION = new MobProtectionEnchantment(EntityGroup.ARTHROPOD);
-    public static Enchantment AQUATIC_PROTECTION = new MobProtectionEnchantment(EntityGroup.AQUATIC, new EntityType[]{EntityType.SLIME});
-    public static Enchantment ILLAGER_PROTECTION = new MobProtectionEnchantment(EntityGroup.ILLAGER, new EntityType[]{EntityType.VEX, EntityType.WITCH});
+    public static Enchantment UNDEAD_PROTECTION = new MobProtectionEnchantment(ModEnchantments::isUndead);
+    public static Enchantment ARTHROPOD_PROTECTION = new MobProtectionEnchantment(ModEnchantments::isArthropod);
+    public static Enchantment AQUATIC_PROTECTION = new MobProtectionEnchantment(ModEnchantments::isAquatic);
+    public static Enchantment ILLAGER_PROTECTION = new MobProtectionEnchantment(ModEnchantments::isIllager);
+    public static Enchantment BANE_OF_THE_AQUATIC = new DamageEnchantment(Enchantment.Rarity.UNCOMMON, 3, EquipmentSlot.MAINHAND);
+    public static Enchantment BANE_OF_ILLAGERS = new DamageEnchantment(Enchantment.Rarity.UNCOMMON, 4, EquipmentSlot.MAINHAND);
 
     public static void registerEnchantments() {
         Registry.register(Registries.ENCHANTMENT, new Identifier(Main.MOD_ID, "undead_protection"), UNDEAD_PROTECTION);
         Registry.register(Registries.ENCHANTMENT, new Identifier(Main.MOD_ID, "arthropod_protection"), ARTHROPOD_PROTECTION);
         Registry.register(Registries.ENCHANTMENT, new Identifier(Main.MOD_ID, "aquatic_protection"), AQUATIC_PROTECTION);
         Registry.register(Registries.ENCHANTMENT, new Identifier(Main.MOD_ID, "illager_protection"), ILLAGER_PROTECTION);
+
+        Registry.register(Registries.ENCHANTMENT, new Identifier(Main.MOD_ID, "bane_of_the_aquatic"), BANE_OF_THE_AQUATIC);
+        Registry.register(Registries.ENCHANTMENT, new Identifier(Main.MOD_ID, "bane_of_illagers"), BANE_OF_ILLAGERS);
 
         registerBooks();
     }
@@ -41,5 +49,24 @@ public class ModEnchantments {
                         EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(Enchantments.PROJECTILE_PROTECTION, 5))
                 )))
         );
+    }
+
+    public static boolean isUndead(LivingEntity entity) {
+        return entity.getGroup() == EntityGroup.UNDEAD;
+    }
+
+    public static boolean isArthropod(LivingEntity entity) {
+        return entity.getGroup() == EntityGroup.ARTHROPOD;
+    }
+
+    public static boolean isAquatic(LivingEntity entity) {
+        if (entity.getType() == EntityType.SLIME) return true;
+        return entity.getGroup() == EntityGroup.AQUATIC;
+    }
+
+    public static boolean isIllager(LivingEntity entity) {
+        if (entity.getType() == EntityType.VEX) return true;
+        if (entity.getType() == EntityType.WITCH) return true;
+        return entity.getGroup() == EntityGroup.ILLAGER;
     }
 }

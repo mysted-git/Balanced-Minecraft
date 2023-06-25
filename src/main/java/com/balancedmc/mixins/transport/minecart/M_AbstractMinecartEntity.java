@@ -15,7 +15,7 @@ import java.util.List;
 public abstract class M_AbstractMinecartEntity {
 
     /**
-     * Minecart speed doubled with player riding
+     * Minecarts now travel at 20m/s
      */
     @Inject(method = "getMaxSpeed()D", at = @At("RETURN"), cancellable = true)
     private void inject(CallbackInfoReturnable<Double> cir) {
@@ -24,7 +24,7 @@ public abstract class M_AbstractMinecartEntity {
         if ((AbstractMinecartEntity) (Object) this instanceof MinecartEntity cart) {
             List<Entity> passengers = cart.getPassengerList();
             if (passengers.size() > 0 && passengers.get(0) instanceof PlayerEntity) {
-                speed *= 2;
+                speed *= 2.5;
             }
         }
 

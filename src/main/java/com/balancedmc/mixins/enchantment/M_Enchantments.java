@@ -11,14 +11,16 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class M_Enchantments {
 
     /**
-     * @author HB0P
-     * @reason Remove protection and infinity enchantments
+     * Remove protection, sharpness, and infinity enchantments
      */
-
-    @Inject(method = "register(Ljava/lang/String;Lnet/minecraft/enchantment/Enchantment;)Lnet/minecraft/enchantment/Enchantment;", at = @At("HEAD"), cancellable = true)
-    private static void inject(String name, Enchantment enchantment, CallbackInfoReturnable<Enchantment> ci) {
-        if (name.equals("protection") || name.equals("infinity")) {
-            ci.cancel();
+    @Inject(
+            method = "register(Ljava/lang/String;Lnet/minecraft/enchantment/Enchantment;)Lnet/minecraft/enchantment/Enchantment;",
+            at = @At("HEAD"),
+            cancellable = true
+    )
+    private static void inject(String name, Enchantment enchantment, CallbackInfoReturnable<Enchantment> cir) {
+        if (name.equals("protection") || name.equals("infinity") || name.equals("sharpness")) {
+            cir.cancel();
         }
     }
 }

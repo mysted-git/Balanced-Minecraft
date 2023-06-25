@@ -2,28 +2,20 @@ package com.balancedmc.enchantments;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
-import net.minecraft.entity.EntityGroup;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.registry.tag.DamageTypeTags;
 
-import java.util.List;
+import java.util.function.Predicate;
 
 public class MobProtectionEnchantment extends Enchantment {
 
-    private final EntityGroup group;
-    private final EntityType[] entities;
+    private final Predicate<LivingEntity> predicate;
 
-    public MobProtectionEnchantment(EntityGroup group, EntityType[] entities) {
+    public MobProtectionEnchantment(Predicate<LivingEntity> p) {
         super(Rarity.COMMON, EnchantmentTarget.ARMOR, new EquipmentSlot[]{EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET});
-        this.group = group;
-        this.entities = entities;
-    }
-
-    public MobProtectionEnchantment(EntityGroup group) {
-        this(group, new EntityType[0]);
+        this.predicate = p;
     }
 
     public int getProtectionAmount(int level, DamageSource source) {
@@ -36,10 +28,7 @@ public class MobProtectionEnchantment extends Enchantment {
         else if (!(source.getAttacker() instanceof LivingEntity entity)) {
             return 0;
         }
-        else if (entity.getGroup() == group) {
-            return level;
-        }
-        else if (List.of(entities).contains(entity.getType())) {
+        else if (predicate.test(entity)) {
             return level;
         }
         return 0;
