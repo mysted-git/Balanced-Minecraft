@@ -1,12 +1,8 @@
 package com.balancedmc.mixins.enchantment;
 
 import com.balancedmc.enchantments.EnchantmentTags;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.FrostWalkerEnchantment;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;

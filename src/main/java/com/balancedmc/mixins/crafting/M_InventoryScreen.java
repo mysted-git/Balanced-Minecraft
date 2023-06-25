@@ -28,6 +28,8 @@ public abstract class M_InventoryScreen extends AbstractInventoryScreen<PlayerSc
         super(screenHandler, playerInventory, text);
     }
 
+    @Shadow public static void drawEntity(DrawContext context, int x, int y, int size, float mouseX, float mouseY, LivingEntity entity) {}
+
     /**
      * Move title
      */
@@ -41,30 +43,19 @@ public abstract class M_InventoryScreen extends AbstractInventoryScreen<PlayerSc
     }
 
     /**
-     * Remove player model if mode is 1
+     * Remove/Move player model
      */
-    @Inject(
-            method = "drawEntity(Lnet/minecraft/client/gui/DrawContext;IIIFFLnet/minecraft/entity/LivingEntity;)V",
-            at = @At("HEAD"),
-            cancellable = true
+    @Redirect(
+            method = "drawBackground",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/client/gui/screen/ingame/InventoryScreen;drawEntity(Lnet/minecraft/client/gui/DrawContext;IIIFFLnet/minecraft/entity/LivingEntity;)V"
+            )
     )
-    private static void injected(DrawContext context, int x, int y, int size, float mouseX, float mouseY, LivingEntity entity, CallbackInfo ci) {
-        if (entity instanceof PlayerEntity player && player.currentScreenHandler instanceof PlayerScreenHandler && !player.currentScreenHandler.getSlot(0).isEnabled()) {
-            ci.cancel();
+    private void redirect(DrawContext context, int x, int y, int size, float mouseX, float mouseY, LivingEntity entity) {
+        if (entity instanceof PlayerEntity player && player.currentScreenHandler.getSlot(0).isEnabled()) {
+            drawEntity(context, x + 93, y, size, mouseX, mouseY, entity);
         }
-    }
-
-    /**
-     * Move player model to the right
-     */
-    @ModifyVariable(
-            method = "drawEntity(Lnet/minecraft/client/gui/DrawContext;IIIFFLnet/minecraft/entity/LivingEntity;)V",
-            at = @At("HEAD"),
-            ordinal = 0,
-            argsOnly = true
-    )
-    private static int modifyInt(int x) {
-        return x + 93;
     }
 
     @Inject(

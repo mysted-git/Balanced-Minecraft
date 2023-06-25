@@ -17,5 +17,7 @@
   "enchantment.balancedmc.arthropod_protection": "Arthropod Protection",
   "enchantment.balancedmc.aquatic_protection": "Aquatic Protection",
   "enchantment.balancedmc.illager_protection": "Illager Protection",
+  "enchantment.balancedmc.bane_of_the_aquatic": "Bane of the Aquatic",
+  "enchantment.balancedmc.bane_of_illagers": "Bane of Illagers",
   "container.grindstone_title": "Transfer Enchantments"
 }
