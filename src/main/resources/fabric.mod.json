@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "balancedmc",
-  "version": "${version}",
+  "version": "0.2",
 
   "name": "Balanced Minecraft",
   "description": "description!",

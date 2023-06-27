@@ -84,7 +84,10 @@
       "jungle_planks",
       "acacia_planks",
       "dark_oak_planks",
-      "mangrove_planks"
+      "mangrove_planks",
+      "cherry_planks",
+      "bamboo_planks",
+      "bamboo_mosaic"
     ],
     "price": 2,
     "professions": [
@@ -101,7 +104,8 @@
       "jungle_sapling",
       "acacia_sapling",
       "dark_oak_sapling",
-      "mangrove_propagule"
+      "mangrove_propagule",
+      "cherry_sapling"
     ],
     "price": 8,
     "professions": [
@@ -509,9 +513,11 @@
       "jungle_log",
       "acacia_log",
       "dark_oak_log",
-      "mangrove_log"
+      "mangrove_log",
+      "cherry_log",
+      "bamboo_block"
     ],
-    "price": 8,
+    "price": 4,
     "professions": [
       "farmer"
     ],
@@ -777,6 +783,17 @@
   },
   {
     "items": [
+      "pink_petals"
+    ],
+    "price": 5,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
       "sugar_cane"
     ],
     "price": 5,
@@ -901,6 +918,17 @@
       "bookshelf"
     ],
     "price": 80,
+    "professions": [
+      "librarian"
+    ],
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "chiseled_bookshelf"
+    ],
+    "price": 15,
     "professions": [
       "librarian"
     ],
@@ -1668,7 +1696,9 @@
       "jungle_boat",
       "acacia_boat",
       "dark_oak_boat",
-      "mangrove_boat"
+      "mangrove_boat",
+      "bamboo_raft",
+      "cherry_boat"
     ],
     "price": 2,
     "professions": [
@@ -2814,6 +2844,18 @@
   },
   {
     "items": [
+      "brush"
+    ],
+    "price": 20,
+    "professions": [
+      "fletcher",
+      "toolsmith"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
       "melon_slice"
     ],
     "price": 3,
@@ -3057,6 +3099,73 @@
   },
   {
     "items": [
+      "decorated_pot"
+    ],
+    "price": 12,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "angler_pottery_sherd",
+      "archer_pottery_sherd",
+      "arms_up_pottery_sherd",
+      "blade_pottery_sherd",
+      "brewer_pottery_sherd",
+      "burn_pottery_sherd",
+      "danger_pottery_sherd",
+      "explorer_pottery_sherd",
+      "friend_pottery_sherd",
+      "heart_pottery_sherd",
+      "heartbreak_pottery_sherd",
+      "howl_pottery_sherd",
+      "miner_pottery_sherd",
+      "mourner_pottery_sherd",
+      "plenty_pottery_sherd",
+      "prize_pottery_sherd",
+      "sheaf_pottery_sherd",
+      "shelter_pottery_sherd",
+      "skull_pottery_sherd",
+      "snort_pottery_sherd"
+    ],
+    "price": 50,
+    "professions": [
+      "mason"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "coast_armor_trim_smithing_template",
+      "dune_armor_trim_smithing_template",
+      "eye_armor_trim_smithing_template",
+      "host_armor_trim_smithing_template",
+      "raiser_armor_trim_smithing_template",
+      "rib_armor_trim_smithing_template",
+      "sentry_armor_trim_smithing_template",
+      "shaper_armor_trim_smithing_template",
+      "silence_armor_trim_smithing_template",
+      "snout_armor_trim_smithing_template",
+      "spire_armor_trim_smithing_template",
+      "tide_armor_trim_smithing_template",
+      "vex_armor_trim_smithing_template",
+      "ward_armor_trim_smithing_template",
+      "wayfinder_armor_trim_smithing_template",
+      "wild_armor_trim_smithing_template"
+    ],
+    "price": 50,
+    "professions": [
+      "armorer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
       "carrot"
     ],
     "price": 3,
@@ -3093,6 +3202,50 @@
       "poisonous_potato"
     ],
     "price": 1,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "pitcher_plant"
+    ],
+    "price": 6,
+    "professions": [
+      "farmer"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "pitcher_pod"
+    ],
+    "price": 6,
+    "professions": [
+      "farmer"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "torchflower"
+    ],
+    "price": 6,
+    "professions": [
+      "shepherd"
+    ],
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "torchflower_seeds"
+    ],
+    "price": 3,
     "professions": [
       "farmer"
     ],
@@ -3157,6 +3310,17 @@
   {
     "items": [
       "creeper_head"
+    ],
+    "price": 200,
+    "professions": [
+      "butcher"
+    ],
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "piglin_head"
     ],
     "price": 200,
     "professions": [
