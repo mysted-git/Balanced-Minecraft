@@ -1,7 +1,7 @@
 package com.balancedmc.mixins.dragon;
 
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.mob.ShulkerEntity;
+import com.balancedmc.entity.ModEntities;
+import com.balancedmc.entity.SentryShulkerEntity;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
@@ -28,8 +28,8 @@ public abstract class M_EndSpikeFeature {
     )
     private void injected(ServerWorldAccess world, Random random, EndSpikeFeatureConfig config, EndSpikeFeature.Spike spike, CallbackInfo ci) {
         int r = spike.getRadius() + 1;
-        List<ShulkerEntity> entities = world.getEntitiesByClass(ShulkerEntity.class, new Box(spike.getCenterX() - r, world.getBottomY(), spike.getCenterZ() - r, spike.getCenterX() + r, spike.getHeight() + 10, spike.getCenterZ() + r), (ShulkerEntity) -> true);
-        for (ShulkerEntity entity : entities) {
+        List<SentryShulkerEntity> entities = world.getEntitiesByClass(SentryShulkerEntity.class, new Box(spike.getCenterX() - r, world.getBottomY(), spike.getCenterZ() - r, spike.getCenterX() + r, spike.getHeight() + 10, spike.getCenterZ() + r), (ShulkerEntity) -> true);
+        for (SentryShulkerEntity entity : entities) {
             entity.discard();
         }
         for (Direction direction : Direction.values()) {
@@ -38,7 +38,7 @@ public abstract class M_EndSpikeFeature {
             int z = spike.getCenterZ() + (direction.getOffsetZ() * r);
             int top = world.getTopY(Heightmap.Type.MOTION_BLOCKING, x, z);
             int y = (int) (Math.random() * (spike.getHeight() - top)) + top;
-            ShulkerEntity shulker = EntityType.SHULKER.create(world.toServerWorld());
+            SentryShulkerEntity shulker = ModEntities.SENTRY_SHULKER.create(world.toServerWorld());
             shulker.setPosition(x, y, z);
             world.spawnEntity(shulker);
         }

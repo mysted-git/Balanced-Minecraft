@@ -1,8 +1,11 @@
 package com.balancedmc.mixins.dragon;
 
+import com.balancedmc.entity.SentryShulkerEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.boss.ServerBossBar;
+import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.boss.dragon.EnderDragonFight;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.decoration.EndCrystalEntity;
@@ -41,7 +44,7 @@ public abstract class M_EnderDragonFight {
             at = @At("TAIL")
     )
     private void injected(EndCrystalEntity enderCrystal, DamageSource source, CallbackInfo ci) {
-        if (stage < 1 && this.getAliveEndCrystals() == 0) {
+        if (!dragonKilled && stage < 1 && this.getAliveEndCrystals() == 0) {
             stage = 1;
         }
     }
@@ -79,5 +82,23 @@ public abstract class M_EnderDragonFight {
         }
         // show stage on boss bar
         this.bossBar.setName(Text.of(this.bossBar.getName().getString().replaceAll(" - Stage \\d", "") + " - Stage " + (stage + 1)));
+    }
+
+    /**
+     * Remove shulkers, phantoms, and illusioners when the dragon is killed
+     */
+    @Inject(
+            method = "dragonKilled(Lnet/minecraft/entity/boss/dragon/EnderDragonEntity;)V",
+            at = @At(
+                    value = "FIELD",
+                    target = "Lnet/minecraft/entity/boss/dragon/EnderDragonFight;dragonKilled:Z"
+            )
+    )
+    private void injected(EnderDragonEntity dragon, CallbackInfo ci) {
+        for (Class<Entity> cls : new Class[]{SentryShulkerEntity.class, PhantomEntity.class, IllusionerEntity.class}) {
+            for (Entity entity : this.world.getEntitiesByClass(cls, new Box(-50, 0, -50, 50, 255, 50), (entity) -> true)) {
+                entity.discard();
+            }
+        }
     }
 }

@@ -2,6 +2,7 @@ package com.balancedmc;
 
 import com.balancedmc.enchantments.ModEnchantments;
 import com.balancedmc.entity.EntitySpawns;
+import com.balancedmc.entity.ModEntities;
 import com.balancedmc.items.ModItems;
 import com.balancedmc.loot_tables.ModLootTables;
 import com.balancedmc.potion.ModPotionRecipes;
@@ -25,6 +26,7 @@ public class Main implements ModInitializer {
 		ModPotionRecipes.registerPotionRecipes();
 		ModLootTables.registerLootTables();
 		EntitySpawns.registerEntitySpawns();
+		ModEntities.registerEntities();
 
 		VillagerHelper.registerReloadListener();
 	}

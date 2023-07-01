@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "com.balancedmc.Main"
+    ],
+    "client": [
+      "com.balancedmc.MainClient"
     ]
   },
   "mixins": [
