@@ -382,12 +382,14 @@ class TradeItem {
             Collections.shuffle(enchantments);
             for (Enchantment enchantment : enchantments) {
                 if (enchantment.isAcceptableItem(itemStack) || itemStack.isOf(Items.ENCHANTED_BOOK)) {
-                    int level = (int) (Math.random() * (enchantment.getMaxLevel() + 1));
-                    if (level == 0) break;
+                    int level;
                     if (itemStack.isOf(Items.ENCHANTED_BOOK)) {
+                        level = (int) ((Math.random() * enchantment.getMaxLevel()) + 1);
                         itemStack = EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(enchantment, level));
                     }
                     else {
+                        level = (int) (Math.random() * (enchantment.getMaxLevel() + 1));
+                        if (level == 0) break;
                         itemStack.addEnchantment(enchantment, level);
                     }
                     priceBonus = VillagerHelper.enchantments.get(enchantment) * level;

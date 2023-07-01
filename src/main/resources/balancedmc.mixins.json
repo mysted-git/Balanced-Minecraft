@@ -4,6 +4,7 @@
   "package": "com.balancedmc.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "M_Blocks",
     "M_PistonBlock",
     "M_WitherSkullBlock",
     "conduit.M_ConduitBlockEntity",

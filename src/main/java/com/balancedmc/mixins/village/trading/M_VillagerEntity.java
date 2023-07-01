@@ -24,7 +24,7 @@ public abstract class M_VillagerEntity {
         VillagerProfession profession = villager.getVillagerData().getProfession();
 
         if (profession != VillagerProfession.NONE && profession != VillagerProfession.NITWIT) {
-            TradeOffer[] trades = VillagerHelper.generateTrades(villager, 2);
+            TradeOffer[] trades = VillagerHelper.generateTrades(villager, 3);
             offerList.addAll(List.of(trades));
         }
     }
