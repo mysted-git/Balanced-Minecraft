@@ -4,6 +4,7 @@
       "polished_granite"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -15,6 +16,7 @@
       "polished_diorite"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -26,6 +28,7 @@
       "polished_andesite"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -37,6 +40,7 @@
       "polished_deepslate"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -48,6 +52,7 @@
       "calcite"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -59,6 +64,7 @@
       "tuff"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -70,6 +76,7 @@
       "dripstone_block"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -90,6 +97,7 @@
       "bamboo_mosaic"
     ],
     "price": 2,
+    "weight": 3,
     "professions": [
       "farmer"
     ],
@@ -108,6 +116,7 @@
       "cherry_sapling"
     ],
     "price": 8,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -119,6 +128,7 @@
       "sand"
     ],
     "price": 2,
+    "weight": 3,
     "professions": [
       "mason"
     ],
@@ -130,6 +140,7 @@
       "red_sand"
     ],
     "price": 5,
+    "weight": 2,
     "professions": [
       "mason"
     ],
@@ -141,6 +152,7 @@
       "gravel"
     ],
     "price": 2,
+    "weight": 3,
     "professions": [
       "fletcher"
     ],
@@ -152,6 +164,7 @@
       "coal_ore"
     ],
     "price": 50,
+    "weight": 2,
     "professions": [
       "mason"
     ],
@@ -163,6 +176,7 @@
       "deepslate_coal_ore"
     ],
     "price": 60,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -174,6 +188,7 @@
       "iron_ore"
     ],
     "price": 80,
+    "weight": 2,
     "professions": [
       "mason"
     ],
@@ -185,6 +200,7 @@
       "deepslate_iron_ore"
     ],
     "price": 80,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -196,6 +212,7 @@
       "copper_ore"
     ],
     "price": 50,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -207,6 +224,7 @@
       "deepslate_copper_ore"
     ],
     "price": 50,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -218,6 +236,7 @@
       "gold_ore"
     ],
     "price": 80,
+    "weight": 2,
     "professions": [
       "cleric"
     ],
@@ -229,6 +248,7 @@
       "deepslate_gold_ore"
     ],
     "price": 80,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -240,6 +260,7 @@
       "redstone_ore"
     ],
     "price": 100,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -251,6 +272,7 @@
       "deepslate_redstone_ore"
     ],
     "price": 100,
+    "weight": 2,
     "professions": [
       "cleric"
     ],
@@ -262,6 +284,7 @@
       "lapis_ore"
     ],
     "price": 100,
+    "weight": 2,
     "professions": [
       "cleric"
     ],
@@ -273,6 +296,7 @@
       "deepslate_lapis_ore"
     ],
     "price": 100,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -284,6 +308,7 @@
       "diamond_ore"
     ],
     "price": 1000,
+    "weight": 1,
     "professions": [
       "armorer",
       "toolsmith",
@@ -297,6 +322,7 @@
       "deepslate_diamond_ore"
     ],
     "price": 1000,
+    "weight": 2,
     "professions": [
       "armorer",
       "toolsmith",
@@ -310,6 +336,7 @@
       "nether_gold_ore"
     ],
     "price": 70,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -321,6 +348,7 @@
       "nether_quartz_ore"
     ],
     "price": 40,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -332,6 +360,7 @@
       "coal_block"
     ],
     "price": 90,
+    "weight": 2,
     "professions": [
       "mason"
     ],
@@ -343,6 +372,7 @@
       "raw_iron_block"
     ],
     "price": 180,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -354,6 +384,7 @@
       "raw_copper_block"
     ],
     "price": 108,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -365,6 +396,7 @@
       "raw_gold_block"
     ],
     "price": 180,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -376,6 +408,7 @@
       "amethyst_block"
     ],
     "price": 50,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -387,6 +420,7 @@
       "iron_block"
     ],
     "price": 225,
+    "weight": 3,
     "professions": [
       "mason"
     ],
@@ -398,6 +432,7 @@
       "copper_block"
     ],
     "price": 135,
+    "weight": 3,
     "professions": [
       "mason"
     ],
@@ -409,6 +444,7 @@
       "gold_block"
     ],
     "price": 225,
+    "weight": 3,
     "professions": [
       "cleric"
     ],
@@ -420,6 +456,7 @@
       "diamond_block"
     ],
     "price": 4500,
+    "weight": 1,
     "professions": [
       "armorer",
       "toolsmith",
@@ -433,6 +470,7 @@
       "exposed_copper"
     ],
     "price": 140,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -444,6 +482,7 @@
       "weathered_copper"
     ],
     "price": 145,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -455,6 +494,7 @@
       "oxidized_copper"
     ],
     "price": 150,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -466,6 +506,7 @@
       "cut_copper"
     ],
     "price": 135,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -477,6 +518,7 @@
       "exposed_cut_copper"
     ],
     "price": 140,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -488,6 +530,7 @@
       "weathered_cut_copper"
     ],
     "price": 145,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -499,6 +542,7 @@
       "oxidized_cut_copper"
     ],
     "price": 150,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -518,6 +562,7 @@
       "bamboo_block"
     ],
     "price": 4,
+    "weight": 3,
     "professions": [
       "farmer"
     ],
@@ -529,6 +574,7 @@
       "sponge"
     ],
     "price": 200,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -540,6 +586,7 @@
       "glass"
     ],
     "price": 6,
+    "weight": 1,
     "professions": [
       "toolsmith"
     ],
@@ -551,6 +598,7 @@
       "tinted_glass"
     ],
     "price": 20,
+    "weight": 1,
     "professions": [
       "toolsmith"
     ],
@@ -562,6 +610,7 @@
       "lapis_block"
     ],
     "price": 225,
+    "weight": 3,
     "professions": [
       "cleric"
     ],
@@ -573,6 +622,7 @@
       "chiseled_sandstone"
     ],
     "price": 16,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -584,6 +634,7 @@
       "cut_sandstone"
     ],
     "price": 16,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -595,6 +646,7 @@
       "azalea"
     ],
     "price": 40,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -606,6 +658,7 @@
       "flowering_azalea"
     ],
     "price": 45,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -617,6 +670,7 @@
       "sea_pickle"
     ],
     "price": 7,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -643,6 +697,7 @@
       "black_wool"
     ],
     "price": 12,
+    "weight": 3,
     "professions": [
       "shepherd"
     ],
@@ -654,6 +709,7 @@
       "dandelion"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -665,6 +721,7 @@
       "poppy"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -676,6 +733,7 @@
       "blue_orchid"
     ],
     "price": 5,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -687,6 +745,7 @@
       "allium"
     ],
     "price": 5,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -698,6 +757,7 @@
       "azure_bluet"
     ],
     "price": 5,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -709,6 +769,7 @@
       "red_tulip"
     ],
     "price": 6,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -720,6 +781,7 @@
       "orange_tulip"
     ],
     "price": 6,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -731,6 +793,7 @@
       "white_tulip"
     ],
     "price": 6,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -742,6 +805,7 @@
       "pink_tulip"
     ],
     "price": 6,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -753,6 +817,7 @@
       "oxeye_daisy"
     ],
     "price": 5,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -764,6 +829,7 @@
       "cornflower"
     ],
     "price": 5,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -775,6 +841,7 @@
       "lily_of_the_valley"
     ],
     "price": 5,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -786,6 +853,7 @@
       "pink_petals"
     ],
     "price": 5,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -797,6 +865,7 @@
       "sugar_cane"
     ],
     "price": 5,
+    "weight": 3,
     "professions": [
       "farmer"
     ],
@@ -808,6 +877,7 @@
       "kelp"
     ],
     "price": 4,
+    "weight": 2,
     "professions": [
       "fisherman"
     ],
@@ -819,6 +889,7 @@
       "moss_block"
     ],
     "price": 6,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -830,6 +901,7 @@
       "big_dripleaf"
     ],
     "price": 8,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -841,6 +913,7 @@
       "small_dripleaf"
     ],
     "price": 8,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -852,6 +925,7 @@
       "bamboo"
     ],
     "price": 4,
+    "weight": 3,
     "professions": [
       "farmer"
     ],
@@ -863,6 +937,7 @@
       "smooth_quartz"
     ],
     "price": 45,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -874,6 +949,7 @@
       "smooth_red_sandstone"
     ],
     "price": 20,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -885,6 +961,7 @@
       "smooth_sandstone"
     ],
     "price": 20,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -896,6 +973,7 @@
       "smooth_stone"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -907,6 +985,7 @@
       "bricks"
     ],
     "price": 12,
+    "weight": 2,
     "professions": [
       "mason"
     ],
@@ -918,6 +997,7 @@
       "bookshelf"
     ],
     "price": 80,
+    "weight": 2,
     "professions": [
       "librarian"
     ],
@@ -929,6 +1009,7 @@
       "chiseled_bookshelf"
     ],
     "price": 15,
+    "weight": 1,
     "professions": [
       "librarian"
     ],
@@ -940,6 +1021,7 @@
       "obsidian"
     ],
     "price": 80,
+    "weight": 3,
     "professions": [
       "cleric"
     ],
@@ -951,6 +1033,7 @@
       "ice"
     ],
     "price": 10,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -962,6 +1045,7 @@
       "cactus"
     ],
     "price": 5,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -973,6 +1057,7 @@
       "clay"
     ],
     "price": 8,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -984,6 +1069,7 @@
       "jukebox"
     ],
     "price": 400,
+    "weight": 1,
     "professions": [
       "librarian"
     ],
@@ -995,6 +1081,7 @@
       "pumpkin"
     ],
     "price": 10,
+    "weight": 2,
     "professions": [
       "farmer"
     ],
@@ -1006,6 +1093,7 @@
       "carved_pumpkin"
     ],
     "price": 10,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -1017,6 +1105,7 @@
       "jack_o_lantern"
     ],
     "price": 10,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -1028,6 +1117,7 @@
       "glowstone"
     ],
     "price": 10,
+    "weight": 2,
     "professions": [
       "cleric"
     ],
@@ -1039,6 +1129,7 @@
       "stone_bricks"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -1050,6 +1141,7 @@
       "deepslate_bricks"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -1061,6 +1153,7 @@
       "deepslate_tiles"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -1072,6 +1165,7 @@
       "chiseled_deepslate"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -1083,6 +1177,7 @@
       "melon"
     ],
     "price": 10,
+    "weight": 2,
     "professions": [
       "farmer"
     ],
@@ -1094,6 +1189,7 @@
       "vine"
     ],
     "price": 1,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -1105,6 +1201,7 @@
       "enchanting_table"
     ],
     "price": 800,
+    "weight": 1,
     "professions": [
       "librarian"
     ],
@@ -1116,6 +1213,7 @@
       "emerald_block"
     ],
     "price": 450,
+    "weight": 3,
     "professions": [
       "ANY"
     ],
@@ -1127,6 +1225,7 @@
       "anvil"
     ],
     "price": 675,
+    "weight": 3,
     "professions": [
       "weaponsmith"
     ],
@@ -1138,6 +1237,7 @@
       "chiseled_quartz_block"
     ],
     "price": 40,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -1149,6 +1249,7 @@
       "quartz_block"
     ],
     "price": 40,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -1160,6 +1261,7 @@
       "quartz_bricks"
     ],
     "price": 40,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -1171,6 +1273,7 @@
       "quartz_pillar"
     ],
     "price": 40,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -1197,6 +1300,7 @@
       "black_terracotta"
     ],
     "price": 3,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -1208,6 +1312,7 @@
       "hay_block"
     ],
     "price": 20,
+    "weight": 2,
     "professions": [
       "farmer"
     ],
@@ -1234,6 +1339,7 @@
       "black_carpet"
     ],
     "price": 8,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -1245,6 +1351,7 @@
       "terracotta"
     ],
     "price": 3,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -1256,6 +1363,7 @@
       "packed_ice"
     ],
     "price": 3,
+    "weight": 2,
     "professions": [
       "fisherman"
     ],
@@ -1267,6 +1375,7 @@
       "sunflower"
     ],
     "price": 5,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -1278,6 +1387,7 @@
       "lilac"
     ],
     "price": 5,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -1289,6 +1399,7 @@
       "rose_bush"
     ],
     "price": 5,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -1300,6 +1411,7 @@
       "peony"
     ],
     "price": 5,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -1326,6 +1438,7 @@
       "black_stained_glass"
     ],
     "price": 7,
+    "weight": 1,
     "professions": [
       "toolsmith"
     ],
@@ -1337,6 +1450,7 @@
       "prismarine"
     ],
     "price": 20,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -1348,6 +1462,7 @@
       "prismarine_bricks"
     ],
     "price": 20,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -1359,6 +1474,7 @@
       "dark_prismarine"
     ],
     "price": 25,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -1370,6 +1486,7 @@
       "sea_lantern"
     ],
     "price": 30,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -1381,6 +1498,7 @@
       "chiseled_red_sandstone"
     ],
     "price": 16,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -1392,6 +1510,7 @@
       "cut_red_sandstone"
     ],
     "price": 16,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -1403,6 +1522,7 @@
       "bone_block"
     ],
     "price": 4,
+    "weight": 2,
     "professions": [
       "butcher"
     ],
@@ -1429,6 +1549,7 @@
       "black_glazed_terracotta"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -1455,6 +1576,7 @@
       "black_concrete"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -1481,6 +1603,7 @@
       "black_concrete_powder"
     ],
     "price": 3,
+    "weight": 1,
     "professions": [
       "fletcher"
     ],
@@ -1506,6 +1629,7 @@
       "horn_coral_fan"
     ],
     "price": 5,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -1517,6 +1641,7 @@
       "blue_ice"
     ],
     "price": 4,
+    "weight": 2,
     "professions": [
       "fisherman"
     ],
@@ -1528,6 +1653,7 @@
       "scaffolding"
     ],
     "price": 5,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -1539,6 +1665,7 @@
       "redstone"
     ],
     "price": 25,
+    "weight": 3,
     "professions": [
       "cleric"
     ],
@@ -1550,6 +1677,7 @@
       "redstone_torch"
     ],
     "price": 25,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -1561,6 +1689,7 @@
       "redstone_block"
     ],
     "price": 225,
+    "weight": 3,
     "professions": [
       "cleric"
     ],
@@ -1572,6 +1701,7 @@
       "slime_block"
     ],
     "price": 50,
+    "weight": 1,
     "professions": [
       "butcher"
     ],
@@ -1583,6 +1713,7 @@
       "honey_block"
     ],
     "price": 60,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -1594,6 +1725,7 @@
       "lectern"
     ],
     "price": 80,
+    "weight": 1,
     "professions": [
       "librarian"
     ],
@@ -1605,6 +1737,7 @@
       "target"
     ],
     "price": 30,
+    "weight": 1,
     "professions": [
       "fletcher"
     ],
@@ -1616,6 +1749,7 @@
       "tnt"
     ],
     "price": 20,
+    "weight": 2,
     "professions": [
       "weaponsmith"
     ],
@@ -1627,6 +1761,7 @@
       "powered_rail"
     ],
     "price": 30,
+    "weight": 1,
     "professions": [
       "cartographer"
     ],
@@ -1638,6 +1773,7 @@
       "detector_rail"
     ],
     "price": 30,
+    "weight": 1,
     "professions": [
       "cartographer"
     ],
@@ -1649,6 +1785,7 @@
       "rail"
     ],
     "price": 10,
+    "weight": 1,
     "professions": [
       "cartographer"
     ],
@@ -1660,6 +1797,7 @@
       "activator_rail"
     ],
     "price": 30,
+    "weight": 1,
     "professions": [
       "cartographer"
     ],
@@ -1671,6 +1809,7 @@
       "saddle"
     ],
     "price": 20,
+    "weight": 1,
     "professions": [
       "toolsmith"
     ],
@@ -1682,6 +1821,7 @@
       "minecart"
     ],
     "price": 100,
+    "weight": 1,
     "professions": [
       "cartographer"
     ],
@@ -1701,6 +1841,7 @@
       "cherry_boat"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -1712,6 +1853,7 @@
       "turtle_helmet"
     ],
     "price": 100,
+    "weight": 3,
     "professions": [
       "armorer"
     ],
@@ -1723,6 +1865,7 @@
       "scute"
     ],
     "price": 20,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -1734,6 +1877,7 @@
       "flint_and_steel"
     ],
     "price": 25,
+    "weight": 1,
     "professions": [
       "weaponsmith"
     ],
@@ -1745,6 +1889,7 @@
       "apple"
     ],
     "price": 7,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -1756,6 +1901,7 @@
       "bow"
     ],
     "price": 15,
+    "weight": 4,
     "professions": [
       "fletcher"
     ],
@@ -1767,6 +1913,7 @@
       "arrow"
     ],
     "price": 3,
+    "weight": 3,
     "professions": [
       "fletcher"
     ],
@@ -1778,6 +1925,7 @@
       "coal"
     ],
     "price": 10,
+    "weight": 1,
     "professions": [
       "armorer"
     ],
@@ -1789,6 +1937,7 @@
       "charcoal"
     ],
     "price": 9,
+    "weight": 1,
     "professions": [
       "armorer"
     ],
@@ -1800,6 +1949,7 @@
       "diamond"
     ],
     "price": 500,
+    "weight": 1,
     "professions": [
       "armorer",
       "toolsmith",
@@ -1813,6 +1963,7 @@
       "emerald"
     ],
     "price": 50,
+    "weight": 4,
     "professions": [
       "ANY"
     ],
@@ -1824,6 +1975,7 @@
       "lapis_lazuli"
     ],
     "price": 25,
+    "weight": 2,
     "professions": [
       "cleric",
       "librarian"
@@ -1836,6 +1988,7 @@
       "quartz"
     ],
     "price": 10,
+    "weight": 2,
     "professions": [
       "cleric"
     ],
@@ -1847,6 +2000,7 @@
       "amethyst_shard"
     ],
     "price": 10,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -1858,6 +2012,7 @@
       "raw_iron"
     ],
     "price": 20,
+    "weight": 1,
     "professions": [
       "armorer",
       "toolsmith",
@@ -1871,6 +2026,7 @@
       "iron_ingot"
     ],
     "price": 25,
+    "weight": 2,
     "professions": [
       "armorer",
       "toolsmith",
@@ -1884,6 +2040,7 @@
       "raw_copper"
     ],
     "price": 12,
+    "weight": 1,
     "professions": [
       "toolsmith"
     ],
@@ -1895,6 +2052,7 @@
       "copper_ingot"
     ],
     "price": 15,
+    "weight": 2,
     "professions": [
       "toolsmith"
     ],
@@ -1906,6 +2064,7 @@
       "raw_gold"
     ],
     "price": 20,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -1917,6 +2076,7 @@
       "gold_ingot"
     ],
     "price": 25,
+    "weight": 2,
     "professions": [
       "cleric"
     ],
@@ -1928,6 +2088,7 @@
       "wooden_sword"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "weaponsmith"
     ],
@@ -1939,6 +2100,7 @@
       "wooden_shovel"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "toolsmith"
     ],
@@ -1950,6 +2112,7 @@
       "wooden_pickaxe"
     ],
     "price": 6,
+    "weight": 1,
     "professions": [
       "toolsmith"
     ],
@@ -1961,6 +2124,7 @@
       "wooden_axe"
     ],
     "price": 6,
+    "weight": 1,
     "professions": [
       "toolsmith"
     ],
@@ -1972,6 +2136,7 @@
       "wooden_hoe"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -1983,6 +2148,7 @@
       "stone_sword"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "weaponsmith"
     ],
@@ -1994,6 +2160,7 @@
       "stone_shovel"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "toolsmith"
     ],
@@ -2005,6 +2172,7 @@
       "stone_pickaxe"
     ],
     "price": 6,
+    "weight": 1,
     "professions": [
       "toolsmith"
     ],
@@ -2016,6 +2184,7 @@
       "stone_axe"
     ],
     "price": 6,
+    "weight": 1,
     "professions": [
       "toolsmith"
     ],
@@ -2027,6 +2196,7 @@
       "iron_sword"
     ],
     "price": 50,
+    "weight": 3,
     "professions": [
       "weaponsmith"
     ],
@@ -2038,6 +2208,7 @@
       "iron_shovel"
     ],
     "price": 25,
+    "weight": 3,
     "professions": [
       "toolsmith"
     ],
@@ -2049,6 +2220,7 @@
       "iron_pickaxe"
     ],
     "price": 75,
+    "weight": 3,
     "professions": [
       "toolsmith"
     ],
@@ -2060,6 +2232,7 @@
       "iron_axe"
     ],
     "price": 75,
+    "weight": 3,
     "professions": [
       "toolsmith"
     ],
@@ -2071,6 +2244,7 @@
       "iron_hoe"
     ],
     "price": 30,
+    "weight": 3,
     "professions": [
       "farmer"
     ],
@@ -2082,6 +2256,7 @@
       "diamond_sword"
     ],
     "price": 1000,
+    "weight": 3,
     "professions": [
       "weaponsmith"
     ],
@@ -2093,6 +2268,7 @@
       "diamond_shovel"
     ],
     "price": 500,
+    "weight": 3,
     "professions": [
       "toolsmith"
     ],
@@ -2104,6 +2280,7 @@
       "diamond_pickaxe"
     ],
     "price": 1500,
+    "weight": 3,
     "professions": [
       "toolsmith"
     ],
@@ -2115,6 +2292,7 @@
       "diamond_axe"
     ],
     "price": 1500,
+    "weight": 3,
     "professions": [
       "toolsmith"
     ],
@@ -2126,6 +2304,7 @@
       "diamond_hoe"
     ],
     "price": 750,
+    "weight": 3,
     "professions": [
       "farmer"
     ],
@@ -2137,6 +2316,7 @@
       "string"
     ],
     "price": 3,
+    "weight": 2,
     "professions": [
       "shepherd"
     ],
@@ -2148,6 +2328,7 @@
       "feather"
     ],
     "price": 3,
+    "weight": 2,
     "professions": [
       "fletcher"
     ],
@@ -2159,6 +2340,7 @@
       "gunpowder"
     ],
     "price": 5,
+    "weight": 2,
     "professions": [
       "weaponsmith"
     ],
@@ -2170,6 +2352,7 @@
       "wheat_seeds"
     ],
     "price": 1,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -2181,6 +2364,7 @@
       "wheat"
     ],
     "price": 4,
+    "weight": 2,
     "professions": [
       "farmer"
     ],
@@ -2192,6 +2376,7 @@
       "bread"
     ],
     "price": 12,
+    "weight": 3,
     "professions": [
       "farmer"
     ],
@@ -2203,6 +2388,7 @@
       "leather_helmet"
     ],
     "price": 40,
+    "weight": 1,
     "professions": [
       "armorer"
     ],
@@ -2214,6 +2400,7 @@
       "leather_chestplate"
     ],
     "price": 64,
+    "weight": 1,
     "professions": [
       "armorer"
     ],
@@ -2225,6 +2412,7 @@
       "leather_leggings"
     ],
     "price": 56,
+    "weight": 1,
     "professions": [
       "armorer"
     ],
@@ -2236,6 +2424,7 @@
       "leather_boots"
     ],
     "price": 32,
+    "weight": 1,
     "professions": [
       "armorer"
     ],
@@ -2247,6 +2436,7 @@
       "chainmail_helmet"
     ],
     "price": 30,
+    "weight": 1,
     "professions": [
       "armorer"
     ],
@@ -2258,6 +2448,7 @@
       "chainmail_chestplate"
     ],
     "price": 30,
+    "weight": 1,
     "professions": [
       "armorer"
     ],
@@ -2269,6 +2460,7 @@
       "chainmail_leggings"
     ],
     "price": 30,
+    "weight": 1,
     "professions": [
       "armorer"
     ],
@@ -2280,6 +2472,7 @@
       "chainmail_boots"
     ],
     "price": 30,
+    "weight": 1,
     "professions": [
       "armorer"
     ],
@@ -2291,6 +2484,7 @@
       "iron_helmet"
     ],
     "price": 125,
+    "weight": 3,
     "professions": [
       "armorer"
     ],
@@ -2302,6 +2496,7 @@
       "iron_chestplate"
     ],
     "price": 200,
+    "weight": 3,
     "professions": [
       "armorer"
     ],
@@ -2313,6 +2508,7 @@
       "iron_leggings"
     ],
     "price": 175,
+    "weight": 3,
     "professions": [
       "armorer"
     ],
@@ -2324,6 +2520,7 @@
       "iron_boots"
     ],
     "price": 100,
+    "weight": 3,
     "professions": [
       "armorer"
     ],
@@ -2335,6 +2532,7 @@
       "diamond_helmet"
     ],
     "price": 2500,
+    "weight": 3,
     "professions": [
       "armorer"
     ],
@@ -2346,6 +2544,7 @@
       "diamond_chestplate"
     ],
     "price": 4000,
+    "weight": 3,
     "professions": [
       "armorer"
     ],
@@ -2357,6 +2556,7 @@
       "diamond_leggings"
     ],
     "price": 3500,
+    "weight": 3,
     "professions": [
       "armorer"
     ],
@@ -2368,6 +2568,7 @@
       "diamond_boots"
     ],
     "price": 2000,
+    "weight": 3,
     "professions": [
       "armorer"
     ],
@@ -2379,6 +2580,7 @@
       "flint"
     ],
     "price": 2,
+    "weight": 2,
     "professions": [
       "fletcher"
     ],
@@ -2390,6 +2592,7 @@
       "porkchop"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "butcher"
     ],
@@ -2401,6 +2604,7 @@
       "cooked_porkchop"
     ],
     "price": 5,
+    "weight": 3,
     "professions": [
       "butcher"
     ],
@@ -2412,6 +2616,7 @@
       "golden_apple"
     ],
     "price": 100,
+    "weight": 2,
     "professions": [
       "cleric"
     ],
@@ -2423,6 +2628,7 @@
       "bucket"
     ],
     "price": 50,
+    "weight": 1,
     "professions": [
       "toolsmith"
     ],
@@ -2434,6 +2640,7 @@
       "water_bucket"
     ],
     "price": 50,
+    "weight": 1,
     "professions": [
       "toolsmith"
     ],
@@ -2445,6 +2652,7 @@
       "lava_bucket"
     ],
     "price": 55,
+    "weight": 1,
     "professions": [
       "toolsmith"
     ],
@@ -2456,6 +2664,7 @@
       "leather"
     ],
     "price": 8,
+    "weight": 2,
     "professions": [
       "butcher"
     ],
@@ -2467,6 +2676,7 @@
       "milk_bucket"
     ],
     "price": 50,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -2478,6 +2688,7 @@
       "pufferfish_bucket"
     ],
     "price": 55,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -2489,6 +2700,7 @@
       "salmon_bucket"
     ],
     "price": 55,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -2500,6 +2712,7 @@
       "cod_bucket"
     ],
     "price": 55,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -2511,6 +2724,7 @@
       "tropical_fish_bucket"
     ],
     "price": 55,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -2522,6 +2736,7 @@
       "axolotl_bucket"
     ],
     "price": 55,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -2533,6 +2748,7 @@
       "tadpole_bucket"
     ],
     "price": 55,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -2544,6 +2760,7 @@
       "brick"
     ],
     "price": 3,
+    "weight": 2,
     "professions": [
       "mason"
     ],
@@ -2555,6 +2772,7 @@
       "clay_ball"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -2566,6 +2784,7 @@
       "paper"
     ],
     "price": 5,
+    "weight": 2,
     "professions": [
       "librarian"
     ],
@@ -2577,6 +2796,7 @@
       "book"
     ],
     "price": 23,
+    "weight": 1,
     "professions": [
       "librarian"
     ],
@@ -2588,6 +2808,7 @@
       "slime_ball"
     ],
     "price": 10,
+    "weight": 2,
     "professions": [
       "butcher"
     ],
@@ -2599,6 +2820,7 @@
       "compass"
     ],
     "price": 100,
+    "weight": 1,
     "professions": [
       "cartographer"
     ],
@@ -2610,6 +2832,7 @@
       "recovery_compass"
     ],
     "price": 500,
+    "weight": 1,
     "professions": [
       "cartographer"
     ],
@@ -2621,6 +2844,7 @@
       "fishing_rod"
     ],
     "price": 15,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -2632,6 +2856,7 @@
       "clock"
     ],
     "price": 75,
+    "weight": 1,
     "professions": [
       "cartographer"
     ],
@@ -2643,6 +2868,7 @@
       "spyglass"
     ],
     "price": 30,
+    "weight": 1,
     "professions": [
       "cartographer"
     ],
@@ -2654,6 +2880,7 @@
       "glowstone_dust"
     ],
     "price": 3,
+    "weight": 2,
     "professions": [
       "cleric"
     ],
@@ -2665,6 +2892,7 @@
       "cod"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -2676,6 +2904,7 @@
       "salmon"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -2687,6 +2916,7 @@
       "tropical_fish"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -2698,6 +2928,7 @@
       "pufferfish"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -2709,6 +2940,7 @@
       "cooked_cod"
     ],
     "price": 3,
+    "weight": 3,
     "professions": [
       "fisherman"
     ],
@@ -2720,6 +2952,7 @@
       "cooked_salmon"
     ],
     "price": 3,
+    "weight": 3,
     "professions": [
       "fisherman"
     ],
@@ -2731,6 +2964,7 @@
       "ink_sac"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -2742,6 +2976,7 @@
       "glow_ink_sac"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -2768,6 +3003,7 @@
       "black_dye"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -2779,6 +3015,7 @@
       "bone_meal"
     ],
     "price": 3,
+    "weight": 1,
     "professions": [
       "butcher",
       "farmer"
@@ -2791,6 +3028,7 @@
       "bone"
     ],
     "price": 3,
+    "weight": 2,
     "professions": [
       "butcher"
     ],
@@ -2802,6 +3040,7 @@
       "sugar"
     ],
     "price": 5,
+    "weight": 2,
     "professions": [
       "farmer"
     ],
@@ -2813,6 +3052,7 @@
       "cookie"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "ANY"
     ],
@@ -2824,6 +3064,7 @@
       "filled_map"
     ],
     "price": 300,
+    "weight": 1,
     "professions": [
       "cartographer"
     ],
@@ -2835,6 +3076,7 @@
       "shears"
     ],
     "price": 45,
+    "weight": 1,
     "professions": [
       "shepherd",
       "toolsmith"
@@ -2847,6 +3089,7 @@
       "brush"
     ],
     "price": 20,
+    "weight": 1,
     "professions": [
       "fletcher",
       "toolsmith"
@@ -2859,6 +3102,7 @@
       "melon_slice"
     ],
     "price": 3,
+    "weight": 2,
     "professions": [
       "farmer"
     ],
@@ -2870,6 +3114,7 @@
       "dried_kelp"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -2881,6 +3126,7 @@
       "pumpkin_seeds"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -2892,6 +3138,7 @@
       "melon_seeds"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -2903,6 +3150,7 @@
       "beef"
     ],
     "price": 3,
+    "weight": 1,
     "professions": [
       "butcher"
     ],
@@ -2914,6 +3162,7 @@
       "cooked_beef"
     ],
     "price": 4,
+    "weight": 3,
     "professions": [
       "butcher"
     ],
@@ -2925,6 +3174,7 @@
       "chicken"
     ],
     "price": 3,
+    "weight": 1,
     "professions": [
       "butcher"
     ],
@@ -2936,6 +3186,7 @@
       "cooked_chicken"
     ],
     "price": 4,
+    "weight": 3,
     "professions": [
       "butcher"
     ],
@@ -2947,6 +3198,7 @@
       "ender_pearl"
     ],
     "price": 10,
+    "weight": 2,
     "professions": [
       "cleric"
     ],
@@ -2958,6 +3210,7 @@
       "gold_nugget"
     ],
     "price": 3,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -2969,6 +3222,7 @@
       "potion"
     ],
     "price": 18,
+    "weight": 4,
     "professions": [
       "cleric"
     ],
@@ -2980,6 +3234,7 @@
       "glass_bottle"
     ],
     "price": 18,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -2991,6 +3246,7 @@
       "spider_eye"
     ],
     "price": 4,
+    "weight": 2,
     "professions": [
       "cleric"
     ],
@@ -3002,6 +3258,7 @@
       "fermented_spider_eye"
     ],
     "price": 6,
+    "weight": 2,
     "professions": [
       "cleric"
     ],
@@ -3013,6 +3270,7 @@
       "magma_cream"
     ],
     "price": 6,
+    "weight": 2,
     "professions": [
       "cleric"
     ],
@@ -3024,6 +3282,7 @@
       "brewing_stand"
     ],
     "price": 40,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -3035,6 +3294,7 @@
       "cauldron"
     ],
     "price": 130,
+    "weight": 1,
     "professions": [
       "cleric"
     ],
@@ -3046,6 +3306,7 @@
       "glistering_melon_slice"
     ],
     "price": 30,
+    "weight": 2,
     "professions": [
       "cleric"
     ],
@@ -3057,6 +3318,7 @@
       "experience_bottle"
     ],
     "price": 20,
+    "weight": 2,
     "professions": [
       "cleric",
       "librarian"
@@ -3069,6 +3331,7 @@
       "fire_charge"
     ],
     "price": 10,
+    "weight": 1,
     "professions": [
       "weaponsmith"
     ],
@@ -3080,6 +3343,7 @@
       "writable_book"
     ],
     "price": 25,
+    "weight": 1,
     "professions": [
       "librarian"
     ],
@@ -3091,6 +3355,7 @@
       "flower_pot"
     ],
     "price": 9,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -3102,6 +3367,7 @@
       "decorated_pot"
     ],
     "price": 12,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -3132,6 +3398,7 @@
       "snort_pottery_sherd"
     ],
     "price": 50,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -3158,6 +3425,7 @@
       "wild_armor_trim_smithing_template"
     ],
     "price": 50,
+    "weight": 1,
     "professions": [
       "armorer"
     ],
@@ -3169,6 +3437,7 @@
       "carrot"
     ],
     "price": 3,
+    "weight": 2,
     "professions": [
       "farmer"
     ],
@@ -3180,6 +3449,7 @@
       "potato"
     ],
     "price": 2,
+    "weight": 2,
     "professions": [
       "farmer"
     ],
@@ -3191,6 +3461,7 @@
       "baked_potato"
     ],
     "price": 4,
+    "weight": 2,
     "professions": [
       "farmer"
     ],
@@ -3202,6 +3473,7 @@
       "poisonous_potato"
     ],
     "price": 1,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -3213,6 +3485,7 @@
       "pitcher_plant"
     ],
     "price": 6,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -3224,6 +3497,7 @@
       "pitcher_pod"
     ],
     "price": 6,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -3235,6 +3509,7 @@
       "torchflower"
     ],
     "price": 6,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -3246,6 +3521,7 @@
       "torchflower_seeds"
     ],
     "price": 3,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -3257,6 +3533,7 @@
       "map"
     ],
     "price": 100,
+    "weight": 3,
     "professions": [
       "cartographer"
     ],
@@ -3268,6 +3545,7 @@
       "golden_carrot"
     ],
     "price": 30,
+    "weight": 3,
     "professions": [
       "farmer"
     ],
@@ -3279,6 +3557,7 @@
       "skeleton_skull"
     ],
     "price": 200,
+    "weight": 1,
     "professions": [
       "butcher"
     ],
@@ -3290,6 +3569,7 @@
       "wither_skeleton_skull"
     ],
     "price": 100,
+    "weight": 1,
     "professions": [
       "butcher"
     ],
@@ -3301,6 +3581,7 @@
       "zombie_head"
     ],
     "price": 200,
+    "weight": 1,
     "professions": [
       "butcher"
     ],
@@ -3312,6 +3593,7 @@
       "creeper_head"
     ],
     "price": 200,
+    "weight": 1,
     "professions": [
       "butcher"
     ],
@@ -3323,6 +3605,7 @@
       "piglin_head"
     ],
     "price": 200,
+    "weight": 1,
     "professions": [
       "butcher"
     ],
@@ -3334,6 +3617,7 @@
       "pumpkin_pie"
     ],
     "price": 30,
+    "weight": 3,
     "professions": [
       "farmer"
     ],
@@ -3345,6 +3629,7 @@
       "firework_rocket"
     ],
     "price": 5,
+    "weight": 1,
     "professions": [
       "fletcher"
     ],
@@ -3356,6 +3641,7 @@
       "enchanted_book"
     ],
     "price": 25,
+    "weight": 4,
     "professions": [
       "librarian"
     ],
@@ -3367,6 +3653,7 @@
       "prismarine_shard"
     ],
     "price": 10,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -3378,6 +3665,7 @@
       "prismarine_crystals"
     ],
     "price": 10,
+    "weight": 1,
     "professions": [
       "fisherman"
     ],
@@ -3389,6 +3677,7 @@
       "rabbit"
     ],
     "price": 3,
+    "weight": 1,
     "professions": [
       "butcher"
     ],
@@ -3400,6 +3689,7 @@
       "cooked_rabbit"
     ],
     "price": 4,
+    "weight": 3,
     "professions": [
       "butcher"
     ],
@@ -3411,6 +3701,7 @@
       "rabbit_stew"
     ],
     "price": 7,
+    "weight": 3,
     "professions": [
       "butcher"
     ],
@@ -3422,6 +3713,7 @@
       "rabbit_foot"
     ],
     "price": 15,
+    "weight": 2,
     "professions": [
       "butcher"
     ],
@@ -3433,6 +3725,7 @@
       "rabbit_hide"
     ],
     "price": 13,
+    "weight": 2,
     "professions": [
       "butcher"
     ],
@@ -3444,6 +3737,7 @@
       "armor_stand"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "armorer"
     ],
@@ -3455,6 +3749,7 @@
       "iron_horse_armor"
     ],
     "price": 150,
+    "weight": 2,
     "professions": [
       "armorer"
     ],
@@ -3466,6 +3761,7 @@
       "golden_horse_armor"
     ],
     "price": 150,
+    "weight": 1,
     "professions": [
       "armorer"
     ],
@@ -3477,6 +3773,7 @@
       "diamond_horse_armor"
     ],
     "price": 2500,
+    "weight": 2,
     "professions": [
       "armorer"
     ],
@@ -3488,6 +3785,7 @@
       "leather_horse_armor"
     ],
     "price": 48,
+    "weight": 1,
     "professions": [
       "armorer"
     ],
@@ -3499,6 +3797,7 @@
       "lead"
     ],
     "price": 13,
+    "weight": 1,
     "professions": [
       "farmer",
       "shepherd"
@@ -3511,6 +3810,7 @@
       "name_tag"
     ],
     "price": 20,
+    "weight": 1,
     "professions": [
       "librarian"
     ],
@@ -3522,6 +3822,7 @@
       "mutton"
     ],
     "price": 3,
+    "weight": 1,
     "professions": [
       "butcher"
     ],
@@ -3533,6 +3834,7 @@
       "cooked_mutton"
     ],
     "price": 4,
+    "weight": 3,
     "professions": [
       "butcher"
     ],
@@ -3559,6 +3861,7 @@
       "black_banner"
     ],
     "price": 12,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -3570,6 +3873,7 @@
       "beetroot"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -3581,6 +3885,7 @@
       "beetroot_seeds"
     ],
     "price": 2,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -3592,6 +3897,7 @@
       "beetroot_soup"
     ],
     "price": 6,
+    "weight": 2,
     "professions": [
       "farmer"
     ],
@@ -3603,6 +3909,7 @@
       "splash_potion"
     ],
     "price": 20,
+    "weight": 4,
     "professions": [
       "cleric"
     ],
@@ -3614,10 +3921,11 @@
       "spectral_arrow"
     ],
     "price": 8,
+    "weight": 2,
     "professions": [
       "fletcher"
     ],
-    "buy": true,
+    "buy": false,
     "sell": true
   },
   {
@@ -3625,6 +3933,7 @@
       "tipped_arrow"
     ],
     "price": 6,
+    "weight": 3,
     "professions": [
       "fletcher"
     ],
@@ -3636,6 +3945,7 @@
       "lingering_potion"
     ],
     "price": 25,
+    "weight": 3,
     "professions": [
       "cleric"
     ],
@@ -3647,6 +3957,7 @@
       "shield"
     ],
     "price": 25,
+    "weight": 1,
     "professions": [
       "armorer",
       "weaponsmith"
@@ -3659,6 +3970,7 @@
       "iron_nugget"
     ],
     "price": 3,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -3670,6 +3982,7 @@
       "phantom_membrane"
     ],
     "price": 18,
+    "weight": 2,
     "professions": [
       "cleric"
     ],
@@ -3681,6 +3994,7 @@
       "crossbow"
     ],
     "price": 30,
+    "weight": 3,
     "professions": [
       "fletcher"
     ],
@@ -3692,6 +4006,7 @@
       "suspicious_stew"
     ],
     "price": 8,
+    "weight": 1,
     "professions": [
       "butcher",
       "cleric",
@@ -3705,6 +4020,7 @@
       "loom"
     ],
     "price": 8,
+    "weight": 1,
     "professions": [
       "shepherd"
     ],
@@ -3716,6 +4032,7 @@
       "composter"
     ],
     "price": 8,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -3727,6 +4044,7 @@
       "smoker"
     ],
     "price": 8,
+    "weight": 1,
     "professions": [
       "butcher"
     ],
@@ -3738,6 +4056,7 @@
       "blast_furnace"
     ],
     "price": 80,
+    "weight": 1,
     "professions": [
       "armorer"
     ],
@@ -3749,6 +4068,7 @@
       "cartography_table"
     ],
     "price": 8,
+    "weight": 1,
     "professions": [
       "cartographer"
     ],
@@ -3760,6 +4080,7 @@
       "fletching_table"
     ],
     "price": 8,
+    "weight": 1,
     "professions": [
       "fletcher"
     ],
@@ -3771,6 +4092,7 @@
       "grindstone"
     ],
     "price": 8,
+    "weight": 1,
     "professions": [
       "weaponsmith"
     ],
@@ -3782,6 +4104,7 @@
       "smithing_table"
     ],
     "price": 30,
+    "weight": 1,
     "professions": [
       "toolsmith"
     ],
@@ -3793,6 +4116,7 @@
       "stonecutter"
     ],
     "price": 30,
+    "weight": 1,
     "professions": [
       "mason"
     ],
@@ -3804,6 +4128,7 @@
       "bell"
     ],
     "price": 20,
+    "weight": 1,
     "professions": [
       "ANY"
     ],
@@ -3815,6 +4140,7 @@
       "lantern"
     ],
     "price": 10,
+    "weight": 1,
     "professions": [
       "cartographer"
     ],
@@ -3826,6 +4152,7 @@
       "sweet_berries"
     ],
     "price": 3,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -3837,6 +4164,7 @@
       "glow_berries"
     ],
     "price": 4,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -3848,6 +4176,7 @@
       "honeycomb"
     ],
     "price": 10,
+    "weight": 2,
     "professions": [
       "farmer"
     ],
@@ -3859,6 +4188,7 @@
       "beehive"
     ],
     "price": 20,
+    "weight": 1,
     "professions": [
       "farmer"
     ],
@@ -3870,6 +4200,7 @@
       "honey_bottle"
     ],
     "price": 10,
+    "weight": 2,
     "professions": [
       "farmer"
     ],
@@ -3881,6 +4212,7 @@
       "honeycomb_block"
     ],
     "price": 15,
+    "weight": 1,
     "professions": [
       "farmer"
     ],

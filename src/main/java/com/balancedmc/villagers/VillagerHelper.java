@@ -487,7 +487,7 @@ enum Slot {
 /**
  * Intermediate classes for json parsing
  */
-class ItemInfo { String[] items; int price; String[] professions; boolean buy; boolean sell; }
+class ItemInfo { String[] items; int price; int weight; String[] professions; boolean buy; boolean sell; }
 
 class ConversionInfo { String profession; ConversionItemInfo buy; int price; ConversionItemInfo sell; }
 
@@ -509,8 +509,10 @@ class ReloadListener implements SimpleSynchronousResourceReloadListener {
             VillagerHelper.sellItems = new ArrayList<>();
             for (ItemInfo info : itemInfo) {
                 TradeItem item = new TradeItem(info.items, info.price, info.professions, info.buy, info.sell);
-                if (item.canBuy) VillagerHelper.buyItems.add(item);
-                if (item.canSell) VillagerHelper.sellItems.add(item);
+                for (int i = 0; i < info.weight; i++) {
+                    if (item.canBuy) VillagerHelper.buyItems.add(item);
+                    if (item.canSell) VillagerHelper.sellItems.add(item);
+                }
                 if (item.isEmerald()) VillagerHelper.emeraldItem = item;
             }
             if (VillagerHelper.emeraldItem == null) {
