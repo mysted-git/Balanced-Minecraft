@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "M_Blocks",
+    "M_Items",
     "M_PistonBlock",
     "M_WitherSkullBlock",
     "conduit.M_ConduitBlockEntity",
@@ -29,6 +30,8 @@
     "potion.M_BrewingRecipeRegistry",
     "potion.M_LivingEntity",
     "potion.M_PlayerEntity",
+    "potion.M_PotionItem",
+    "potion.M_ThrowablePotionItem",
     "transport.boat.M_Blocks",
     "transport.boat.M_BoatEntity",
     "transport.boat.M_IceBlock",

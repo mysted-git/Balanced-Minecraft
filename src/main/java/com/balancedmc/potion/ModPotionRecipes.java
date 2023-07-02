@@ -9,4 +9,5 @@ public class ModPotionRecipes {
     public static void registerPotionRecipes() {
         BrewingRecipeRegistry.registerPotionRecipe(Potions.AWKWARD, Items.RABBIT_FOOT, Potions.LUCK);
     }
+
 }
