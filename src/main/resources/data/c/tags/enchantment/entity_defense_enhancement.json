@@ -1,5 +1,5 @@
 {
-  "replace": false,
+  "replace": true,
   "values": [
     "minecraft:feather_falling",
     "minecraft:blast_protection",
