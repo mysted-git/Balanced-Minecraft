@@ -97,7 +97,7 @@
       "bamboo_mosaic"
     ],
     "price": 2,
-    "weight": 3,
+    "weight": 4,
     "professions": [
       "farmer"
     ],
@@ -456,7 +456,7 @@
       "diamond_block"
     ],
     "price": 4500,
-    "weight": 1,
+    "weight": 2,
     "professions": [
       "armorer",
       "toolsmith",
@@ -1225,7 +1225,7 @@
       "anvil"
     ],
     "price": 675,
-    "weight": 3,
+    "weight": 2,
     "professions": [
       "weaponsmith"
     ],
@@ -1665,7 +1665,7 @@
       "redstone"
     ],
     "price": 25,
-    "weight": 3,
+    "weight": 4,
     "professions": [
       "cleric"
     ],
@@ -1913,7 +1913,7 @@
       "arrow"
     ],
     "price": 3,
-    "weight": 3,
+    "weight": 4,
     "professions": [
       "fletcher"
     ],
@@ -1963,7 +1963,7 @@
       "emerald"
     ],
     "price": 50,
-    "weight": 4,
+    "weight": 3,
     "professions": [
       "ANY"
     ],
@@ -1975,7 +1975,7 @@
       "lapis_lazuli"
     ],
     "price": 25,
-    "weight": 2,
+    "weight": 3,
     "professions": [
       "cleric",
       "librarian"
@@ -1988,7 +1988,7 @@
       "quartz"
     ],
     "price": 10,
-    "weight": 2,
+    "weight": 3,
     "professions": [
       "cleric"
     ],
@@ -2026,7 +2026,7 @@
       "iron_ingot"
     ],
     "price": 25,
-    "weight": 2,
+    "weight": 3,
     "professions": [
       "armorer",
       "toolsmith",
@@ -2208,7 +2208,7 @@
       "iron_shovel"
     ],
     "price": 25,
-    "weight": 3,
+    "weight": 2,
     "professions": [
       "toolsmith"
     ],
@@ -2244,7 +2244,7 @@
       "iron_hoe"
     ],
     "price": 30,
-    "weight": 3,
+    "weight": 2,
     "professions": [
       "farmer"
     ],
@@ -2268,7 +2268,7 @@
       "diamond_shovel"
     ],
     "price": 500,
-    "weight": 3,
+    "weight": 2,
     "professions": [
       "toolsmith"
     ],
@@ -2304,7 +2304,7 @@
       "diamond_hoe"
     ],
     "price": 750,
-    "weight": 3,
+    "weight": 2,
     "professions": [
       "farmer"
     ],
@@ -2808,7 +2808,7 @@
       "slime_ball"
     ],
     "price": 10,
-    "weight": 2,
+    "weight": 3,
     "professions": [
       "butcher"
     ],
@@ -3222,7 +3222,7 @@
       "potion"
     ],
     "price": 18,
-    "weight": 4,
+    "weight": 5,
     "professions": [
       "cleric"
     ],
@@ -3258,7 +3258,7 @@
       "fermented_spider_eye"
     ],
     "price": 6,
-    "weight": 2,
+    "weight": 3,
     "professions": [
       "cleric"
     ],
@@ -3641,7 +3641,7 @@
       "enchanted_book"
     ],
     "price": 25,
-    "weight": 4,
+    "weight": 5,
     "professions": [
       "librarian"
     ],
@@ -3921,7 +3921,7 @@
       "spectral_arrow"
     ],
     "price": 8,
-    "weight": 2,
+    "weight": 3,
     "professions": [
       "fletcher"
     ],

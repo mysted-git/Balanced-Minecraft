@@ -244,7 +244,7 @@ public class VillagerHelper {
         // create trade offer
         final int maxUses = 12;
         final int experience = Math.min(sellPrice / 2, 30);
-        final float price = 0.05F;
+        final float multiplier = 0.05F;
         if (buyItem2 == null || buyCount2 == 0) {
             // divide by HCF
             int hcf = VillagerMath.hcf(buyCount1, sellStack.getCount());
@@ -252,16 +252,22 @@ public class VillagerHelper {
                 buyCount1 /= hcf;
                 sellStack.setCount(sellStack.getCount() / hcf);
             }
+            // confirm buy and sell are not the same
+            ItemStack buyStack1 = buyItem1.getItemStack(buyCount1, sellStack.getItem());
+            if (buyStack1 == null) {
+                Main.LOGGER.warn("Failed to generate trade with " + sellStack + " (4)");
+                return null;
+            }
             // return
             return new TradeOffer(
-                    buyItem1.getItemStack(buyCount1),
+                    buyStack1,
                     sellStack,
-                    maxUses, experience, price
+                    maxUses, experience, multiplier
             );
         }
         else {
             // swap buy items with random chance
-            if (Math.random() < 0.5) {
+            if (buyItem1 != buyItem2 && Math.random() < 0.5) {
                 TradeItem temp = buyItem1;
                 buyItem1 = buyItem2;
                 buyItem2 = temp;
@@ -276,12 +282,19 @@ public class VillagerHelper {
                 buyCount2 /= hcf;
                 sellStack.setCount(sellStack.getCount() / hcf);
             }
+            // confirm buy and sell are not the same
+            ItemStack buyStack1 = buyItem1.getItemStack(buyCount1, sellStack.getItem());
+            ItemStack buyStack2 = buyItem2.getItemStack(buyCount2, sellStack.getItem());
+            if (buyStack1 == null || buyStack2 == null) {
+                Main.LOGGER.warn("Failed to generate trade with " + sellStack + " (5)");
+                return null;
+            }
             // return
             return new TradeOffer(
-                    buyItem1.getItemStack(buyCount1),
-                    buyItem2.getItemStack(buyCount2),
+                    buyStack1,
+                    buyStack2,
                     sellStack,
-                    maxUses, experience, price
+                    maxUses, experience, multiplier
             );
         }
     }
@@ -439,9 +452,13 @@ class TradeItem {
 
     /**
      * Get a stack of items to buy
+     * @param count The number of items in the stack
+     * @param banned An item which cannot be returned
      */
-    ItemStack getItemStack(int count) {
-        Item item = items.get((int) (Math.random() * items.size()));
+    ItemStack getItemStack(int count, Item banned) {
+        List<Item> validItems = items.stream().filter((i) -> i != banned).toList();
+        if (validItems.isEmpty()) return null;
+        Item item = validItems.get((int) (Math.random() * validItems.size()));
         return new ItemStack(item, count);
     }
 

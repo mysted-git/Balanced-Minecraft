@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.enchantment;
+package com.balancedmc.mixins.enchantment.frost_walker;
 
 import com.balancedmc.enchantments.EnchantmentTags;
 import net.minecraft.block.BlockState;

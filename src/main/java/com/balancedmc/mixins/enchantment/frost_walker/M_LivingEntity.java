@@ -1,4 +1,4 @@
-package com.balancedmc.mixins.enchantment;
+package com.balancedmc.mixins.enchantment.frost_walker;
 
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;

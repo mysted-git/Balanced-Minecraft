@@ -11,8 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class M_ProtectionEnchantment {
 
     /**
-     * @author HB0P
-     * @reason Reduce environmental protection amounts (for level 5 enchants)
+     * Reduce environmental protection amounts (for level 5 enchants)
      */
 
     @Inject(
