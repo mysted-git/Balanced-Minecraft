@@ -30,6 +30,7 @@
     "phantom.carry.M_SwoopMovementGoal",
     "phantom.spawn.M_PhantomSpawner",
     "potion.M_BrewingRecipeRegistry",
+    "potion.M_BrewingStandScreenHandler",
     "potion.M_LivingEntity",
     "potion.M_PlayerEntity",
     "potion.M_PotionItem",
