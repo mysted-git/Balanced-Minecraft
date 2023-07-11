@@ -1,6 +1,5 @@
 package com.balancedmc.mixins.potion;
 
-import com.balancedmc.Main;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
@@ -100,7 +99,7 @@ public class M_BrewingStandScreenHandler extends ScreenHandler {
                 itemStack = slot.getStack();
                 if (itemStack.isEmpty() && slot.canInsert(stack)) {
                     if (stack.getCount() > 1) {
-                        slot.setStack(stack.split(slot.getMaxItemCount()));
+                        slot.setStack(stack.split(1));
                     } else {
                         slot.setStack(stack.split(stack.getCount()));
                     }
@@ -125,12 +124,10 @@ public class M_BrewingStandScreenHandler extends ScreenHandler {
         Slot slot2A = (Slot) this.slots.get(slot);
         if (slot2A != null) {
             if (slot2A.hasStack()) {
-                Main.LOGGER.info("Shift clicked something");
                 ItemStack itemStack2A = slot2A.getStack();
                 itemStackA = itemStack2A.copy();
                 if (!(slot >= 0 && slot <= 4)) {
                     if (canInsertPotion(itemStackA)) {
-                        Main.LOGGER.info("Pot Shift clicked");
                         for (int i = 0; i < itemStack2A.getCount(); i++) {
                             if (!this.insertPotion(itemStack2A, 0, 3, false)) {
                                 cir.setReturnValue(ItemStack.EMPTY);
@@ -178,7 +175,7 @@ public class M_BrewingStandScreenHandler extends ScreenHandler {
                         return ItemStack.EMPTY;
                     }
                 } else if (PotionSlot.matches(itemStack) && itemStack.getCount() == 1) {
-                    if (!this.insertItem(itemStack2, 0, 3, false)) {
+                    if (!this.insertPotion(itemStack2, 0, 3, false)) {
                         return ItemStack.EMPTY;
                     }
                 } else if (slot >= 5 && slot < 32) {
