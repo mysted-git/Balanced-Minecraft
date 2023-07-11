@@ -8,6 +8,7 @@ public class ModPotionRecipes {
 
     public static void registerPotionRecipes() {
         BrewingRecipeRegistry.registerPotionRecipe(Potions.AWKWARD, Items.RABBIT_FOOT, Potions.LUCK);
+        BrewingRecipeRegistry.registerPotionRecipe(Potions.AWKWARD, Items.BLAZE_ROD, ModPotions.MINGLING);
     }
 
 }
