@@ -7,9 +7,7 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentLevelEntry;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EntityGroup;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -21,10 +19,10 @@ import java.util.List;
 
 public class ModEnchantments {
 
-    public static Enchantment UNDEAD_PROTECTION = new MobProtectionEnchantment(ModEnchantments::isUndead);
-    public static Enchantment ARTHROPOD_PROTECTION = new MobProtectionEnchantment(ModEnchantments::isArthropod);
-    public static Enchantment AQUATIC_PROTECTION = new MobProtectionEnchantment(ModEnchantments::isAquatic);
-    public static Enchantment ILLAGER_PROTECTION = new MobProtectionEnchantment(ModEnchantments::isIllager);
+    public static Enchantment UNDEAD_PROTECTION = new MobProtectionEnchantment(entity -> entity.getGroup() == EntityGroup.UNDEAD);
+    public static Enchantment ARTHROPOD_PROTECTION = new MobProtectionEnchantment(entity -> entity.getGroup() == EntityGroup.ARTHROPOD);
+    public static Enchantment AQUATIC_PROTECTION = new MobProtectionEnchantment(entity -> entity.getGroup() == EntityGroup.AQUATIC);
+    public static Enchantment ILLAGER_PROTECTION = new MobProtectionEnchantment(entity -> entity.getGroup() == EntityGroup.ILLAGER);
     public static Enchantment BANE_OF_THE_AQUATIC = new DamageEnchantment(Enchantment.Rarity.UNCOMMON, 3, EquipmentSlot.MAINHAND);
     public static Enchantment BANE_OF_ILLAGERS = new DamageEnchantment(Enchantment.Rarity.UNCOMMON, 4, EquipmentSlot.MAINHAND);
 
@@ -49,24 +47,5 @@ public class ModEnchantments {
                         EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(Enchantments.PROJECTILE_PROTECTION, 5))
                 )))
         );
-    }
-
-    public static boolean isUndead(LivingEntity entity) {
-        return entity.getGroup() == EntityGroup.UNDEAD;
-    }
-
-    public static boolean isArthropod(LivingEntity entity) {
-        return entity.getGroup() == EntityGroup.ARTHROPOD;
-    }
-
-    public static boolean isAquatic(LivingEntity entity) {
-        if (entity.getType() == EntityType.SLIME) return true;
-        return entity.getGroup() == EntityGroup.AQUATIC;
-    }
-
-    public static boolean isIllager(LivingEntity entity) {
-        if (entity.getType() == EntityType.VEX) return true;
-        if (entity.getType() == EntityType.WITCH) return true;
-        return entity.getGroup() == EntityGroup.ILLAGER;
     }
 }
