@@ -24,12 +24,29 @@ public abstract class M_DamageEnchantment extends Enchantment {
     @Shadow @Final private static final int[] MIN_MAX_POWER_DIFFERENCES = new int[]{20, 20, 20, 20, 20};
     @Shadow @Final public int typeIndex;
 
+    /**
+     * Sharpness is nerfed such that level 5 is equal to the old level 3
+     */
+    @Inject(
+            method = "getAttackDamage(ILnet/minecraft/entity/EntityGroup;)F",
+            at = @At("HEAD"),
+            cancellable = true
+    )
+    private void injectedHead(int level, EntityGroup group, CallbackInfoReturnable<Float> cir) {
+        if (this.typeIndex == 0) {
+            cir.setReturnValue(1.0F + (float)Math.max(0, (level * 0.6) - 1) * 0.5F);
+        }
+    }
+
+    /**
+     * Bane of the Aquatic & Bane of Illagers work the same as Smite & BoA
+     */
     @Inject(
             method = "getAttackDamage(ILnet/minecraft/entity/EntityGroup;)F",
             at = @At("TAIL"),
             cancellable = true
     )
-    private void injected(int level, EntityGroup group, CallbackInfoReturnable<Float> cir) {
+    private void injectedTail(int level, EntityGroup group, CallbackInfoReturnable<Float> cir) {
         if (this.typeIndex == 3 && group == EntityGroup.AQUATIC) {
             cir.setReturnValue(level * 2.5f);
         }

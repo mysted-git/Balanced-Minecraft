@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "M_Blocks",
+    "M_FireChargeItem",
     "M_Items",
     "M_PistonBlock",
     "M_WitherSkullBlock",
