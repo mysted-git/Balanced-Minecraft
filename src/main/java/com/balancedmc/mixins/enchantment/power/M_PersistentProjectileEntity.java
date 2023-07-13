@@ -1,8 +1,8 @@
 package com.balancedmc.mixins.enchantment.power;
 
 import com.balancedmc.Main;
-import com.balancedmc.enchantments.ModEnchantments;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
@@ -35,20 +35,17 @@ public abstract class M_PersistentProjectileEntity {
             )
     )
     private boolean redirect(Entity entity, DamageSource source, float amount) {
-        Main.log("Initial damage", amount);
         if (entity instanceof LivingEntity livingEntity) {
-            if (ModEnchantments.isUndead(livingEntity) || ModEnchantments.isArthropod(livingEntity)) {
+            if (livingEntity.getGroup() == EntityGroup.UNDEAD || livingEntity.getGroup() == EntityGroup.ARTHROPOD) {
                 amount += powerDamage;
             }
             else {
                 amount += powerDamage * 0.8;
             }
-            Main.log("After power increase", amount);
-            if (ModEnchantments.isIllager(livingEntity)) {
+            if (livingEntity.getGroup() == EntityGroup.ILLAGER) {
                 amount += getPierceLevel() * 2;
             }
         }
-        Main.log("Final damage", amount);
         return entity.damage(source, amount);
     }
 
@@ -79,7 +76,6 @@ public abstract class M_PersistentProjectileEntity {
             )
     )
     private void redirect(PersistentProjectileEntity projectile, double damage) {
-        Main.log("Setting damage A", damage);
         projectile.setDamage(-damage);
     }
 }

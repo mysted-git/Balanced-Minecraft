@@ -1,13 +1,18 @@
 package com.balancedmc.mixins;
 
-import net.minecraft.item.Items;
+import net.minecraft.block.Block;
+import net.minecraft.item.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
+import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.Slice;
 
+/**
+ * Change the stack size of various items
+ */
 @Mixin(Items.class)
-public class M_Items {
+public abstract class M_Items {
 
     // Stackable Potions
     @ModifyArg(
@@ -35,5 +40,62 @@ public class M_Items {
     )
     private static int lingeringPotionMaxCount(int oldMax) {
         return 16;
+    }
+
+    // stackable mushroom stew, rabbit stew, beetroot soup
+    @Redirect(
+            method = "<clinit>",
+            at = @At(
+                    value = "NEW",
+                    target = "Lnet/minecraft/item/StewItem;*"
+            )
+    )
+    private static StewItem stewMaxCount(Item.Settings settings) {
+        return new StewItem(settings.maxCount(16));
+    }
+
+    // some 16-stackables now stack to 64
+    @Redirect(
+            method = "<clinit>",
+            at = @At(
+                    value = "NEW",
+                    target = "Lnet/minecraft/item/SignItem;*"
+            )
+    )
+    private static SignItem signMaxCount(Item.Settings settings, Block standingBlock, Block wallBlock) {
+        return new SignItem(settings.maxCount(64), standingBlock, wallBlock);
+    }
+
+    @Redirect(
+            method = "<clinit>",
+            at = @At(
+                    value = "NEW",
+                    target = "Lnet/minecraft/item/HangingSignItem;*"
+            )
+    )
+    private static HangingSignItem hangingSignMaxCount(Block hangingSign, Block wallHangingSign, Item.Settings settings) {
+        return new HangingSignItem(hangingSign, wallHangingSign, settings.maxCount(64));
+    }
+
+    @Redirect(
+            method = "<clinit>",
+            at = @At(
+                    value = "NEW",
+                    target = "Lnet/minecraft/item/BannerItem;*"
+            )
+    )
+    private static BannerItem bannerMaxCount(Block bannerBlock, Block wallBannerBlock, Item.Settings settings) {
+        return new BannerItem(bannerBlock, wallBannerBlock, settings.maxCount(64));
+    }
+
+    @Redirect(
+            method = "<clinit>",
+            at = @At(
+                    value = "NEW",
+                    target = "Lnet/minecraft/item/ArmorStandItem;*"
+            )
+    )
+    private static ArmorStandItem armorStandMaxCount(Item.Settings settings) {
+        return new ArmorStandItem(settings.maxCount(64));
     }
 }

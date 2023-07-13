@@ -4,6 +4,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.Vec3d;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -53,5 +55,19 @@ public abstract class M_LivingEntity {
             x += this.getStatusEffect(StatusEffects.DOLPHINS_GRACE).getAmplifier() * 0.01;
         }
         return vec3d.multiply(x, y, x);
+    }
+
+    /**
+     * Use ambient effect particles for all effects
+     */
+    @Redirect(
+            method = "tickStatusEffects()V",
+            at = @At(
+                    value = "FIELD",
+                    target = "Lnet/minecraft/particle/ParticleTypes;ENTITY_EFFECT:Lnet/minecraft/particle/DefaultParticleType;"
+            )
+    )
+    private DefaultParticleType redirect() {
+        return ParticleTypes.AMBIENT_ENTITY_EFFECT;
     }
 }

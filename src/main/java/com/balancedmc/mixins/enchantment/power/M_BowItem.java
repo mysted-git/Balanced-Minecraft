@@ -22,7 +22,6 @@ public abstract class M_BowItem {
             )
     )
     private void redirect(PersistentProjectileEntity projectile, double damage) {
-        Main.log("Setting damage B", damage);
         projectile.setDamage(-damage);
     }
 }
