@@ -31,6 +31,7 @@
     "phantom.spawn.M_PhantomSpawner",
     "potion.M_BrewingRecipeRegistry",
     "potion.M_BrewingStandScreenHandler",
+    "potion.M_BrewingStandScreenHandlerPotionSlot",
     "potion.M_BrewingStandScreen",
     "potion.M_LivingEntity",
     "potion.M_PlayerEntity",
