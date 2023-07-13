@@ -8,6 +8,9 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.Slice;
 
+/**
+ * Change the stack size of various items
+ */
 @Mixin(Items.class)
 public abstract class M_Items {
 
@@ -39,6 +42,17 @@ public abstract class M_Items {
         return 16;
     }
 
+    // stackable mushroom stew, rabbit stew, beetroot soup
+    @Redirect(
+            method = "<clinit>",
+            at = @At(
+                    value = "NEW",
+                    target = "Lnet/minecraft/item/StewItem;*"
+            )
+    )
+    private static StewItem stewMaxCount(Item.Settings settings) {
+        return new StewItem(settings.maxCount(16));
+    }
 
     // some 16-stackables now stack to 64
     @Redirect(

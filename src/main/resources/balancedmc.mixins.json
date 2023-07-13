@@ -28,6 +28,8 @@
     "enchantment.groups.M_WitchEntity",
     "enchantment.power.M_BowItem",
     "enchantment.power.M_PersistentProjectileEntity",
+    "food.M_FlowerBlock",
+    "food.M_StewItem",
     "phantom.carry.M_FindTargetGoal",
     "phantom.carry.M_PhantomEntity",
     "phantom.carry.M_PlayerEntity",

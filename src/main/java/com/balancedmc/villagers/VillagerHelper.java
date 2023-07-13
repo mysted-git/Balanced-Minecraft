@@ -5,11 +5,10 @@ import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
+import net.minecraft.block.SuspiciousStewIngredient;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentLevelEntry;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.passive.WanderingTraderEntity;
 import net.minecraft.item.*;
@@ -56,7 +55,6 @@ public class VillagerHelper {
     static final HashMap<Enchantment, Integer> enchantments = new HashMap<>();
     static HashMap<String, Integer> potions;
     static final HashMap<String, String[]> potionVariants = new HashMap<>();
-    static final HashMap<StatusEffect, Integer> suspiciousStewEffects = new HashMap<>();
     static TradeItem emeraldItem;
 
     /**
@@ -339,13 +337,6 @@ public class VillagerHelper {
         potionVariants.put("luck", new String[]{});
         potionVariants.put("turtle_master", both);
         potionVariants.put("slow_falling", length);
-
-        suspiciousStewEffects.put(StatusEffects.NIGHT_VISION, 100);
-        suspiciousStewEffects.put(StatusEffects.JUMP_BOOST, 160);
-        suspiciousStewEffects.put(StatusEffects.WEAKNESS, 140);
-        suspiciousStewEffects.put(StatusEffects.BLINDNESS, 120);
-        suspiciousStewEffects.put(StatusEffects.POISON, 280);
-        suspiciousStewEffects.put(StatusEffects.SATURATION, 7);
     }
 }
 
@@ -424,9 +415,9 @@ class TradeItem {
 
         // suspicious stew
         else if (item == Items.SUSPICIOUS_STEW) {
-            List<StatusEffect> effects = VillagerHelper.suspiciousStewEffects.keySet().stream().toList();
-            StatusEffect effect = effects.get((int) (Math.random() * effects.size()));
-            SuspiciousStewItem.addEffectToStew(itemStack, effect, VillagerHelper.suspiciousStewEffects.get(effect));
+            List<SuspiciousStewIngredient> ingredients = SuspiciousStewIngredient.getAll();
+            SuspiciousStewIngredient ingredient = ingredients.get((int) (Math.random() * ingredients.size()));
+            SuspiciousStewItem.addEffectToStew(itemStack, ingredient.getEffectInStew(), ingredient.getEffectInStewDuration());
         }
 
         // explorer maps
