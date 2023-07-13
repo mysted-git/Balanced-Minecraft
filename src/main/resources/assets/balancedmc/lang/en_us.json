@@ -20,6 +20,6 @@
   "enchantment.balancedmc.bane_of_the_aquatic": "Bane of the Aquatic",
   "enchantment.balancedmc.bane_of_illagers": "Bane of Illagers",
   "container.grindstone_title": "Transfer Enchantments",
-  "item.minecraft.potion.effect.mingling": "Potion of Mingling",
+  "item.balancedmc.potion_mingling.effect.empty": "Potion of Mingling",
   "effect.balancedmc.mingling": "Mingling"
 }

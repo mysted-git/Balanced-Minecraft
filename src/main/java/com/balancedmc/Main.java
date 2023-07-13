@@ -6,8 +6,6 @@ import com.balancedmc.entity.ModEntities;
 import com.balancedmc.items.ModItems;
 import com.balancedmc.loot_tables.ModLootTables;
 import com.balancedmc.potion.ModPotionRecipes;
-import com.balancedmc.potion.ModPotions;
-import com.balancedmc.potion.ModStatusEffects;
 import com.balancedmc.sounds.ModSoundEvents;
 import com.balancedmc.villagers.VillagerHelper;
 import net.fabricmc.api.ModInitializer;
@@ -29,8 +27,6 @@ public class Main implements ModInitializer {
 		ModLootTables.registerLootTables();
 		EntitySpawns.registerEntitySpawns();
 		ModEntities.registerEntities();
-		ModStatusEffects.registerStatusEffects();
-		ModPotions.registerPotions();
 
 		VillagerHelper.registerReloadListener();
 	}

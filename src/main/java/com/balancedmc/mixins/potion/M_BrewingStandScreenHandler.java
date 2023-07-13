@@ -32,7 +32,7 @@ public class M_BrewingStandScreenHandler extends ScreenHandler {
     }
 
     boolean canInsertPotion(ItemStack stack) {
-        return stack.isOf(Items.POTION) || stack.isOf(Items.SPLASH_POTION) || stack.isOf(Items.LINGERING_POTION) || stack.isOf(Items.GLASS_BOTTLE);
+        return stack.isOf(Items.POTION) || stack.isOf(Items.SPLASH_POTION) || stack.isOf(Items.LINGERING_POTION) || stack.isOf(Items.GLASS_BOTTLE) || stack.isOf(Items.DRAGON_BREATH);
     }
 
     protected boolean insertPotion(ItemStack stack, int startIndex, int endIndex, boolean fromLast) {
@@ -236,7 +236,7 @@ public class M_BrewingStandScreenHandler extends ScreenHandler {
         }
     }
 
-    private static class IngredientSlot extends Slot {
+    static class IngredientSlot extends Slot {
         public IngredientSlot(Inventory inventory, int i, int j, int k) {
             super(inventory, i, j, k);
         }
@@ -248,7 +248,7 @@ public class M_BrewingStandScreenHandler extends ScreenHandler {
         }
     }
 
-    private static class FuelSlot extends Slot {
+    static class FuelSlot extends Slot {
         public FuelSlot(Inventory inventory, int i, int j, int k) {
             super(inventory, i, j, k);
         }

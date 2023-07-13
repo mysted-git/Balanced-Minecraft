@@ -18,7 +18,7 @@ public class M_BrewingStandScreen {
             )
     )
     private int adjustWidth(int oldWidth) {
-        return (5 * oldWidth) - 5;
+        return (int) Math.floor(18 * oldWidth/5);
     }
 
 }

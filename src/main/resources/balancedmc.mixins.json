@@ -37,6 +37,7 @@
     "potion.M_PotionItem",
     "potion.M_ThrowablePotionItem",
     "potion.M_BrewingStandBlockEntity",
+    "potion.M_BrewingStandScreenHandlerPotionSlot",
     "potion.A_BrewingStandBlockEntity",
     "transport.boat.M_Blocks",
     "transport.boat.M_BoatEntity",
