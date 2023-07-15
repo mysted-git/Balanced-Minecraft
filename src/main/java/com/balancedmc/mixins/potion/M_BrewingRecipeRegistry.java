@@ -28,7 +28,7 @@ public abstract class M_BrewingRecipeRegistry {
 
     /**
      * Leaping is now brewed with a slimeball
-     * Slow falling is now brewed with phantom membrane
+     * Slow falling is now brewed with dragon's breath
      */
 
     @ModifyArg(

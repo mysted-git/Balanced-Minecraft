@@ -3,6 +3,7 @@ package com.balancedmc.items;
 import com.balancedmc.Main;
 import com.balancedmc.sounds.ModSoundEvents;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.*;
 import net.minecraft.potion.PotionUtil;
 import net.minecraft.registry.Registries;
@@ -21,6 +22,7 @@ public class ModItems {
     public static final Item MUSIC_DISC_KEY;
     public static final Item MUSIC_DISC_DOOR;
     public static final Item MINGLING_POTION_ITEM;
+    public static final Item ILLUSIONER_SPAWN_EGG;
 
     static {
         MUSIC_DISC_INTRO = register("music_disc_intro", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_INTRO, 276));
@@ -31,6 +33,9 @@ public class ModItems {
         MUSIC_DISC_KEY = register("music_disc_key", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_KEY, 65));
         MUSIC_DISC_DOOR = register("music_disc_door", new CustomMusicDiscItem(ModSoundEvents.MUSIC_DISC_DOOR, 108));
         MINGLING_POTION_ITEM = register("potion_mingling", new PotionItem(new Item.Settings().maxCount(16)));
+        ILLUSIONER_SPAWN_EGG = register("illusioner_spawn_egg", new SpawnEggItem(EntityType.ILLUSIONER, 1706419, 13139693, new Item.Settings()));
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(content -> content.add(ILLUSIONER_SPAWN_EGG));
     }
 
     private static Item register(String name, Item item) {
