@@ -11,6 +11,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
@@ -29,6 +30,22 @@ public abstract class M_BrewingRecipeRegistry {
      * Leaping is now brewed with a slimeball
      * Slow falling is now brewed with phantom membrane
      */
+
+    @ModifyArg(
+            method = "registerDefaults",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/recipe/BrewingRecipeRegistry;registerItemRecipe(Lnet/minecraft/item/Item;Lnet/minecraft/item/Item;Lnet/minecraft/item/Item;)V"
+            ),
+            index = 1
+    )
+    private static Item getLingeringIngredient(Item input) {
+        if (input == Items.DRAGON_BREATH) {
+            return Items.PHANTOM_MEMBRANE;
+        }
+        return input;
+    }
+
     @Inject(
             method = "registerPotionRecipe(Lnet/minecraft/potion/Potion;Lnet/minecraft/item/Item;Lnet/minecraft/potion/Potion;)V",
             at = @At("HEAD"),
@@ -50,19 +67,14 @@ public abstract class M_BrewingRecipeRegistry {
             cancellable = true
     )
     private static void mRegisterItemRecipe(Item input, Item ingredient, Item output, CallbackInfo ci) {
-        if (input == Items.SPLASH_POTION && ingredient == Items.DRAGON_BREATH && output == Items.LINGERING_POTION) {
-            registerItemRecipe(input, Items.PHANTOM_MEMBRANE, output);
-            ci.cancel();
-        }
-
         if (!(input instanceof PotionItem || input == Items.DRAGON_BREATH)) {
             throw new IllegalArgumentException("Expected a potion, got: " + Registries.ITEM.getId(input));
         } else if (!(output instanceof PotionItem || output == Items.DRAGON_BREATH)) {
             throw new IllegalArgumentException("Expected a potion, got: " + Registries.ITEM.getId(output));
         } else {
             ITEM_RECIPES.add(new BrewingRecipeRegistry.Recipe(input, Ingredient.ofItems(new ItemConvertible[]{ingredient}), output));
-            ci.cancel();
         }
+        ci.cancel();
     }
 
     @Inject(
