@@ -93,6 +93,6 @@ public abstract class M_FurnaceMinecartEntity {
             cancellable = true
     )
     private void injected(CallbackInfoReturnable<Double> cir) {
-        cir.setReturnValue(cir.getReturnValueD() * 2);
+        cir.setReturnValue(cir.getReturnValueD() * 4);
     }
 }

@@ -21,5 +21,6 @@
   "enchantment.balancedmc.bane_of_illagers": "Bane of Illagers",
   "container.grindstone_title": "Transfer Enchantments",
   "item.balancedmc.potion_mingling.effect.empty": "Potion of Mingling",
-  "effect.balancedmc.mingling": "Mingling"
+  "effect.balancedmc.mingling": "Mingling",
+  "item.balancedmc.illusioner_spawn_egg": "Illusioner Spawn Egg"
 }
