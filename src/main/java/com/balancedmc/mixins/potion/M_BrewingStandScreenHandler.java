@@ -15,6 +15,7 @@ import net.minecraft.screen.slot.Slot;
 import net.minecraft.server.network.ServerPlayerEntity;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -22,13 +23,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(BrewingStandScreenHandler.class)
 public class M_BrewingStandScreenHandler extends ScreenHandler {
 
-    private Inventory inventory;
-    private final Slot ingredientSlot;
+    @Shadow Slot ingredientSlot;
 
     protected M_BrewingStandScreenHandler(@Nullable ScreenHandlerType<?> type, int syncId, Inventory inventory) {
         super(type, syncId);
-        this.inventory = inventory;
-        this.ingredientSlot = this.addSlot(new IngredientSlot(inventory, 3, 79, 17));
     }
 
     boolean canInsertPotion(ItemStack stack) {

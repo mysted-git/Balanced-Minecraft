@@ -34,7 +34,6 @@
     "potion.A_BrewingStandBlockEntity",
     "potion.M_BrewingRecipeRegistry",
     "potion.M_BrewingStandBlockEntity",
-    "potion.M_BrewingStandScreen",
     "potion.M_BrewingStandScreenHandler",
     "potion.M_BrewingStandScreenHandlerPotionSlot",
     "potion.M_LivingEntity",
@@ -68,7 +67,8 @@
     "phantom.carry.M_BipedEntityModel",
     "phantom.carry.M_ClientPlayNetworkHandler",
     "phantom.carry.M_InGameHud",
-    "phantom.carry.M_LivingEntityRenderer"
+    "phantom.carry.M_LivingEntityRenderer",
+    "potion.M_BrewingStandScreen"
   ],
   "server": [
   ],
