@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "~": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "~~ ",
+    "~# ",
+    "  ~"
+  ],
+  "result": {
+    "count": 2,
+    "item": "minecraft:lead"
+  },
+  "show_notification": true
+}

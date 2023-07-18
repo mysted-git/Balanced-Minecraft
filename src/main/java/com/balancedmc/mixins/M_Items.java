@@ -54,6 +54,18 @@ public abstract class M_Items {
         return new StewItem(settings.maxCount(16));
     }
 
+    // stackable beds
+    @Redirect(
+            method = "<clinit>",
+            at = @At(
+                    value = "NEW",
+                    target = "Lnet/minecraft/item/BedItem;*"
+            )
+    )
+    private static BedItem bedMaxCount(Block block, Item.Settings settings) {
+        return new BedItem(block, settings.maxCount(16));
+    }
+
     // some 16-stackables now stack to 64
     @Redirect(
             method = "<clinit>",

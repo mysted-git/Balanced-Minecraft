@@ -47,6 +47,7 @@
     "transport.elytra.M_LivingEntity",
     "transport.horse.M_EnchantmentHelper",
     "transport.horse.M_FrostWalkerEnchantment",
+    "transport.horse.M_HorseArmorItem",
     "transport.horse.M_ProtectionEnchantment",
     "transport.horse.M_SoulSpeedEnchantment",
     "transport.minecart.M_AbstractMinecartEntity",
