@@ -22,5 +22,6 @@
   "container.grindstone_title": "Transfer Enchantments",
   "item.balancedmc.potion_mingling.effect.empty": "Potion of Mingling",
   "effect.balancedmc.mingling": "Mingling",
-  "item.balancedmc.illusioner_spawn_egg": "Illusioner Spawn Egg"
+  "item.balancedmc.illusioner_spawn_egg": "Illusioner Spawn Egg",
+  "filled_map.ancient_city": "Deep Dark Explorer Map"
 }

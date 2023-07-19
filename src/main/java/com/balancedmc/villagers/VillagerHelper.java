@@ -1,6 +1,7 @@
 package com.balancedmc.villagers;
 
 import com.balancedmc.Main;
+import com.balancedmc.structure_tags.ModStructureTags;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
@@ -422,10 +423,10 @@ class TradeItem {
 
         // explorer maps
         else if (item == Items.FILLED_MAP) {
-            boolean bool = Math.random() < 0.5;
-            TagKey<Structure> structure = bool ? StructureTags.ON_OCEAN_EXPLORER_MAPS : StructureTags.ON_WOODLAND_EXPLORER_MAPS;
-            String nameKey = bool ? "filled_map.monument" : "filled_map.mansion";
-            MapIcon.Type iconType = bool ? MapIcon.Type.MONUMENT : MapIcon.Type.MANSION;
+            int n = (int) (Math.random() * 3);
+            TagKey<Structure> structure = n == 0 ? StructureTags.ON_OCEAN_EXPLORER_MAPS : n == 1 ? StructureTags.ON_WOODLAND_EXPLORER_MAPS : ModStructureTags.ON_DEEP_DARK_EXPLORER_MAPS;
+            String nameKey = n == 0 ? "filled_map.monument" : n == 1 ? "filled_map.mansion" : "filled_map.ancient_city";
+            MapIcon.Type iconType = n == 0 ? MapIcon.Type.MONUMENT : n == 1 ? MapIcon.Type.MANSION : MapIcon.Type.BANNER_MAGENTA;
             if (entity.getWorld() instanceof ServerWorld serverWorld) {
                 BlockPos blockPos = serverWorld.locateStructure(structure, entity.getBlockPos(), 100, true);
                 if (blockPos != null) {

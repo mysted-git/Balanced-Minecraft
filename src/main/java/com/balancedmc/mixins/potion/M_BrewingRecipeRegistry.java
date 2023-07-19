@@ -1,6 +1,9 @@
 package com.balancedmc.mixins.potion;
 
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
+import net.minecraft.item.PotionItem;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
 import net.minecraft.recipe.BrewingRecipeRegistry;

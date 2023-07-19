@@ -1,6 +1,5 @@
 package com.balancedmc.mixins.enchantment.power;
 
-import com.balancedmc.Main;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.LivingEntity;

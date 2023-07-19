@@ -1,6 +1,5 @@
 package com.balancedmc.mixins.enchantment.power;
 
-import com.balancedmc.Main;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.BowItem;
 import org.spongepowered.asm.mixin.Mixin;
