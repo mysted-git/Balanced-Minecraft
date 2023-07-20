@@ -27,7 +27,10 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Grindstones transfer a single enchantment to a book<br>
@@ -76,8 +79,16 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
             // input 1
             case 0 -> {
                 return this.addSlot(new Slot(this.input, 0, 49, 19) {
+                    // allow insert if the item has enchantments other than curses, and does not have mending
                     public boolean canInsert(ItemStack stack) {
-                        return stack.hasEnchantments() && EnchantmentHelper.getLevel(Enchantments.MENDING, stack) == 0;
+                        int enchantmentCount = EnchantmentHelper.get(stack).size();
+                        if (EnchantmentHelper.hasBindingCurse(stack)) {
+                            enchantmentCount--;
+                        }
+                        if (EnchantmentHelper.hasVanishingCurse(stack)) {
+                            enchantmentCount--;
+                        }
+                        return enchantmentCount != 0 && EnchantmentHelper.getLevel(Enchantments.MENDING, stack) == 0;
                     }
                 });
             }
@@ -138,8 +149,11 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
         }
 
         Map<Enchantment, Integer> enchantmentLevels = EnchantmentHelper.get(input);
-        Enchantment[] enchantments = enchantmentLevels.keySet().toArray(Enchantment[]::new);
-        Enchantment toRemove = enchantments[(int) (Math.random() * enchantments.length)];
+        Set<Enchantment> enchantments = enchantmentLevels.keySet();
+        Set<Enchantment> selectableEnchantments = new HashSet<>(enchantments);
+        selectableEnchantments.remove(Enchantments.BINDING_CURSE);
+        selectableEnchantments.remove(Enchantments.VANISHING_CURSE);
+        Enchantment toRemove = selectableEnchantments.toArray(Enchantment[]::new)[(int) (Math.random() * selectableEnchantments.size())];
         removedEnchantment = new EnchantmentLevelEntry(toRemove, enchantmentLevels.get(toRemove));
 
         // stop if player does not have required experience

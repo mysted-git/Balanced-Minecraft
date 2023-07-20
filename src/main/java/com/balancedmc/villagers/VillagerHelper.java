@@ -289,7 +289,7 @@ public class VillagerHelper {
                 return null;
             }
             // merge buy items if they are the same
-            if (buyStack1.getItem() == buyStack2.getItem()) {
+            if (buyStack1.getItem() == buyStack2.getItem() && buyStack1.getCount() + buyStack2.getCount() >= 64) {
                 buyStack1.setCount(buyStack1.getCount() + buyStack2.getCount());
                 return new TradeOffer(
                         buyStack1,
