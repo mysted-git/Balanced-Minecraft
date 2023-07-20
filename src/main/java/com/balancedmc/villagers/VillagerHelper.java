@@ -24,7 +24,6 @@ import net.minecraft.resource.ResourceType;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Pair;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.VillagerProfession;
@@ -43,7 +42,7 @@ import java.util.*;
  * The following methods generate a single trade for a villager with
  * {@link #generateTrade(VillagerEntity) normal generation},
  * {@link #generateTrade(VillagerEntity, TradeItem) a specific sell item}, or
- * {@link #generateConversion(VillagerProfession) a conversion}<p>
+ * {@link #generateConversion(VillagerEntity) a conversion}<p>
  * {@link #generateTrade(WanderingTraderEntity) This method} generates a single trade for a wandering trader<p>
  * The main logic is in the method which {@link #generateTrade(Entity, ArrayList, ArrayList, ArrayList, Slot) generates a trade for any merchant}
  */
@@ -64,7 +63,6 @@ public class VillagerHelper {
      */
     public static TradeOffer[] generateTrades(VillagerEntity villager, int count) {
         int level = villager.getVillagerData().getLevel();
-        VillagerProfession profession = villager.getVillagerData().getProfession();
         TradeOffer[] trades = new TradeOffer[level == 5 || level == 1 ? count + 1 : count];
         // standard trades
         for (int i = 0; i < count;) {
@@ -83,7 +81,7 @@ public class VillagerHelper {
         }
         // conversion trade for master villagers
         if (level == 5) {
-            trades[count] = generateConversion(profession);
+            trades[count] = generateConversion(villager);
         }
         return trades;
     }
@@ -188,9 +186,9 @@ public class VillagerHelper {
             return new TradeOffer(new ItemStack(Items.AIR), new ItemStack(Items.AIR), 0, 0, 0);
         }
 
-        Pair<ItemStack, Integer> pair = sellItem.getItemStack(entity);
-        ItemStack sellStack = pair.getLeft();
-        int sellPrice = pair.getRight();
+        SellItemContainer.SellItemResult sellItemResult = sellItem.getSellItemStack(entity);
+        ItemStack sellStack = sellItemResult.itemStack;
+        int sellPrice = sellItemResult.price;
 
         // get first buy item
         TradeItem buyItem1 = null;
@@ -241,7 +239,7 @@ public class VillagerHelper {
         }
 
         // create trade offer
-        final int maxUses = 12;
+        int maxUses = 12 + (int) (Math.random() * 5); // 12 to 16
         final int experience = Math.min(sellPrice / 2, 30);
         final float multiplier = 0.05F;
         if (buyItem2 == null || buyCount2 == 0) {
@@ -250,9 +248,10 @@ public class VillagerHelper {
             if (hcf != 1) {
                 buyCount1 /= hcf;
                 sellStack.setCount(sellStack.getCount() / hcf);
+                maxUses *= hcf;
             }
             // confirm buy and sell are not the same
-            ItemStack buyStack1 = buyItem1.getItemStack(buyCount1, sellStack.getItem());
+            ItemStack buyStack1 = buyItem1.getBuyItemStack(buyCount1, sellStack.getItem());
             if (buyStack1 == null) {
                 Main.LOGGER.warn("Failed to generate trade with " + sellStack + " (4)");
                 return null;
@@ -280,13 +279,23 @@ public class VillagerHelper {
                 buyCount1 /= hcf;
                 buyCount2 /= hcf;
                 sellStack.setCount(sellStack.getCount() / hcf);
+                maxUses *= hcf;
             }
             // confirm buy and sell are not the same
-            ItemStack buyStack1 = buyItem1.getItemStack(buyCount1, sellStack.getItem());
-            ItemStack buyStack2 = buyItem2.getItemStack(buyCount2, sellStack.getItem());
+            ItemStack buyStack1 = buyItem1.getBuyItemStack(buyCount1, sellStack.getItem());
+            ItemStack buyStack2 = buyItem2.getBuyItemStack(buyCount2, sellStack.getItem());
             if (buyStack1 == null || buyStack2 == null) {
                 Main.LOGGER.warn("Failed to generate trade with " + sellStack + " (5)");
                 return null;
+            }
+            // merge buy items if they are the same
+            if (buyStack1.getItem() == buyStack2.getItem()) {
+                buyStack1.setCount(buyStack1.getCount() + buyStack2.getCount());
+                return new TradeOffer(
+                        buyStack1,
+                        sellStack,
+                        maxUses, experience, multiplier
+                );
             }
             // return
             return new TradeOffer(
@@ -303,12 +312,13 @@ public class VillagerHelper {
      * For VILLAGER<br>
      * Conversion
      */
-    private static TradeOffer generateConversion(VillagerProfession profession) {
+    private static TradeOffer generateConversion(VillagerEntity villager) {
+        VillagerProfession profession = villager.getVillagerData().getProfession();
         Conversion conversion = conversions.get(profession).get((int) (Math.random() * conversions.get(profession).size()));
         return new TradeOffer(
-                conversion.buyItem,
+                conversion.getBuyItemStack(),
                 new ItemStack(Items.EMERALD, conversion.price),
-                conversion.sellItem,
+                conversion.getSellItemStack(villager),
                 Integer.MAX_VALUE, 0, 0.05F
         );
     }
@@ -341,45 +351,13 @@ public class VillagerHelper {
     }
 }
 
-class TradeItem {
-    private final ArrayList<Item> items = new ArrayList<>();
-    final int price;
-    final ArrayList<VillagerProfession> professions = new ArrayList<>();
-    final boolean canBuy;
-    final boolean canSell;
+abstract class SellItemContainer {
 
-    TradeItem(String[] items, int price, String[] professions, boolean canBuy, boolean canSell) {
-        for (String item : items) {
-            this.items.add(Registries.ITEM.get(new Identifier(item)));
-        }
-        this.price = price;
-        for (String prof : professions) {
-            if (prof.equals("ANY")) break;
-            this.professions.add(Registries.VILLAGER_PROFESSION.get(new Identifier(prof)));
-        }
-        this.canBuy = canBuy;
-        this.canSell = canSell;
-    }
+    int price;
 
-    int getMaxCount() {
-        return items.get(0).getMaxCount();
-    }
-
-    /**
-     * Get a single item to sell
-     * <p>
-     * Includes special items such as:
-     * <p>
-     * Enchantable items<br>
-     * Potions and tipped arrows<br>
-     * Suspicious stew<br>
-     * Explorer maps<br>
-     */
-    Pair<ItemStack, Integer /*price*/> getItemStack(Entity entity) {
-        Item item = items.get((int) (Math.random() * items.size()));
-        int count = (int) (Math.pow(Math.random(), 2) * getMaxCount()) + 1; // favours lower counts
-        ItemStack itemStack = new ItemStack(item, count);
+    protected SellItemResult applyEffectsToSellItem(Item item, int count, Entity entity) {
         int priceBonus = 0;
+        ItemStack itemStack = new ItemStack(item, count);
 
         // enchantments
         if (itemStack.isEnchantable() || itemStack.isOf(Items.ENCHANTED_BOOK)) {
@@ -439,7 +417,45 @@ class TradeItem {
             count = 1;
         }
 
-        return new Pair<>(itemStack, (price + priceBonus) * count);
+        return new SellItemResult((price + priceBonus) * count, itemStack);
+    }
+
+    protected static class SellItemResult {
+        int price;
+        final ItemStack itemStack;
+
+        private SellItemResult(int price, ItemStack itemStack) {
+            this.price = price;
+            this.itemStack = itemStack;
+        }
+
+        protected void applyMultiplierToPrice(float multiplier) {
+            price *= multiplier;
+        }
+    }
+}
+
+class TradeItem extends SellItemContainer {
+    private final ArrayList<Item> items = new ArrayList<>();
+    final ArrayList<VillagerProfession> professions = new ArrayList<>();
+    final boolean canBuy;
+    final boolean canSell;
+
+    TradeItem(String[] items, int price, String[] professions, boolean canBuy, boolean canSell) {
+        for (String item : items) {
+            this.items.add(Registries.ITEM.get(new Identifier(item)));
+        }
+        this.price = price;
+        for (String prof : professions) {
+            if (prof.equals("ANY")) break;
+            this.professions.add(Registries.VILLAGER_PROFESSION.get(new Identifier(prof)));
+        }
+        this.canBuy = canBuy;
+        this.canSell = canSell;
+    }
+
+    int getMaxCount() {
+        return items.get(0).getMaxCount();
     }
 
     /**
@@ -447,11 +463,37 @@ class TradeItem {
      * @param count The number of items in the stack
      * @param banned An item which cannot be returned
      */
-    ItemStack getItemStack(int count, Item banned) {
+    ItemStack getBuyItemStack(int count, Item banned) {
         List<Item> validItems = items.stream().filter((i) -> i != banned).toList();
         if (validItems.isEmpty()) return null;
         Item item = validItems.get((int) (Math.random() * validItems.size()));
         return new ItemStack(item, count);
+    }
+
+    /**
+     * Get a single item to sell
+     * <p>
+     * Includes special items such as:
+     * <p>
+     * Enchantable items<br>
+     * Potions and tipped arrows<br>
+     * Suspicious stew<br>
+     * Explorer maps<br>
+     */
+    SellItemResult getSellItemStack(Entity entity) {
+        Item item = items.get((int) (Math.random() * items.size()));
+        int count = (int) (Math.pow(Math.random(), 2) * getMaxCount()) + 1; // favours lower counts
+
+        SellItemResult result = applyEffectsToSellItem(item, count, entity);
+
+        // wandering traders have better deals
+        float priceMultiplier = 1;
+        if (entity instanceof WanderingTraderEntity) {
+            priceMultiplier = 0.8f;
+        }
+        result.applyMultiplierToPrice(priceMultiplier);
+
+        return result;
     }
 
     boolean isEmerald() {
@@ -459,16 +501,27 @@ class TradeItem {
     }
 }
 
-class Conversion {
+class Conversion extends SellItemContainer {
 
-    ItemStack buyItem;
-    ItemStack sellItem;
-    int price;
+    private final Item buyItem;
+    private final Item sellItem;
+    private final int buyCount;
+    private final int sellCount;
 
     Conversion(ConversionItemInfo buy, ConversionItemInfo sell, int price) {
-        this.buyItem = new ItemStack(Registries.ITEM.get(new Identifier(buy.item)), buy.count);
-        this.sellItem = new ItemStack(Registries.ITEM.get(new Identifier(sell.item)), sell.count);
+        this.buyItem = Registries.ITEM.get(new Identifier(buy.item));
+        this.sellItem = Registries.ITEM.get(new Identifier(sell.item));
+        this.buyCount = buy.count;
+        this.sellCount = sell.count;
         this.price = price;
+    }
+
+    ItemStack getBuyItemStack() {
+        return new ItemStack(buyItem, buyCount);
+    }
+
+    ItemStack getSellItemStack(Entity entity) {
+        return applyEffectsToSellItem(sellItem, sellCount, entity).itemStack;
     }
 }
 
