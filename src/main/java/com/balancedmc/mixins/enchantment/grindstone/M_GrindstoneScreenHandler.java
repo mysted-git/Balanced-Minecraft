@@ -138,7 +138,7 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
         ItemStack input = this.input.getStack(0);
 
         // clear if there is no input
-        if (input == ItemStack.EMPTY) {
+        if (input.isEmpty()) {
             this.result.clear();
             return;
         }
@@ -163,14 +163,33 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
             return;
         }
 
-        ItemStack result = input.copy();
-        result.removeSubNbt("Enchantments");
-        result.removeSubNbt("StoredEnchantments");
+        ItemStack result;
 
         // add all but one enchantment to output item
-        for (Enchantment enchantment : enchantments) {
-            if (enchantment != removedEnchantment.enchantment) {
-                result.addEnchantment(enchantment, enchantmentLevels.get(enchantment));
+        if (input.isOf(Items.ENCHANTED_BOOK)) {
+            // enchanted book => book
+            if (enchantments.size() == 1) {
+                result = new ItemStack(Items.BOOK);
+            }
+            // enchanted book => enchanted book
+            else {
+                result = new ItemStack(Items.ENCHANTED_BOOK);
+                for (Enchantment enchantment : enchantments) {
+                    if (enchantment != removedEnchantment.enchantment) {
+                        EnchantedBookItem.addEnchantment(result, new EnchantmentLevelEntry(enchantment, enchantmentLevels.get(enchantment)));
+                    }
+                }
+            }
+        }
+        // other items
+        else {
+            result = input.copy();
+            result.removeSubNbt("Enchantments");
+            result.removeSubNbt("StoredEnchantments");
+            for (Enchantment enchantment : enchantments) {
+                if (enchantment != removedEnchantment.enchantment) {
+                    result.addEnchantment(enchantment, enchantmentLevels.get(enchantment));
+                }
             }
         }
 
