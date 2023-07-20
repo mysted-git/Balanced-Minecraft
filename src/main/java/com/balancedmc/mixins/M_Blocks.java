@@ -72,6 +72,6 @@ public abstract class M_Blocks {
             )
     )
     private static NetherPortalBlock nether_portal(AbstractBlock.Settings settings) {
-        return new NetherPortalBlock(settings.breakInstantly());
+        return new NetherPortalBlock(settings.strength(0.2f));
     }
 }

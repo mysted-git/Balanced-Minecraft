@@ -6,6 +6,7 @@
   "mixins": [
     "M_Blocks",
     "M_Items",
+    "M_Oxidizable",
     "M_PistonBlock",
     "M_WitherSkullBlock",
     "conduit.M_ConduitBlockEntity",
