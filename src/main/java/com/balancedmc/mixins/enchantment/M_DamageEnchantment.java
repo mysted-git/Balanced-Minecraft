@@ -1,5 +1,6 @@
 package com.balancedmc.mixins.enchantment;
 
+import com.balancedmc.entity.ModEntityGroup;
 import net.minecraft.enchantment.DamageEnchantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -19,9 +20,9 @@ public abstract class M_DamageEnchantment extends Enchantment {
         super(weight, target, slotTypes);
     }
 
-    @Shadow @Final private static final int[] BASE_POWERS = new int[]{1, 5, 5, 5, 5};
-    @Shadow @Final private static final int[] POWERS_PER_LEVEL = new int[]{11, 8, 8, 8, 8};
-    @Shadow @Final private static final int[] MIN_MAX_POWER_DIFFERENCES = new int[]{20, 20, 20, 20, 20};
+    @Shadow @Final private static final int[] BASE_POWERS = new int[]{1, 5, 5, 5, 5, 5};
+    @Shadow @Final private static final int[] POWERS_PER_LEVEL = new int[]{11, 8, 8, 8, 8, 8};
+    @Shadow @Final private static final int[] MIN_MAX_POWER_DIFFERENCES = new int[]{20, 20, 20, 20, 20, 20};
     @Shadow @Final public int typeIndex;
 
     /**
@@ -50,7 +51,10 @@ public abstract class M_DamageEnchantment extends Enchantment {
         if (this.typeIndex == 3 && group == EntityGroup.AQUATIC) {
             cir.setReturnValue(level * 2.5f);
         }
-        if (this.typeIndex == 4 && group == EntityGroup.ILLAGER) {
+        else if (this.typeIndex == 4 && group == EntityGroup.ILLAGER) {
+            cir.setReturnValue(level * 2.5f);
+        }
+        else if (this.typeIndex == 5 && group == ModEntityGroup.NETHER) {
             cir.setReturnValue(level * 2.5f);
         }
     }

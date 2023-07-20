@@ -10,12 +10,16 @@ import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(AnvilScreenHandler.class)
 public abstract class M_AnvilScreenHandler extends ForgingScreenHandler {
 
     @Shadow @Final public static int INPUT_1_ID;
+    @Shadow @Final public static int INPUT_2_ID;
+    @Shadow @Final private Property levelCost;
 
     public M_AnvilScreenHandler(@Nullable ScreenHandlerType<?> type, int syncId, PlayerInventory playerInventory, ScreenHandlerContext context) {
         super(type, syncId, playerInventory, context);
@@ -24,7 +28,13 @@ public abstract class M_AnvilScreenHandler extends ForgingScreenHandler {
     /**
      * Remove "too expensive" functionality
      */
-    @Redirect(method = "updateResult()V", at = @At(value = "INVOKE", target = "Lnet/minecraft/screen/Property;get()I"))
+    @Redirect(
+            method = "updateResult()V",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/screen/Property;get()I"
+            )
+    )
     private int redirect(Property levelCost) {
         return 1;
     }
@@ -33,8 +43,27 @@ public abstract class M_AnvilScreenHandler extends ForgingScreenHandler {
      * Allow level 5 environmental protection enchantments to be applied<br>
      * Do not allow combining level 4 books
      */
-    @Redirect(method = "updateResult()V", at = @At(value = "INVOKE", target = "Lnet/minecraft/enchantment/Enchantment;getMaxLevel()I"))
+    @Redirect(
+            method = "updateResult()V",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/enchantment/Enchantment;getMaxLevel()I"
+            )
+    )
     private int redirect(Enchantment enchantment) {
         return enchantment instanceof ProtectionEnchantment && !getSlot(INPUT_1_ID).getStack().isOf(Items.ENCHANTED_BOOK)  ? 5 : enchantment.getMaxLevel();
+    }
+
+    /**
+     * Renaming always costs 1 level
+     */
+    @Inject(
+            method = "updateResult()V",
+            at = @At("TAIL")
+    )
+    private void injected(CallbackInfo ci) {
+        if (!this.getSlot(INPUT_2_ID).hasStack() && this.levelCost.get() != 0) {
+            this.levelCost.set(1);
+        }
     }
 }

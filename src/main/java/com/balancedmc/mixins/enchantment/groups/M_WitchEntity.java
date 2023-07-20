@@ -7,9 +7,6 @@ import net.minecraft.entity.raid.RaiderEntity;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 
-/**
- * Witches are considered illagers
- */
 @Mixin(WitchEntity.class)
 public abstract class M_WitchEntity extends RaiderEntity {
 

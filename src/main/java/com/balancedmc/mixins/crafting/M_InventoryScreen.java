@@ -55,7 +55,7 @@ public abstract class M_InventoryScreen extends AbstractInventoryScreen<PlayerSc
     )
     private void redirect(DrawContext context, int x, int y, int size, float mouseX, float mouseY, LivingEntity entity) {
         if (entity instanceof PlayerEntity player && player.currentScreenHandler.getSlot(0).isEnabled()) {
-            drawEntity(context, x + 93, y, size, mouseX, mouseY, entity);
+            drawEntity(context, x + 93, y, size, mouseX + 93, mouseY, entity);
         }
     }
 
