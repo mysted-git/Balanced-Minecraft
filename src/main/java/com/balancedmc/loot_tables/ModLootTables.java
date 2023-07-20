@@ -34,7 +34,7 @@ public class ModLootTables {
                             // Blast protection V book
                             .with(ItemEntry.builder(Items.BOOK)
                                     .apply(new SetEnchantmentsLootFunction.Builder()
-                                            .enchantment(Enchantments.BLAST_PROTECTION, ConstantLootNumberProvider.create(5))
+                                            .enchantment(Enchantments.PROJECTILE_PROTECTION, ConstantLootNumberProvider.create(5))
                                     ).conditionally(
                                             RandomChanceLootCondition.builder(0.3F)
                                     )
@@ -46,7 +46,7 @@ public class ModLootTables {
                             // Projectile protection V book
                             .with(ItemEntry.builder(Items.BOOK)
                                     .apply(new SetEnchantmentsLootFunction.Builder()
-                                            .enchantment(Enchantments.PROJECTILE_PROTECTION, ConstantLootNumberProvider.create(5))
+                                            .enchantment(Enchantments.BLAST_PROTECTION, ConstantLootNumberProvider.create(5))
                                     ).conditionally(
                                             RandomChanceLootCondition.builder(0.5F)
                                     )
