@@ -46,6 +46,7 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
     @Shadow @Final private CraftingResultInventory craftingResult;
     @Shadow @Final private PlayerEntity owner;
     @Shadow static void onEquipStack(PlayerEntity player, EquipmentSlot slot, ItemStack newStack, ItemStack currentStack) {}
+    @Shadow public abstract boolean canInsertIntoSlot(ItemStack stack, Slot slot);
 
     private void updateCrafting() {
         ItemStack stack = craftingInventory.getStack(0);
@@ -219,6 +220,28 @@ public abstract class M_PlayerScreenHandler extends AbstractRecipeScreenHandler<
             slot.onTakeItem(player, result);
         }
         return result;
+    }
+
+    /**
+     * Block shift clicking if inventory full
+     */
+    @Redirect(
+            method = "quickMove(Lnet/minecraft/entity/player/PlayerEntity;I)Lnet/minecraft/item/ItemStack;",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/screen/slot/Slot;hasStack()Z",
+                    ordinal = 0
+            )
+    )
+    private boolean redirect(Slot slot) {
+        for (int i = 9; i < 45; i++) {
+            ItemStack sourceItem = slot.getStack();
+            ItemStack targetItem = this.getSlot(i).getStack();
+            if (targetItem.isEmpty() || (targetItem.isOf(sourceItem.getItem()) && targetItem.getCount() + sourceItem.getCount() <= 64)) {
+                return slot.hasStack();
+            }
+        }
+        return false;
     }
 
     /**
