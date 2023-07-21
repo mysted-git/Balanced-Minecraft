@@ -28,6 +28,7 @@ public class ModEnchantments {
     public static Enchantment BANE_OF_THE_AQUATIC = new DamageEnchantment(Enchantment.Rarity.UNCOMMON, 3, EquipmentSlot.MAINHAND);
     public static Enchantment BANE_OF_ILLAGERS = new DamageEnchantment(Enchantment.Rarity.UNCOMMON, 4, EquipmentSlot.MAINHAND);
     public static Enchantment NETHER_SLAYER = new DamageEnchantment(Enchantment.Rarity.UNCOMMON, 5, EquipmentSlot.MAINHAND);
+    public static Enchantment BANE_OF_VILLAGERS = new DamageEnchantment(Enchantment.Rarity.UNCOMMON, 6, EquipmentSlot.MAINHAND);
 
     public static void registerEnchantments() {
         Registry.register(Registries.ENCHANTMENT, new Identifier(Main.MOD_ID, "undead_protection"), UNDEAD_PROTECTION);
@@ -39,6 +40,7 @@ public class ModEnchantments {
         Registry.register(Registries.ENCHANTMENT, new Identifier(Main.MOD_ID, "bane_of_the_aquatic"), BANE_OF_THE_AQUATIC);
         Registry.register(Registries.ENCHANTMENT, new Identifier(Main.MOD_ID, "bane_of_illagers"), BANE_OF_ILLAGERS);
         Registry.register(Registries.ENCHANTMENT, new Identifier(Main.MOD_ID, "nether_slayer"), NETHER_SLAYER);
+        Registry.register(Registries.ENCHANTMENT, new Identifier(Main.MOD_ID, "bane_of_villagers"), BANE_OF_VILLAGERS);
 
         registerBooks();
     }

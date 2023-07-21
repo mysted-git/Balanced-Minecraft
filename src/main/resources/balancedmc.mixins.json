@@ -31,6 +31,7 @@
     "enchantment.groups.M_SlimeEntity",
     "enchantment.groups.M_StriderEntity",
     "enchantment.groups.M_VexEntity",
+    "enchantment.groups.M_MerchantEntity",
     "enchantment.groups.M_WitchEntity",
     "enchantment.groups.M_WitherSkeletonEntity",
     "enchantment.groups.M_ZoglinEntity",

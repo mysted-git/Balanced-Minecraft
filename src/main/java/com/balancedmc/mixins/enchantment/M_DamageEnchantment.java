@@ -20,9 +20,9 @@ public abstract class M_DamageEnchantment extends Enchantment {
         super(weight, target, slotTypes);
     }
 
-    @Shadow @Final private static final int[] BASE_POWERS = new int[]{1, 5, 5, 5, 5, 5};
-    @Shadow @Final private static final int[] POWERS_PER_LEVEL = new int[]{11, 8, 8, 8, 8, 8};
-    @Shadow @Final private static final int[] MIN_MAX_POWER_DIFFERENCES = new int[]{20, 20, 20, 20, 20, 20};
+    @Shadow @Final private static final int[] BASE_POWERS = new int[]{1, 5, 5, 5, 5, 5, 5};
+    @Shadow @Final private static final int[] POWERS_PER_LEVEL = new int[]{11, 8, 8, 8, 8, 8, 8};
+    @Shadow @Final private static final int[] MIN_MAX_POWER_DIFFERENCES = new int[]{20, 20, 20, 20, 20, 20, 20};
     @Shadow @Final public int typeIndex;
 
     /**
@@ -56,6 +56,23 @@ public abstract class M_DamageEnchantment extends Enchantment {
         }
         else if (this.typeIndex == 5 && group == ModEntityGroup.NETHER) {
             cir.setReturnValue(level * 2.5f);
+        }
+        else if (this.typeIndex == 6 && group == ModEntityGroup.VILLAGER) {
+            cir.setReturnValue(20f);
+        }
+    }
+
+    /**
+     * Bane of villagers max level is 1
+     */
+    @Inject(
+            method = "getMaxLevel()I",
+            at = @At("RETURN"),
+            cancellable = true
+    )
+    private void injected(CallbackInfoReturnable<Integer> cir) {
+        if (this.typeIndex == 6) {
+            cir.setReturnValue(1);
         }
     }
 }
