@@ -58,7 +58,7 @@ public abstract class M_DamageEnchantment extends Enchantment {
             cir.setReturnValue(level * 2.5f);
         }
         else if (this.typeIndex == 6 && group == ModEntityGroup.VILLAGER) {
-            cir.setReturnValue(20f);
+            cir.setReturnValue(40f);
         }
     }
 
