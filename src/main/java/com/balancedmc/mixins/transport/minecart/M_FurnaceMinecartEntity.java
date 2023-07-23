@@ -1,12 +1,21 @@
 package com.balancedmc.mixins.transport.minecart;
 
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.RailBlock;
 import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
+import net.minecraft.block.enums.RailShape;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.vehicle.AbstractMinecartEntity;
 import net.minecraft.entity.vehicle.FurnaceMinecartEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.world.World;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -16,8 +25,14 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.Slice;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import java.util.List;
+
 @Mixin(FurnaceMinecartEntity.class)
-public abstract class M_FurnaceMinecartEntity {
+public abstract class M_FurnaceMinecartEntity extends AbstractMinecartEntity {
+
+    protected M_FurnaceMinecartEntity(EntityType<?> entityType, World world) {
+        super(entityType, world);
+    }
 
     @Shadow private int fuel;
 
@@ -93,6 +108,13 @@ public abstract class M_FurnaceMinecartEntity {
             cancellable = true
     )
     private void injected(CallbackInfoReturnable<Double> cir) {
-        cir.setReturnValue(cir.getReturnValueD() * 4);
+        BlockState state = this.getWorld().getBlockState(this.getBlockPos());
+        if (state.isIn(BlockTags.RAILS) && !(state.isOf(Blocks.RAIL) && isRailCurved(state.get(RailBlock.SHAPE)))) {
+            cir.setReturnValue(cir.getReturnValue() * 2);
+        }
+    }
+
+    private boolean isRailCurved(RailShape shape) {
+        return shape == RailShape.NORTH_EAST || shape == RailShape.NORTH_WEST || shape == RailShape.SOUTH_EAST || shape == RailShape.SOUTH_WEST;
     }
 }

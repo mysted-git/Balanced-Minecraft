@@ -319,7 +319,7 @@ public class VillagerHelper {
                 conversion.getBuyItemStack(),
                 new ItemStack(Items.EMERALD, conversion.price),
                 conversion.getSellItemStack(villager),
-                Integer.MAX_VALUE, 0, 0.05F
+                Integer.MAX_VALUE, 0, 0
         );
     }
 
