@@ -70,6 +70,7 @@
     "transport.minecart.M_AbstractMinecartEntity",
     "transport.minecart.M_FurnaceMinecartEntity",
     "trident.M_ImpalingEnchantment",
+    "trident.M_LightningRodBlock",
     "trident.M_RiptideEnchantment",
     "trident.M_TridentEntity",
     "trident.M_TridentItem",
