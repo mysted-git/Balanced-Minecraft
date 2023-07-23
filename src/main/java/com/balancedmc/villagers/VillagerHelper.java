@@ -401,17 +401,14 @@ abstract class SellItemContainer {
 
         // explorer maps
         else if (item == Items.FILLED_MAP) {
-            int n = (int) (Math.random() * 3);
-            TagKey<Structure> structure = n == 0 ? StructureTags.ON_OCEAN_EXPLORER_MAPS : n == 1 ? StructureTags.ON_WOODLAND_EXPLORER_MAPS : ModStructureTags.ON_DEEP_DARK_EXPLORER_MAPS;
-            String nameKey = n == 0 ? "filled_map.monument" : n == 1 ? "filled_map.mansion" : "filled_map.ancient_city";
-            MapIcon.Type iconType = n == 0 ? MapIcon.Type.MONUMENT : n == 1 ? MapIcon.Type.MANSION : MapIcon.Type.BANNER_MAGENTA;
+            ExplorerMap map = ExplorerMap.values()[(int) (Math.random() * ExplorerMap.values().length)];
             if (entity.getWorld() instanceof ServerWorld serverWorld) {
-                BlockPos blockPos = serverWorld.locateStructure(structure, entity.getBlockPos(), 100, true);
+                BlockPos blockPos = serverWorld.locateStructure(map.structure, entity.getBlockPos(), 100, true);
                 if (blockPos != null) {
                     itemStack = FilledMapItem.createMap(serverWorld, blockPos.getX(), blockPos.getZ(), (byte)2, true, true);
                     FilledMapItem.fillExplorationMap(serverWorld, itemStack);
-                    MapState.addDecorationsNbt(itemStack, blockPos, "+", iconType);
-                    itemStack.setCustomName(Text.translatable(nameKey));
+                    MapState.addDecorationsNbt(itemStack, blockPos, "+", map.iconType);
+                    itemStack.setCustomName(Text.translatable(map.nameKey));
                 }
             }
             count = 1;
@@ -643,5 +640,27 @@ class VillagerMath {
 
     public static int hcf(int a, int b, int c) {
         return hcf(hcf(a, b), c);
+    }
+}
+
+/**
+ * Enum of the possible explorer maps which a cartographer can trade
+ */
+enum ExplorerMap {
+    OCEAN(StructureTags.ON_OCEAN_EXPLORER_MAPS, "filled_map.monument", MapIcon.Type.MONUMENT),
+    WOODLAND(StructureTags.ON_WOODLAND_EXPLORER_MAPS, "filled_map.mansion", MapIcon.Type.MANSION),
+    DEEP_DARK(ModStructureTags.ON_DEEP_DARK_EXPLORER_MAPS, "filled_map.ancient_city", MapIcon.Type.BANNER_MAGENTA),
+    DESERT(ModStructureTags.ON_DESERT_EXPLORER_MAPS, "filled_map.desert_pyramid", MapIcon.Type.BANNER_YELLOW),
+    JUNGLE(ModStructureTags.ON_JUNGLE_EXPLORER_MAPS, "filled_map.jungle_temple", MapIcon.Type.BANNER_GREEN),
+    TUNDRA(ModStructureTags.ON_TUNDRA_EXPLORER_MAPS, "filled_map.igloo", MapIcon.Type.BANNER_LIGHT_BLUE);
+
+    final TagKey<Structure> structure;
+    final String nameKey;
+    final MapIcon.Type iconType;
+
+    ExplorerMap(TagKey<Structure> structure, String nameKey, MapIcon.Type iconType) {
+        this.structure = structure;
+        this.nameKey = nameKey;
+        this.iconType = iconType;
     }
 }
