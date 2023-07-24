@@ -74,6 +74,8 @@
     "trident.M_RiptideEnchantment",
     "trident.M_TridentEntity",
     "trident.M_TridentItem",
+    "trim.M_ArmorTrim",
+    "trim.M_SmithingTrimRecipe",
     "village.M_IronGolemEntity",
     "village.M_VillagerProfession",
     "village.raid.M_EvokerEntity",

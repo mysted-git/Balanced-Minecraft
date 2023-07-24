@@ -29,5 +29,9 @@
   "filled_map.ancient_city": "Deep Dark Explorer Map",
   "filled_map.desert_pyramid": "Desert Explorer Map",
   "filled_map.jungle_temple": "Jungle Explorer Map",
-  "filled_map.igloo": "Tundra Explorer Map"
+  "filled_map.igloo": "Tundra Explorer Map",
+  "item.balancedmc.tool_trim_smithing_template": "Smithing Template",
+  "trim_pattern.balancedmc.tool": "Tool Trim",
+  "item.balancedmc.smithing_template.tool_trim.applies_to": "Tools",
+  "item.balancedmc.smithing_template.tool_trim.base_slot_description": "Add a tool"
 }
