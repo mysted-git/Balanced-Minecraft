@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "balancedmc",
-  "version": "1.1",
+  "version": "1.2",
 
   "name": "Balanced Minecraft",
   "description": "description!",
@@ -23,6 +23,9 @@
     ],
     "client": [
       "com.balancedmc.MainClient"
+    ],
+    "server": [
+      "com.balancedmc.MainServer"
     ]
   },
   "mixins": [
