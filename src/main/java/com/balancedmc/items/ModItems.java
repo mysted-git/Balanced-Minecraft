@@ -2,7 +2,6 @@ package com.balancedmc.items;
 
 import com.balancedmc.Main;
 import com.balancedmc.sounds.ModSoundEvents;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.*;

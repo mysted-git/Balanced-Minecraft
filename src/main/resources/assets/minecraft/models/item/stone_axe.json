@@ -1,0 +1,68 @@
+{
+  "parent": "minecraft:item/handheld",
+  "overrides": [
+    {
+      "model": "balancedmc:item/trimmed/stone_axe_quartz_trim",
+      "predicate": {
+        "custom_model_data": 1
+      }
+    },
+    {
+      "model": "balancedmc:item/trimmed/stone_axe_iron_trim",
+      "predicate": {
+        "custom_model_data": 2
+      }
+    },
+    {
+      "model": "balancedmc:item/trimmed/stone_axe_netherite_trim",
+      "predicate": {
+        "custom_model_data": 3
+      }
+    },
+    {
+      "model": "balancedmc:item/trimmed/stone_axe_redstone_trim",
+      "predicate": {
+        "custom_model_data": 4
+      }
+    },
+    {
+      "model": "balancedmc:item/trimmed/stone_axe_copper_trim",
+      "predicate": {
+        "custom_model_data": 5
+      }
+    },
+    {
+      "model": "balancedmc:item/trimmed/stone_axe_gold_trim",
+      "predicate": {
+        "custom_model_data": 6
+      }
+    },
+    {
+      "model": "balancedmc:item/trimmed/stone_axe_emerald_trim",
+      "predicate": {
+        "custom_model_data": 7
+      }
+    },
+    {
+      "model": "balancedmc:item/trimmed/stone_axe_diamond_trim",
+      "predicate": {
+        "custom_model_data": 8
+      }
+    },
+    {
+      "model": "balancedmc:item/trimmed/stone_axe_lapis_trim",
+      "predicate": {
+        "custom_model_data": 9
+      }
+    },
+    {
+      "model": "balancedmc:item/trimmed/stone_axe_amethyst_trim",
+      "predicate": {
+        "custom_model_data": 10
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "minecraft:item/stone_axe"
+  }
+}

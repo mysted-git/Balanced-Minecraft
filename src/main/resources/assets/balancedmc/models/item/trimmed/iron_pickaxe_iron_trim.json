@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "minecraft:item/iron_pickaxe",
+    "layer1": "balancedmc:item/trims/tool_iron_trim"
+  }
+}
