@@ -10,6 +10,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.vehicle.AbstractMinecartEntity;
 import net.minecraft.entity.vehicle.MinecartEntity;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 
@@ -37,12 +39,27 @@ public abstract class M_MinecartEntity extends AbstractMinecartEntity {
                     return super.getMaxSpeed() * 2.5;
                 }
             }
+            BlockState lowState = this.getWorld().getBlockState(this.getBlockPos().down());
+            if (lowState.isIn(BlockTags.RAILS) && lowState.get(Properties.STRAIGHT_RAIL_SHAPE).isAscending()) {
+                if (isAscending(lowState.get(Properties.STRAIGHT_RAIL_SHAPE), this.getMovementDirection())) {
+                    // uphill
+                    return super.getMaxSpeed();
+                }
+                else {
+                    // downhill
+                    return super.getMaxSpeed() * 1.5;
+                }
+            }
         }
-        // off-rail, uphill, or no player
+        // off-rail or no player
         return super.getMaxSpeed();
     }
 
     private boolean isRailCurved(RailShape shape) {
         return shape == RailShape.NORTH_EAST || shape == RailShape.NORTH_WEST || shape == RailShape.SOUTH_EAST || shape == RailShape.SOUTH_WEST;
+    }
+
+    private boolean isAscending(RailShape shape, Direction movementDirection) {
+        return shape == RailShape.ASCENDING_EAST && movementDirection == Direction.EAST || shape == RailShape.ASCENDING_NORTH && movementDirection == Direction.NORTH || shape == RailShape.ASCENDING_WEST && movementDirection == Direction.WEST || shape == RailShape.ASCENDING_SOUTH && movementDirection == Direction.SOUTH;
     }
 }
