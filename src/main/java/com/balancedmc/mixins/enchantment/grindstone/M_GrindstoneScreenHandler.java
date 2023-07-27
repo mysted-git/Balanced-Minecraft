@@ -60,7 +60,7 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
 
     /**
      * Change which items are allowed to be inserted into slots<br>
-     * Input 1 can accept enchanted items without mending<br>
+     * Input 1 can accept enchanted items (ignoring curses)<br>
      * Input 2 can accept only a single book
      * <p>
      * Set behaviour when items are taken from output slot<br>
@@ -78,7 +78,7 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
             // input 1
             case 0 -> {
                 return this.addSlot(new Slot(this.input, 0, 49, 19) {
-                    // allow insert if the item has enchantments other than curses, and does not have mending
+                    // allow insert if the item has enchantments other than curses
                     public boolean canInsert(ItemStack stack) {
                         int enchantmentCount = EnchantmentHelper.get(stack).size();
                         if (EnchantmentHelper.hasBindingCurse(stack)) {
@@ -87,7 +87,7 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
                         if (EnchantmentHelper.hasVanishingCurse(stack)) {
                             enchantmentCount--;
                         }
-                        return enchantmentCount != 0 && EnchantmentHelper.getLevel(Enchantments.MENDING, stack) == 0;
+                        return enchantmentCount != 0;
                     }
                 });
             }
@@ -156,7 +156,7 @@ public abstract class M_GrindstoneScreenHandler extends ScreenHandler {
         removedEnchantment = new EnchantmentLevelEntry(toRemove, enchantmentLevels.get(toRemove));
 
         // stop if player does not have required experience
-        experienceChange = removedEnchantment.level * 2;
+        experienceChange = removedEnchantment.level * 2 * (EnchantmentHelper.getLevel(Enchantments.MENDING, input) * 3 + 1);
         if (!player.getAbilities().creativeMode && experienceChange > player.experienceLevel && this.getSlot(1).hasStack()) {
             this.result.clear();
             return;

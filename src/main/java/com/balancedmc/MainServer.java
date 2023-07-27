@@ -19,8 +19,13 @@ public class MainServer implements DedicatedServerModInitializer {
     @Override
     public void onInitializeServer() {
         ServerPlayNetworking.registerGlobalReceiver(VERSION_VERIFIER_PACKET_ID, (server, player, handler, buf, responseSender) -> {
-            if (buf.readString().equals(Main.MOD_VERSION)) {
+            String clientVersion = buf.readString();
+            if (clientVersion.equals(Main.MOD_VERSION)) {
                 verifiedPlayers.add(player);
+            }
+            else {
+                verifiedPlayers.remove(player);
+                player.sendMessage(Text.of("§cYou have an out of date mod version (" + clientVersion + ") - you need to update to version " + Main.MOD_VERSION));
             }
         });
 

@@ -5,6 +5,7 @@ import net.minecraft.client.gui.screen.ingame.GrindstoneScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.GrindstoneScreenHandler;
 import net.minecraft.text.Text;
@@ -30,7 +31,7 @@ public abstract class M_GrindstoneScreen extends HandledScreen<GrindstoneScreenH
             int cost = 0;
             for (Enchantment enchantment : enchantments.keySet()) {
                 if (EnchantmentHelper.getLevel(enchantment, this.handler.getSlot(2).getStack()) == 0) {
-                    cost = enchantments.get(enchantment) * 2;
+                    cost = enchantments.get(enchantment) * 2 * (EnchantmentHelper.getLevel(Enchantments.MENDING, this.handler.getSlot(0).getStack()) * 3 + 1);
                     break;
                 }
             }
