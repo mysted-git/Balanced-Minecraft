@@ -20,6 +20,8 @@
     "enchantment.M_Enchantments",
     "enchantment.M_ProtectionEnchantment",
     "enchantment.anvil.M_AnvilScreenHandler",
+    "enchantment.enchanting_table.M_EnchantingTableBlock",
+    "enchantment.enchanting_table.M_EnchantmentScreenHandler",
     "enchantment.frost_walker.M_FrostWalkerEnchantment",
     "enchantment.frost_walker.M_LivingEntity",
     "enchantment.grindstone.M_GrindstoneScreenHandler",
