@@ -8,6 +8,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -20,6 +22,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -32,6 +36,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -44,6 +50,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -56,6 +64,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -68,6 +78,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -80,20 +92,139 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
   {
     "items": [
-      "oak_planks",
-      "spruce_planks",
-      "birch_planks",
-      "jungle_planks",
-      "acacia_planks",
-      "dark_oak_planks",
-      "mangrove_planks",
-      "cherry_planks",
-      "bamboo_planks",
+      "oak_planks"
+    ],
+    "price": 2,
+    "weight": 4,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "plains",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "spruce_planks"
+    ],
+    "price": 2,
+    "weight": 4,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "taiga",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "birch_planks"
+    ],
+    "price": 2,
+    "weight": 4,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "snow",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "jungle_planks"
+    ],
+    "price": 2,
+    "weight": 4,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "jungle",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "acacia_planks"
+    ],
+    "price": 2,
+    "weight": 4,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "savanna",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "dark_oak_planks"
+    ],
+    "price": 2,
+    "weight": 4,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "swamp",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "mangrove_planks"
+    ],
+    "price": 2,
+    "weight": 4,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "swamp",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "cherry_planks"
+    ],
+    "price": 2,
+    "weight": 4,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "plains",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "bamboo_planks"
+    ],
+    "price": 2,
+    "weight": 4,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "jungle",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
       "bamboo_mosaic"
     ],
     "price": 2,
@@ -101,18 +232,111 @@
     "professions": [
       "farmer"
     ],
+    "biome": "jungle",
+    "level": 1,
     "buy": true,
     "sell": true
   },
   {
     "items": [
-      "oak_sapling",
-      "spruce_sapling",
-      "birch_sapling",
-      "jungle_sapling",
-      "acacia_sapling",
-      "dark_oak_sapling",
-      "mangrove_propagule",
+      "oak_sapling"
+    ],
+    "price": 8,
+    "weight": 1,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "plains",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "spruce_sapling"
+    ],
+    "price": 8,
+    "weight": 1,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "taiga",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "birch_sapling"
+    ],
+    "price": 8,
+    "weight": 1,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "snow",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "jungle_sapling"
+    ],
+    "price": 8,
+    "weight": 1,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "jungle",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "acacia_sapling"
+    ],
+    "price": 8,
+    "weight": 1,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "savanna",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "dark_oak_sapling"
+    ],
+    "price": 8,
+    "weight": 1,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "swamp",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "mangrove_propagule"
+    ],
+    "price": 8,
+    "weight": 1,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "swamp",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
       "cherry_sapling"
     ],
     "price": 8,
@@ -120,6 +344,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "plains",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -132,6 +358,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -144,6 +372,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -156,6 +386,8 @@
     "professions": [
       "fletcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -168,6 +400,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -180,6 +414,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -192,6 +428,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -204,6 +442,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -216,6 +456,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -228,6 +470,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -240,6 +484,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -252,6 +498,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -264,6 +512,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -276,6 +526,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -288,6 +540,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -300,6 +554,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -314,6 +570,8 @@
       "toolsmith",
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -328,6 +586,8 @@
       "toolsmith",
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -340,6 +600,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -352,6 +614,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -364,6 +628,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -376,6 +642,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -388,6 +656,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -400,6 +670,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -412,6 +684,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -424,6 +698,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": true,
     "sell": true
   },
@@ -436,6 +712,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": true,
     "sell": true
   },
@@ -448,6 +726,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": true,
     "sell": true
   },
@@ -462,6 +742,8 @@
       "toolsmith",
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": true,
     "sell": false
   },
@@ -474,6 +756,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": true,
     "sell": true
   },
@@ -486,6 +770,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": true,
     "sell": true
   },
@@ -498,6 +784,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": true,
     "sell": true
   },
@@ -510,6 +798,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": true,
     "sell": true
   },
@@ -522,6 +812,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": true,
     "sell": true
   },
@@ -534,6 +826,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": true,
     "sell": true
   },
@@ -546,19 +840,125 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": true,
     "sell": true
   },
   {
     "items": [
-      "oak_log",
-      "spruce_log",
-      "birch_log",
-      "jungle_log",
-      "acacia_log",
-      "dark_oak_log",
-      "mangrove_log",
-      "cherry_log",
+      "oak_log"
+    ],
+    "price": 8,
+    "weight": 3,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "plains",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "spruce_log"
+    ],
+    "price": 8,
+    "weight": 3,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "taiga",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "birch_log"
+    ],
+    "price": 8,
+    "weight": 3,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "snow",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "jungle_log"
+    ],
+    "price": 8,
+    "weight": 3,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "jungle",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "acacia_log"
+    ],
+    "price": 8,
+    "weight": 3,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "savanna",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "dark_oak_log"
+    ],
+    "price": 8,
+    "weight": 3,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "swamp",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "mangrove_log"
+    ],
+    "price": 8,
+    "weight": 3,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "swamp",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
+      "cherry_log"
+    ],
+    "price": 8,
+    "weight": 3,
+    "professions": [
+      "farmer"
+    ],
+    "biome": "plains",
+    "level": 1,
+    "buy": true,
+    "sell": true
+  },
+  {
+    "items": [
       "bamboo_block"
     ],
     "price": 4,
@@ -566,6 +966,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "jungle",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -578,6 +980,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -590,6 +994,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -602,6 +1008,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -614,6 +1022,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": true,
     "sell": true
   },
@@ -626,6 +1036,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -638,6 +1050,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -650,6 +1064,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -662,6 +1078,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -674,6 +1092,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -701,6 +1121,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -713,6 +1135,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -725,6 +1149,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -737,6 +1163,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -749,6 +1177,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -761,6 +1191,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -773,6 +1205,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -785,6 +1219,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -797,6 +1233,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -809,6 +1247,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -821,6 +1261,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -833,6 +1275,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -845,6 +1289,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -857,6 +1303,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -869,6 +1317,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -881,6 +1331,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -893,6 +1345,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -905,6 +1359,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -917,6 +1373,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -929,6 +1387,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -941,6 +1401,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": false,
     "sell": true
   },
@@ -953,6 +1415,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -965,6 +1429,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -977,6 +1443,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -989,6 +1457,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1001,6 +1471,8 @@
     "professions": [
       "librarian"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1013,6 +1485,8 @@
     "professions": [
       "librarian"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1025,6 +1499,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1037,6 +1513,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1049,6 +1527,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1061,6 +1541,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1073,6 +1555,8 @@
     "professions": [
       "librarian"
     ],
+    "biome": "ANY",
+    "level": 3,
     "buy": false,
     "sell": true
   },
@@ -1085,6 +1569,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1097,6 +1583,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1109,6 +1597,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1121,6 +1611,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1133,6 +1625,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1145,6 +1639,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1157,6 +1653,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1169,6 +1667,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1181,6 +1681,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1193,6 +1695,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1205,6 +1709,8 @@
     "professions": [
       "librarian"
     ],
+    "biome": "ANY",
+    "level": 3,
     "buy": false,
     "sell": true
   },
@@ -1217,6 +1723,8 @@
     "professions": [
       "ANY"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1229,6 +1737,8 @@
     "professions": [
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 3,
     "buy": false,
     "sell": true
   },
@@ -1241,6 +1751,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": false,
     "sell": true
   },
@@ -1253,6 +1765,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": false,
     "sell": true
   },
@@ -1265,6 +1779,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": false,
     "sell": true
   },
@@ -1277,6 +1793,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": false,
     "sell": true
   },
@@ -1304,6 +1822,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1316,6 +1836,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1343,6 +1865,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1355,6 +1879,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1367,6 +1893,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1379,6 +1907,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1391,6 +1921,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1403,6 +1935,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1415,6 +1949,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1442,6 +1978,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1454,6 +1992,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1466,6 +2006,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1478,6 +2020,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1490,6 +2034,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1502,6 +2048,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1514,6 +2062,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1526,6 +2076,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1553,6 +2105,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1580,6 +2134,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1607,6 +2163,8 @@
     "professions": [
       "fletcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1633,6 +2191,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1645,6 +2205,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1657,6 +2219,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1669,6 +2233,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1681,6 +2247,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1693,6 +2261,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": true,
     "sell": true
   },
@@ -1705,6 +2275,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 3,
     "buy": true,
     "sell": false
   },
@@ -1717,6 +2289,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 3,
     "buy": true,
     "sell": false
   },
@@ -1729,6 +2303,8 @@
     "professions": [
       "librarian"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1741,6 +2317,8 @@
     "professions": [
       "fletcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1753,6 +2331,8 @@
     "professions": [
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1765,6 +2345,8 @@
     "professions": [
       "cartographer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1777,6 +2359,8 @@
     "professions": [
       "cartographer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1789,6 +2373,8 @@
     "professions": [
       "cartographer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1801,6 +2387,8 @@
     "professions": [
       "cartographer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1813,6 +2401,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -1825,19 +2415,125 @@
     "professions": [
       "cartographer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
   {
     "items": [
-      "oak_boat",
-      "spruce_boat",
-      "birch_boat",
-      "jungle_boat",
-      "acacia_boat",
-      "dark_oak_boat",
-      "mangrove_boat",
-      "bamboo_raft",
+      "oak_boat"
+    ],
+    "price": 2,
+    "weight": 1,
+    "professions": [
+      "fisherman"
+    ],
+    "biome": "plains",
+    "level": 1,
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "spruce_boat"
+    ],
+    "price": 2,
+    "weight": 1,
+    "professions": [
+      "fisherman"
+    ],
+    "biome": "taiga",
+    "level": 1,
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "birch_boat"
+    ],
+    "price": 2,
+    "weight": 1,
+    "professions": [
+      "fisherman"
+    ],
+    "biome": "snow",
+    "level": 1,
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "jungle_boat"
+    ],
+    "price": 2,
+    "weight": 1,
+    "professions": [
+      "fisherman"
+    ],
+    "biome": "jungle",
+    "level": 1,
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "acacia_boat"
+    ],
+    "price": 2,
+    "weight": 1,
+    "professions": [
+      "fisherman"
+    ],
+    "biome": "savanna",
+    "level": 1,
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "dark_oak_boat"
+    ],
+    "price": 2,
+    "weight": 1,
+    "professions": [
+      "fisherman"
+    ],
+    "biome": "swamp",
+    "level": 1,
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "mangrove_boat"
+    ],
+    "price": 2,
+    "weight": 1,
+    "professions": [
+      "fisherman"
+    ],
+    "biome": "swamp",
+    "level": 1,
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
+      "bamboo_raft"
+    ],
+    "price": 2,
+    "weight": 1,
+    "professions": [
+      "fisherman"
+    ],
+    "biome": "jungle",
+    "level": 1,
+    "buy": true,
+    "sell": false
+  },
+  {
+    "items": [
       "cherry_boat"
     ],
     "price": 2,
@@ -1845,6 +2541,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "plains",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -1857,6 +2555,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 3,
     "buy": false,
     "sell": true
   },
@@ -1869,6 +2569,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -1881,6 +2583,8 @@
     "professions": [
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1893,6 +2597,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1905,6 +2611,8 @@
     "professions": [
       "fletcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -1917,6 +2625,8 @@
     "professions": [
       "fletcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1929,6 +2639,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -1941,6 +2653,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -1955,6 +2669,8 @@
       "toolsmith",
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -1967,6 +2683,8 @@
     "professions": [
       "ANY"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1980,6 +2698,8 @@
       "cleric",
       "librarian"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -1992,6 +2712,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2004,6 +2726,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2018,6 +2742,8 @@
       "toolsmith",
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -2032,6 +2758,8 @@
       "toolsmith",
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2044,6 +2772,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -2056,6 +2786,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2068,6 +2800,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -2080,6 +2814,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2092,6 +2828,8 @@
     "professions": [
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2104,6 +2842,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2116,6 +2856,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2128,6 +2870,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2140,6 +2884,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2152,6 +2898,8 @@
     "professions": [
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2164,6 +2912,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2176,6 +2926,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2188,6 +2940,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2200,6 +2954,8 @@
     "professions": [
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": false,
     "sell": true
   },
@@ -2212,6 +2968,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": false,
     "sell": true
   },
@@ -2224,6 +2982,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": false,
     "sell": true
   },
@@ -2236,6 +2996,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": false,
     "sell": true
   },
@@ -2248,6 +3010,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": false,
     "sell": true
   },
@@ -2260,6 +3024,8 @@
     "professions": [
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 4,
     "buy": false,
     "sell": true
   },
@@ -2272,6 +3038,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 4,
     "buy": false,
     "sell": true
   },
@@ -2284,6 +3052,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 4,
     "buy": false,
     "sell": true
   },
@@ -2296,6 +3066,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 4,
     "buy": false,
     "sell": true
   },
@@ -2308,6 +3080,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 4,
     "buy": false,
     "sell": true
   },
@@ -2320,6 +3094,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2332,6 +3108,8 @@
     "professions": [
       "fletcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2344,6 +3122,8 @@
     "professions": [
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2356,6 +3136,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2368,6 +3150,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -2380,6 +3164,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2392,6 +3178,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2404,6 +3192,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2416,6 +3206,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2428,6 +3220,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2440,6 +3234,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2452,6 +3248,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2464,6 +3262,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2476,6 +3276,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2488,6 +3290,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": false,
     "sell": true
   },
@@ -2500,6 +3304,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": false,
     "sell": true
   },
@@ -2512,6 +3318,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": false,
     "sell": true
   },
@@ -2524,6 +3332,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": false,
     "sell": true
   },
@@ -2536,6 +3346,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 4,
     "buy": false,
     "sell": true
   },
@@ -2548,6 +3360,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 4,
     "buy": false,
     "sell": true
   },
@@ -2560,6 +3374,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 4,
     "buy": false,
     "sell": true
   },
@@ -2572,6 +3388,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 4,
     "buy": false,
     "sell": true
   },
@@ -2584,6 +3402,8 @@
     "professions": [
       "fletcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2596,6 +3416,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2608,6 +3430,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -2620,6 +3444,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 3,
     "buy": false,
     "sell": true
   },
@@ -2632,6 +3458,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2644,6 +3472,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -2656,6 +3486,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -2668,6 +3500,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2680,6 +3514,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -2692,6 +3528,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2704,6 +3542,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2716,6 +3556,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2728,6 +3570,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2740,6 +3584,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2752,6 +3598,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2764,6 +3612,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2776,6 +3626,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2788,6 +3640,8 @@
     "professions": [
       "librarian"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2800,6 +3654,8 @@
     "professions": [
       "librarian"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2812,6 +3668,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2824,6 +3682,8 @@
     "professions": [
       "cartographer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -2836,6 +3696,8 @@
     "professions": [
       "cartographer"
     ],
+    "biome": "ANY",
+    "level": 4,
     "buy": false,
     "sell": true
   },
@@ -2848,6 +3710,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2860,6 +3724,8 @@
     "professions": [
       "cartographer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -2872,6 +3738,8 @@
     "professions": [
       "cartographer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -2884,6 +3752,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2896,6 +3766,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2908,6 +3780,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2920,6 +3794,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2932,6 +3808,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -2944,6 +3822,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -2956,6 +3836,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -2968,6 +3850,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -2980,6 +3864,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3007,6 +3893,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3020,6 +3908,8 @@
       "butcher",
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3032,6 +3922,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3044,6 +3936,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3056,6 +3950,8 @@
     "professions": [
       "ANY"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3068,6 +3964,8 @@
     "professions": [
       "cartographer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3081,6 +3979,8 @@
       "shepherd",
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3094,6 +3994,8 @@
       "fletcher",
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3106,6 +4008,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3118,6 +4022,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3130,6 +4036,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3142,6 +4050,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3154,6 +4064,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3166,6 +4078,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3178,6 +4092,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3190,6 +4106,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3202,6 +4120,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3214,6 +4134,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3226,6 +4148,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3238,6 +4162,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3250,6 +4176,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3262,6 +4190,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3274,6 +4204,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3286,6 +4218,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3298,6 +4232,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3310,6 +4246,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3323,6 +4261,8 @@
       "cleric",
       "librarian"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3335,6 +4275,8 @@
     "professions": [
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3347,6 +4289,8 @@
     "professions": [
       "librarian"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3359,6 +4303,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3371,30 +4317,279 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
   {
     "items": [
-      "angler_pottery_sherd",
-      "archer_pottery_sherd",
-      "arms_up_pottery_sherd",
-      "blade_pottery_sherd",
-      "brewer_pottery_sherd",
-      "burn_pottery_sherd",
-      "danger_pottery_sherd",
-      "explorer_pottery_sherd",
-      "friend_pottery_sherd",
-      "heart_pottery_sherd",
-      "heartbreak_pottery_sherd",
-      "howl_pottery_sherd",
-      "miner_pottery_sherd",
-      "mourner_pottery_sherd",
-      "plenty_pottery_sherd",
-      "prize_pottery_sherd",
-      "sheaf_pottery_sherd",
-      "shelter_pottery_sherd",
-      "skull_pottery_sherd",
+      "angler_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "jungle",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "archer_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "desert",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "arms_up_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "savanna",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "blade_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "snow",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "brewer_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "savanna",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "burn_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "taiga",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "danger_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "swamp",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "explorer_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "snow",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "friend_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "plains",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "heart_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "plains",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "heartbreak_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "plains",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "howl_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "taiga",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "miner_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "desert",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "mourner_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "snow",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "plenty_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "snow",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "prize_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "desert",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "sheaf_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "swamp",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "shelter_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "jungle",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "skull_pottery_sherd"
+    ],
+    "price": 50,
+    "weight": 1,
+    "professions": [
+      "mason"
+    ],
+    "biome": "desert",
+    "level": 1,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
       "snort_pottery_sherd"
     ],
     "price": 50,
@@ -3402,33 +4597,232 @@
     "professions": [
       "mason"
     ],
+    "biome": "jungle",
+    "level": 1,
     "buy": false,
     "sell": true
   },
   {
     "items": [
-      "coast_armor_trim_smithing_template",
-      "dune_armor_trim_smithing_template",
-      "eye_armor_trim_smithing_template",
-      "host_armor_trim_smithing_template",
-      "raiser_armor_trim_smithing_template",
-      "rib_armor_trim_smithing_template",
-      "sentry_armor_trim_smithing_template",
-      "shaper_armor_trim_smithing_template",
-      "silence_armor_trim_smithing_template",
-      "snout_armor_trim_smithing_template",
-      "spire_armor_trim_smithing_template",
-      "tide_armor_trim_smithing_template",
-      "vex_armor_trim_smithing_template",
-      "ward_armor_trim_smithing_template",
-      "wayfinder_armor_trim_smithing_template",
-      "wild_armor_trim_smithing_template"
+      "coast_armor_trim_smithing_template"
     ],
-    "price": 50,
+    "price": 3000,
     "weight": 1,
     "professions": [
       "armorer"
     ],
+    "biome": "swamp",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "dune_armor_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "armorer"
+    ],
+    "biome": "desert",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "eye_armor_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "armorer"
+    ],
+    "biome": "desert",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "host_armor_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "armorer"
+    ],
+    "biome": "plains",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "raiser_armor_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "armorer"
+    ],
+    "biome": "plains",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "rib_armor_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "armorer"
+    ],
+    "biome": "savanna",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "sentry_armor_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "armorer"
+    ],
+    "biome": "taiga",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "shaper_armor_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "armorer"
+    ],
+    "biome": "plains",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "silence_armor_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "armorer"
+    ],
+    "biome": "snow",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "snout_armor_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "armorer"
+    ],
+    "biome": "savanna",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "spire_armor_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "armorer"
+    ],
+    "biome": "snow",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "tide_armor_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "armorer"
+    ],
+    "biome": "swamp",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "vex_armor_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "armorer"
+    ],
+    "biome": "taiga",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "ward_armor_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "armorer"
+    ],
+    "biome": "jungle",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "wayfinder_armor_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "armorer"
+    ],
+    "biome": "plains",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
+      "wild_armor_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "armorer"
+    ],
+    "biome": "jungle",
+    "level": 4,
     "buy": false,
     "sell": true
   },
@@ -3441,6 +4835,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3453,6 +4849,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3465,6 +4863,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3477,6 +4877,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3489,6 +4891,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3501,6 +4905,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3513,6 +4919,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3525,6 +4933,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3537,6 +4947,8 @@
     "professions": [
       "cartographer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3549,6 +4961,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3561,6 +4975,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3573,6 +4989,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3585,6 +5003,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3597,6 +5017,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3609,6 +5031,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3621,6 +5045,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3633,6 +5059,8 @@
     "professions": [
       "fletcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3645,6 +5073,8 @@
     "professions": [
       "librarian"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3657,6 +5087,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3669,6 +5101,8 @@
     "professions": [
       "fisherman"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3681,6 +5115,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3693,6 +5129,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3705,6 +5143,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3717,6 +5157,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3729,6 +5171,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3741,6 +5185,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3753,6 +5199,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 2,
     "buy": false,
     "sell": true
   },
@@ -3765,6 +5213,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3777,6 +5227,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 4,
     "buy": false,
     "sell": true
   },
@@ -3789,6 +5241,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3802,6 +5256,8 @@
       "farmer",
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3814,6 +5270,8 @@
     "professions": [
       "librarian"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3826,6 +5284,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3838,6 +5298,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3865,6 +5327,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3877,6 +5341,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3889,6 +5355,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3901,6 +5369,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3913,6 +5383,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3925,6 +5397,8 @@
     "professions": [
       "fletcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3937,6 +5411,8 @@
     "professions": [
       "fletcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3949,6 +5425,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -3962,6 +5440,8 @@
       "armorer",
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -3974,6 +5454,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3986,6 +5468,8 @@
     "professions": [
       "cleric"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": false
   },
@@ -3998,6 +5482,8 @@
     "professions": [
       "fletcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -4012,6 +5498,8 @@
       "cleric",
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -4024,6 +5512,8 @@
     "professions": [
       "shepherd"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -4036,6 +5526,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -4048,6 +5540,8 @@
     "professions": [
       "butcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -4060,6 +5554,8 @@
     "professions": [
       "armorer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -4072,6 +5568,8 @@
     "professions": [
       "cartographer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -4084,6 +5582,8 @@
     "professions": [
       "fletcher"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -4096,6 +5596,8 @@
     "professions": [
       "weaponsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -4108,6 +5610,8 @@
     "professions": [
       "toolsmith"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -4120,6 +5624,8 @@
     "professions": [
       "mason"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -4132,6 +5638,8 @@
     "professions": [
       "ANY"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -4144,6 +5652,8 @@
     "professions": [
       "cartographer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -4156,6 +5666,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -4168,6 +5680,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -4180,6 +5694,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -4192,6 +5708,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": false,
     "sell": true
   },
@@ -4204,6 +5722,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   },
@@ -4216,6 +5736,8 @@
     "professions": [
       "farmer"
     ],
+    "biome": "ANY",
+    "level": 1,
     "buy": true,
     "sell": true
   }

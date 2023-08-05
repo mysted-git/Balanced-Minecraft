@@ -1,39 +1,55 @@
 {
-  "balancedmc:arthropod_protection": 80,
-  "aqua_affinity": 50,
-  "balancedmc:aquatic_protection": 80,
-  "bane_of_arthropods": 70,
-  "balancedmc:bane_of_illagers": 80,
-  "balancedmc:bane_of_the_aquatic": 70,
-  "blast_protection": 90,
-  "binding_curse": 0,
-  "vanishing_curse": 0,
-  "depth_strider": 80,
-  "efficiency": 150,
-  "feather_falling": 100,
-  "fire_aspect": 20,
-  "fire_protection": 100,
-  "flame": 80,
-  "fortune": 100,
-  "frost_walker": 40,
-  "balancedmc:illager_protection": 90,
-  "knockback": 20,
-  "looting": 80,
-  "luck_of_the_sea": 20,
-  "lure": 20,
-  "mending": 500,
-  "multishot": 20,
-  "piercing": 20,
-  "power": 200,
-  "projectile_protection": 80,
-  "punch": 80,
-  "quick_charge": 40,
-  "respiration": 60,
-  "sharpness": 100,
-  "silk_touch": 150,
-  "smite": 80,
-  "sweeping": 40,
-  "thorns": 20,
-  "unbreaking": 100,
-  "balancedmc:undead_protection": 100
+  "desert": {
+    "sharpness": 100,
+    "fire_protection": 100,
+    "fire_aspect": 20,
+    "flame": 80,
+    "thorns": 20
+  },
+  "savanna": {
+    "smite": 80,
+    "blast_protection": 90,
+    "looting": 80,
+    "multishot": 20,
+    "luck_of_the_sea": 20
+  },
+  "plains": {
+    "bane_of_arthropods": 70,
+    "balancedmc:arthropod_protection": 80,
+    "knockback": 20,
+    "punch": 80,
+    "aqua_affinity": 50,
+    "silk_touch": 150
+  },
+  "taiga": {
+    "balancedmc:bane_of_illagers": 80,
+    "balancedmc:illager_protection": 90,
+    "power": 200,
+    "quick_charge": 40,
+    "respiration": 60
+  },
+  "snow": {
+    "balancedmc:bane_of_the_aquatic": 70,
+    "balancedmc:aquatic_protection": 80,
+    "sweeping": 40,
+    "piercing": 20,
+    "frost_walker": 40,
+    "lure": 20
+  },
+  "swamp": {
+    "balancedmc:undead_protection": 100,
+    "depth_strider": 80,
+    "fortune": 100,
+    "mending": 500
+  },
+  "jungle": {
+    "projectile_protection": 80,
+    "feather_falling": 100,
+    "efficiency": 150,
+    "unbreaking": 100
+  },
+  "ANY": {
+    "binding_curse": 0,
+    "vanishing_curse": 0
+  }
 }

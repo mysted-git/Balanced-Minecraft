@@ -27,6 +27,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.VillagerProfession;
+import net.minecraft.village.VillagerType;
 import net.minecraft.world.gen.structure.Structure;
 
 import java.io.IOException;
@@ -52,7 +53,8 @@ public class VillagerHelper {
     static ArrayList<TradeItem> sellItems;
     static final int tolerance = 5;
     static final HashMap<VillagerProfession, ArrayList<Conversion>> conversions = new HashMap<>();
-    static final HashMap<Enchantment, Integer> enchantments = new HashMap<>();
+    static final HashMap<VillagerType, HashMap<Enchantment, Integer>> enchantments = new HashMap<>();
+    static final ArrayList<Enchantment> curseEnchantments = new ArrayList<>();
     static HashMap<String, Integer> potions;
     static final HashMap<String, String[]> potionVariants = new HashMap<>();
     static TradeItem emeraldItem;
@@ -360,8 +362,11 @@ abstract class SellItemContainer {
         ItemStack itemStack = new ItemStack(item, count);
 
         // enchantments
-        if (itemStack.isEnchantable() || itemStack.isOf(Items.ENCHANTED_BOOK)) {
-            List<Enchantment> enchantments = Arrays.asList(VillagerHelper.enchantments.keySet().toArray(new Enchantment[0]));
+        if ((itemStack.isEnchantable() || itemStack.isOf(Items.ENCHANTED_BOOK)) && entity instanceof VillagerEntity villager) {
+            HashMap<Enchantment, Integer> typeEnchantments = VillagerHelper.enchantments.get(villager.getVillagerData().getType());
+            ArrayList<Enchantment> enchantments = new ArrayList<>(Arrays.asList(typeEnchantments.keySet().toArray(new Enchantment[0])));
+            enchantments.addAll(enchantments);
+            enchantments.addAll(VillagerHelper.curseEnchantments);
             Collections.shuffle(enchantments);
             for (Enchantment enchantment : enchantments) {
                 if (enchantment.isAcceptableItem(itemStack) || itemStack.isOf(Items.ENCHANTED_BOOK)) {
@@ -375,7 +380,7 @@ abstract class SellItemContainer {
                         if (level == 0) break;
                         itemStack.addEnchantment(enchantment, level);
                     }
-                    priceBonus = VillagerHelper.enchantments.get(enchantment) * level;
+                    priceBonus = typeEnchantments.getOrDefault(enchantment, 0) * level;
                     break;
                 }
             }
@@ -596,15 +601,30 @@ class ReloadListener implements SimpleSynchronousResourceReloadListener {
         }
         // enchantments.json
         try (InputStream stream = manager.getResource(new Identifier(Main.MOD_ID, "villagers/enchantments.json")).get().getInputStream()) {
-            HashMap<String, Integer> enchantmentInfo = gson.fromJson(new InputStreamReader(stream), new TypeToken<HashMap<String, Integer>>() {
+            HashMap<String, HashMap<String, Integer>> enchantmentInfo = gson.fromJson(new InputStreamReader(stream), new TypeToken<HashMap<String, HashMap<String, Integer>>>() {
             }.getType());
-            for (String name : enchantmentInfo.keySet()) {
-                Enchantment enchantment = Registries.ENCHANTMENT.get(new Identifier(name));
-                if (enchantment == null) {
-                    Main.LOGGER.error("Invalid enchantment " + name);
-                    continue;
+            for (String biome : enchantmentInfo.keySet()) {
+                VillagerType type;
+                if (biome.equals("ANY")) {
+                    type = null;
                 }
-                VillagerHelper.enchantments.put(enchantment, enchantmentInfo.get(name));
+                else {
+                    type = Registries.VILLAGER_TYPE.get(new Identifier(biome));
+                    VillagerHelper.enchantments.put(type, new HashMap<>());
+                }
+                for (String name : enchantmentInfo.get(biome).keySet()) {
+                    Enchantment enchantment = Registries.ENCHANTMENT.get(new Identifier(name));
+                    if (enchantment == null) {
+                        Main.LOGGER.error("Invalid enchantment " + name);
+                        continue;
+                    }
+                    if (type == null) {
+                        VillagerHelper.curseEnchantments.add(enchantment);
+                    }
+                    else {
+                        VillagerHelper.enchantments.get(type).put(enchantment, enchantmentInfo.get(biome).get(name));
+                    }
+                }
             }
         } catch (IOException e) {
             throw new RuntimeException("Failed to read enchantments.json", e);
