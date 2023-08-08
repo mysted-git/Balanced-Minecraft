@@ -4828,6 +4828,20 @@
   },
   {
     "items": [
+      "balancedmc:tool_trim_smithing_template"
+    ],
+    "price": 3000,
+    "weight": 1,
+    "professions": [
+      "toolsmith"
+    ],
+    "biome": "ANY",
+    "level": 4,
+    "buy": false,
+    "sell": true
+  },
+  {
+    "items": [
       "carrot"
     ],
     "price": 3,

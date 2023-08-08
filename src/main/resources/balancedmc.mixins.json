@@ -11,7 +11,6 @@
     "M_WitherSkullBlock",
     "conduit.M_ConduitBlockEntity",
     "conduit.M_OceanMonumentGenerator",
-    "crafting.M_PlayerScreenHandler",
     "dragon.M_BlindTargetGoal",
     "dragon.M_EnderDragonEntity",
     "dragon.M_EnderDragonFight",
@@ -42,6 +41,8 @@
     "enchantment.power.M_PersistentProjectileEntity",
     "food.M_FlowerBlock",
     "food.M_StewItem",
+    "inventory.M_PlayerInventory",
+    "inventory.M_PlayerScreenHandler",
     "phantom.carry.M_FindTargetGoal",
     "phantom.carry.M_PhantomEntity",
     "phantom.carry.M_PlayerEntity",
@@ -86,9 +87,10 @@
     "village.trading.M_WanderingTraderEntity"
   ],
   "client": [
-    "crafting.M_InventoryScreen",
     "enchantment.anvil.M_AnvilScreen",
     "enchantment.grindstone.M_GrindstoneScreen",
+    "inventory.M_InGameHud",
+    "inventory.M_InventoryScreen",
     "phantom.carry.M_BipedEntityModel",
     "phantom.carry.M_ClientPlayNetworkHandler",
     "phantom.carry.M_InGameHud",

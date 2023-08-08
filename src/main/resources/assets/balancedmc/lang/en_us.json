@@ -33,5 +33,6 @@
   "item.balancedmc.tool_trim_smithing_template": "Smithing Template",
   "trim_pattern.balancedmc.tool": "Tool Trim",
   "item.balancedmc.smithing_template.tool_trim.applies_to": "Tools",
-  "item.balancedmc.smithing_template.tool_trim.base_slot_description": "Add a tool"
+  "item.balancedmc.smithing_template.tool_trim.base_slot_description": "Add a tool",
+  "key.balancedmc.toggle_hotbar": "Toggle Hotbar"
 }

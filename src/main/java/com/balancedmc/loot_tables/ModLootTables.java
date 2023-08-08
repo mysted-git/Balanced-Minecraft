@@ -1,5 +1,6 @@
 package com.balancedmc.loot_tables;
 
+import com.balancedmc.items.ModItems;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Items;
@@ -51,6 +52,12 @@ public class ModLootTables {
                                             RandomChanceLootCondition.builder(0.5F)
                                     )
                             );
+                }
+                // toolsmith hero of the village
+                else if (id.equals(LootTables.HERO_OF_THE_VILLAGE_TOOLSMITH_GIFT_GAMEPLAY)) {
+                    builder = LootPool.builder()
+                            // Tool trim smithing template
+                            .with(ItemEntry.builder(ModItems.TOOL_TRIM_SMITHING_TEMPLATE));
                 }
                 if (builder != null) {
                     tableBuilder.pool(builder);

@@ -3,3 +3,5 @@ accessWidener v1 named
 accessible class net/minecraft/recipe/BrewingRecipeRegistry$Recipe
 
 accessible class net/minecraft/screen/BrewingStandScreenHandler$PotionSlot
+
+accessible field net/minecraft/entity/player/PlayerInventory combinedInventory Ljava/util/List;
