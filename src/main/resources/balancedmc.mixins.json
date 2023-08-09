@@ -43,6 +43,7 @@
     "food.M_StewItem",
     "inventory.M_PlayerInventory",
     "inventory.M_PlayerScreenHandler",
+    "inventory.M_RangedWeaponItem",
     "phantom.carry.M_FindTargetGoal",
     "phantom.carry.M_PhantomEntity",
     "phantom.carry.M_PlayerEntity",

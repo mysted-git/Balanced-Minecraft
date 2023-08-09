@@ -31,6 +31,15 @@ public abstract class M_PlayerInventory {
     public final DefaultedList<ItemStack> tools = DefaultedList.ofSize(25, ItemStack.EMPTY);
     @Shadow @Final public final List<DefaultedList<ItemStack>> combinedInventory = ImmutableList.of(this.main, this.armor, this.offHand, this.tools);
 
+    @Inject(
+            method = "size()I",
+            at = @At("RETURN"),
+            cancellable = true
+    )
+    private void injected(CallbackInfoReturnable<Integer> cir) {
+        cir.setReturnValue(cir.getReturnValue() + this.tools.size());
+    }
+
     private DefaultedList<ItemStack> getActiveInventory() {
         if (MainClient.activeHotbar == 0) {
             return this.main;
