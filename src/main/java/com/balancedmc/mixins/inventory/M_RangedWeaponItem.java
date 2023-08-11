@@ -1,6 +1,5 @@
 package com.balancedmc.mixins.inventory;
 
-import com.balancedmc.Main;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
